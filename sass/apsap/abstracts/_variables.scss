@@ -1,0 +1,34 @@
+// Bootstrap variables overwrites START
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1680px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1600px
+);
+
+$font-family-base:'RubrikEdgeNew-Regular';
+$link-color: #003e66;
+$body-bg: #FAFBFB;
+
+// Bootstrap variables overwrites END
+
+// Colors and backgrounds
+$blue-logo: #1d3467;
+$blue-menu: #1c2856;
+$blue-normal: #1a244b;
+$blue-medium: #121324;
+$grey-extralight: #d5d5d4;
+
+// Miscellaneous

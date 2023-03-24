@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.67 30">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="oferta_button">
+      <g id="apsap_sign">
+        <path d="M0,15.18v14.82H3.14c2.87,0,5.2-2.33,5.2-5.2V13.33H1.84c-1.02,0-1.84,.83-1.84,1.84Z" style="fill: #1c2856;"/>
+        <path d="M11.67,8.51V30h3.14c2.87,0,5.2-2.33,5.2-5.2V6.67h-6.49c-1.02,0-1.84,.83-1.84,1.84Z" style="fill: #1c2856;"/>
+        <path d="M23.33,1.84V30h3.14c2.87,0,5.2-2.33,5.2-5.2V0h-6.49c-1.02,0-1.84,.83-1.84,1.84Z" style="fill: #1c2856;"/>
+      </g>
+    </g>
+  </g>
+</svg>
