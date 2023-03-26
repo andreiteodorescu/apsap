@@ -17,33 +17,55 @@
 			<nav class="menu navbar position-static">
 				<div class="menu-left">
 					<button id="menuOffer" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<svg class="menu-icon">
-							<use href="../images/sprite.svg#icon-oferta"></use>
-						</svg>
-						<span>Oferta</span>
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-oferta"></use>
+							</svg>
+							<i class="menu-btn-text">Oferta</i>
+						</span>
 					</button>
 					<div class="main-submenu dropdown-menu" aria-labelledby="menuOffer">
 						<div class="container-narrow">
-							<ul class="main-submenu-list list-group list-group-flush">
-								<li class="list-group-item">
-									<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
-									<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
-										SUBMENU
-									</div>
-								</li>
-								<li class="list-group-item">
-									<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
-								</li>
-								<li class="list-group-item">
-									<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
-								</li>
-								<li class="list-group-item">
-									<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
-								</li>
-								<li class="list-group-item">
-									<a class="main-submenu-list-link" href="#">Action</a>
-								</li>
-							</ul>
+							<div class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item has-submenu">
+										<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
+										<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
+											<ul class="main-submenu-second-level list-group list-group-flush">
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 7 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 6 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de weekend (4 zile)</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+								<button class="search-toggler btn btn-link" type="button">
+									<svg class="search-toggler-icon">
+										<use href="../images/sprite.svg#icon-magnifier"></use>
+									</svg>
+									<span class="search-toggler-text">Cauta un curs</span>
+								</button>
+							</div>
+
+							<div class="search-console">
+								Search
+							</div>
 						</div>
 					</div>
 				</div>
@@ -53,19 +75,30 @@
 					</svg>
 				</a>
 				<div class="menu-right">
-					<button id="menuInfo" class="btn btn-link menu-btn flex-row-reverse" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<svg class="menu-icon">
-							<use href="../images/sprite.svg#icon-info"></use>
-						</svg>
-						<span>Info</span>
+					<button id="menuInfo" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-info"></use>
+							</svg>
+							<i class="menu-btn-text">Info</i>
+						</span>
 					</button>
 					<div class="main-submenu dropdown-menu" aria-labelledby="menuInfo">
 						<div class="container-narrow">
-							<ul class="main-submenu-list list-group list-group-flush">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
-							</ul>
+							<div class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
