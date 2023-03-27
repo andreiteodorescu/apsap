@@ -13,3 +13,10 @@
      max-width: 874px; 
     } 
 }
+
+@media (max-width: 899px) {
+    .container-narrow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

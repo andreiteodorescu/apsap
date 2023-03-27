@@ -97,6 +97,7 @@
     left: 0 !important;
     margin: 0 !important;
     border: 0;
+    overflow-y: auto;
 
     &.dropdown-menu.show {
         opacity: 1;
@@ -204,8 +205,9 @@
         }
     }
 
-    .search-console {
-        //display: none;
+    .search-wrapper {
+        display: none;
+        padding-top: 80px;
     }
 }
 
@@ -226,6 +228,8 @@
 }
 
 .nav-active {
+    overflow: hidden;
+
     .menu {
         color: #fff;
 
@@ -270,5 +274,17 @@
         }
 
         
+    }
+}
+
+@media (max-width: 899px) {
+    .main-submenu {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-btn-text {
+        display: none;
     }
 }

@@ -1,0 +1,94 @@
+.social-media {
+    font-size: rem(15px);
+    color: $grey-extralight-2;
+    text-align: center;
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    &-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: inline-flex;
+
+        &-item {
+            margin-left: 30px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color .2s ease-in-out;
+            }
+
+            &-icon {
+                height: 22px;
+                fill: $blue-medium-2;
+            }
+        }
+    }
+
+    &-facebook a {
+        background-color: $blue-fb;
+
+        &:hover {
+            background-color: #4e6fb9;
+        }
+    }
+
+    &-instagram a {
+        background-color: $purple;
+
+        &:hover {
+            background-color: #8653ab;
+        }
+    }
+
+    &-youtube a {
+        background-color: $red-ytb;
+
+        &:hover {
+            background-color: #e0292a;
+        }
+    }
+}
+
+@media (min-height: 1080px) {
+    .social-media-absolute {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+
+        &.mt-5 {
+            margin-top: 0 !important;
+        }
+
+        &.mb-5 {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 899px) {
+    .social-media {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.mySwiper {
+    width: 100%;
+    height: 300px;
+  }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="MENU-CAUTA_SIMPLE" data-name="MENU-CAUTA SIMPLE">
+    <g id="BACK">
+      <path class="cls-1" d="M23,46c-.51,0-1.03-.2-1.42-.59L.58,24.26C.21,23.89,0,23.38,0,22.85s.21-1.04,.59-1.41L21.59,.58c.78-.78,2.05-.77,2.83,0,.78,.78,.77,2.05,0,2.83L4.83,22.86l19.59,19.73c.78,.78,.77,2.05,0,2.83-.39,.39-.9,.58-1.41,.58Z"/>
+    </g>
+  </g>
+</svg>

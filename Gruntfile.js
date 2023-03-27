@@ -23,6 +23,9 @@ module.exports = function(grunt) {
             },
             dist: {
               src: [
+                'js/standalone/jquery-3.6.4.min.js',
+                'js/standalone/bootstrap.bundle.min.js',
+                'js/standalone/tiny-slider.js',
                 'js/dev/**/*.js'
             ],
               dest: 'js/prod/main.js',
