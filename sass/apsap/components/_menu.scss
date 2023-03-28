@@ -1,3 +1,7 @@
+.header {
+    overflow: hidden;
+}
+
 .menu {
     padding: 0;
 }
@@ -68,7 +72,7 @@
 }
 
 .menu-right {
-    .menu-btn-close {
+    .menu-btn-close, .menu-btn-close-effect {
         right: 0;
     }
 
@@ -230,6 +234,10 @@
 .nav-active {
     overflow: hidden;
 
+    .header {
+        overflow: initial;
+    }
+
     .menu {
         color: #fff;
 
@@ -270,11 +278,15 @@
                     transform: rotate(-45deg) translate(-14px, 6px);
                     opacity: 1;
                 }
-            }
+            }            
         }
 
         
     }
+}
+
+.menu-close-effect {
+    display: none;
 }
 
 @media (max-width: 899px) {
@@ -286,5 +298,85 @@
 @media (max-width: 640px) {
     .menu-btn-text {
         display: none;
+    }
+}
+
+@media (max-height: 768px) {
+    .nav-active {
+        .logo {
+            animation: activeMenuLogoHeight .3s ease-out .2s forwards;
+        }
+
+        .header {
+            position: relative;
+    
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                //background-color: #1a2247;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1000;
+                animation: activeMenuBG .3s ease-out .2s forwards;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .main-submenu .search-wrapper {
+        padding-top: 90px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-btn-close {
+        overflow: initial;
+    }
+
+    .menu-btn-close-effect {
+        display: block;
+        visibility: hidden;
+        //overflow: hidden;
+        width: 0;
+        height: 0;
+        position: absolute;
+
+        &::after, &::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: $grey-light;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+            transition-delay: .3s;
+        }
+
+        &::after {
+            transform: rotate(45deg) translate(-35px, 14px);
+        }
+
+        &::before {
+            transform: rotate(-45deg) translate(28px, 6px);
+            
+        }
+    }
+
+    .nav-active .menu-btn-active .menu-btn-close-effect {
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+
+        &::after {
+            animation: activeMenuXEffectAfter .3s ease-in-out .4s forwards;
+        }
+
+        &::before {
+            animation: activeMenuXEffectBefore .3s ease-in-out .4s forwards;
+        }
     }
 }

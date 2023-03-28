@@ -1,45 +1,47 @@
-@keyframes moveInLeft {
+@keyframes activeMenuBG {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #1a2247;
+  }
+}
+
+@keyframes activeMenuLogoHeight {
+  0% {
+    height: 95px;
+  }
+  100% {
+    height: 85px;
+  }
+}
+
+@keyframes activeMenuXEffectAfter {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    transform: rotate(45deg) translate(-35px, 14px);
   }
-  80% {
-    transform: translateX(1rem);
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(6px, 14px);
   }
   100% {
-    opacity: 1;
-    transform: translate(0);
+    opacity: 0;
+    transform: rotate(45deg) translate(46px, 14px);
   }
 }
 
-@keyframes moveInRight {
+@keyframes activeMenuXEffectBefore {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    transform: rotate(-45deg) translate(28px, 6px);
   }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
+  50% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes heightGrow {
-  0% {
-    height: 0;
+    transform: rotate(-45deg) translate(-14px, 6px);
   }
   100% {
-    height: 100%;
-  }
-}
-
-@keyframes widthGrow {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
+    opacity: 0;
+    transform: rotate(-45deg) translate(-54px, 6px);
   }
 }
