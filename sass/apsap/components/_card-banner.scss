@@ -1,0 +1,25 @@
+.card-banner-component {
+    padding-top: 15px;
+    
+    .tns-inner {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .slider-general.tns-slider {
+        display: block;
+    }
+}
+
+.card-banner {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+
+    &-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

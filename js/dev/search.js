@@ -8,6 +8,7 @@ $('.search-toggler').on("click", function() {
 $('.search-back-btn').on("click", function() {
     $(this).closest('.search-wrapper').hide();
     $(this).closest('.main-submenu').find('.main-submenu-group').show();
+    $('body').removeClass('search-general-active');
 });
 
 // Update text and value of the search console buttons by selecting options from their dropdown
@@ -28,4 +29,10 @@ $('.search-console-slice-btn').on("click", function() {
             $(this).siblings('.search-console-slice-dropdown').addClass('scsDropOverflow');
         }
     } 
+});
+
+// Show search console outside of the menu in the hero area
+$('.search-trigger-mobile').on("click", function() {
+    $(this).siblings('.search-wrapper-general').fadeIn();
+    $('body').addClass('search-general-active');
 });

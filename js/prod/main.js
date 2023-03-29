@@ -27,6 +27,7 @@ $('.search-toggler').on("click", function() {
 $('.search-back-btn').on("click", function() {
     $(this).closest('.search-wrapper').hide();
     $(this).closest('.main-submenu').find('.main-submenu-group').show();
+    $('body').removeClass('search-general-active');
 });
 
 // Update text and value of the search console buttons by selecting options from their dropdown
@@ -47,6 +48,12 @@ $('.search-console-slice-btn').on("click", function() {
             $(this).siblings('.search-console-slice-dropdown').addClass('scsDropOverflow');
         }
     } 
+});
+
+// Show search console outside of the menu in the hero area
+$('.search-trigger-mobile').on("click", function() {
+    $(this).siblings('.search-wrapper-general').fadeIn();
+    $('body').addClass('search-general-active');
 });
 // Initialization for the first slider with full image cards
 const cardFullImageSlider = tns({
@@ -84,6 +91,54 @@ const cardFullImageSlider = tns({
 
 // Add text align center class in order to center the items when the slider is inactive (the slider is inactive when there are no items enough to active it, to exceed the viewport)
 cardFullImageSlider.getInfo().container.parentElement.classList.add("text-center");
+
+// Initialization for the hero slider. Uncomment this code only if you use the slider.
+/* const heroSlider = tns({
+    "container": "#hero-slider",
+    "mode": "gallery",
+    "nav": false,
+    "controls": false,
+    "swipeAngle": false,
+    "speed": 600,
+    "autoplay": true,
+    "autoplayHoverPause": true,
+    "autoplayTimeout": 3000,
+    "autoplayButtonOutput": false,
+    "preventScrollOnTouch": 'force',
+    "animateIn": "tns-fadeIn",
+    "animateOut": "tns-fadeOut",
+}); */
+
+// Initialization for the card banner slider
+const cardBannerSlider = tns({
+    "container": "#card-banner-slider",
+    "nav": false,
+    "controls": false,
+    "swipeAngle": false,
+    "speed": 400,
+    "rewind": true,
+    "responsive": {
+        "370": {
+          "edgePadding": 15,
+          "controls": false,
+          "center": true,
+          "gutter": 10,
+          "fixedWidth": 248,
+          "startIndex": 1
+        },
+        "400": {
+            "center": false,
+            "startIndex": 0
+        },
+        "768": {
+            "fixedWidth": 310,
+        },
+        "1295": {
+            "fixedWidth": 388,
+            "gutter": 16,
+        }
+      }
+});
 
 
 //# sourceMappingURL=main.js.map

@@ -35,3 +35,51 @@ const cardFullImageSlider = tns({
 // Add text align center class in order to center the items when the slider is inactive (the slider is inactive when there are no items enough to active it, to exceed the viewport)
 cardFullImageSlider.getInfo().container.parentElement.classList.add("text-center");
 
+// Initialization for the hero slider. Uncomment this code only if you use the slider.
+/* const heroSlider = tns({
+    "container": "#hero-slider",
+    "mode": "gallery",
+    "nav": false,
+    "controls": false,
+    "swipeAngle": false,
+    "speed": 600,
+    "autoplay": true,
+    "autoplayHoverPause": true,
+    "autoplayTimeout": 3000,
+    "autoplayButtonOutput": false,
+    "preventScrollOnTouch": 'force',
+    "animateIn": "tns-fadeIn",
+    "animateOut": "tns-fadeOut",
+}); */
+
+// Initialization for the card banner slider
+const cardBannerSlider = tns({
+    "container": "#card-banner-slider",
+    "nav": false,
+    "controls": false,
+    "swipeAngle": false,
+    "speed": 400,
+    "rewind": true,
+    "responsive": {
+        "370": {
+          "edgePadding": 15,
+          "controls": false,
+          "center": true,
+          "gutter": 10,
+          "fixedWidth": 248,
+          "startIndex": 1
+        },
+        "400": {
+            "center": false,
+            "startIndex": 0
+        },
+        "768": {
+            "fixedWidth": 310,
+        },
+        "1295": {
+            "fixedWidth": 388,
+            "gutter": 16,
+        }
+      }
+});
+

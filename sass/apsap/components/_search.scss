@@ -204,12 +204,13 @@
         }
     }
 
-    &-submit {
+    &-bubbles {
         position: absolute;
         top: 5px;
         right: 5px;
         width: 55px;
         height: 55px;
+        border: none;
 
         &::before {
             content: "";
@@ -279,7 +280,35 @@
     }
 }
 
+.search-title {
+    font-size: rem(36px);
+    font-family: 'RubrikEdgeNew-Light';
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.search-trigger-mobile {
+    display: none;
+}
+
 @media (max-width: 899px) {
+    .search-wrapper-general {
+        display: none;
+        background-image: url('../images/diamonds-bg.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $grey-extralight-4;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding-top: 130px;
+        background-size: cover;
+        overflow-y: auto;
+        z-index: 1;
+    }
+
     .search-console-inner {
         background-color: transparent;
         height: auto;
@@ -337,7 +366,7 @@
         }
     }
 
-    .search-console-submit {
+    .search-console-bubbles {
         position: static;
         top: auto;
         width: 100%;
@@ -352,5 +381,36 @@
         &::before, &::after {
             display: none;
         }
+    }
+
+    .search-trigger-mobile {
+        display: block;
+        width: 55px;
+        position: absolute;
+        border-radius: 0;
+        background-color: transparent !important;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: translateX(10px);
+        z-index: 1;
+
+        span {
+            left: -16px;
+        }
+
+        &::before, &::after {
+            display: block;
+        }
+    }
+
+    .search-title {
+        font-size: rem(28px);
+    }
+}
+
+@media (min-width: 900px) {
+    .search-wrapper-general {
+        display: block !important;
     }
 }

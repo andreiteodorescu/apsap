@@ -5,18 +5,24 @@
   padding-right: calc(var(--bs-gutter-x) * .5);
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-right: auto;
-  margin-left: auto; 
-}
+  margin-left: auto;
 
-@media (min-width: 900px) {
-  .container-narrow {
-     max-width: 874px; 
-    } 
-}
+  @media (min-width: 900px) {
+       max-width: 874px; 
+  }
 
-@media (max-width: 899px) {
-    .container-narrow {
+  @media (max-width: 899px) {
         padding-left: 20px;
         padding-right: 20px;
+    }
+}
+
+.main {
+    background-image: url('../images/diamonds-bg.svg');
+    background-position: center 945px;
+    background-repeat: no-repeat;
+
+    &.home {
+        background-position: center 770px;
     }
 }
