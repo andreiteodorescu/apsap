@@ -9758,12 +9758,24 @@ textarea.form-control-lg {
       padding-left: 20px;
       padding-right: 20px; } }
 
+.container-medium {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 1251px) {
+    .container-medium {
+      max-width: 1250px; } }
+
 .main {
   background-image: url("../images/diamonds-bg.svg");
   background-position: center 945px;
   background-repeat: no-repeat; }
   .main.home {
-    background-position: center 770px; }
+    background-position: center 600px; }
 
 @font-face {
   font-family: 'RubrikEdgeNew-Bold';
@@ -9804,6 +9816,12 @@ textarea.form-control-lg {
 @font-face {
   font-family: 'RubrikEdgeNew-RegularItalic';
   src: url("../fonts/rubrikedgenew-regularitalic-webfont.woff2") format("woff2"), url("../fonts/rubrikedgenew-regularitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url("../fonts/bebasneue-webfont.woff2") format("woff2"), url("../fonts/bebasneue-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -10277,7 +10295,7 @@ textarea.form-control-lg {
     padding-top: 130px;
     background-size: cover;
     overflow-y: auto;
-    z-index: 1; }
+    z-index: 2; }
   .search-console-inner {
     background-color: transparent;
     height: auto;
@@ -10629,11 +10647,102 @@ textarea.form-control-lg {
 .card-banner {
   border-radius: 20px;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  display: block; }
   .card-banner-image {
     display: block;
     object-fit: cover;
     width: 100%;
     height: 100%; }
+
+.stats-component {
+  margin-top: 70px; }
+
+.stats-big-icon {
+  width: 60px; }
+
+.stats-big-text {
+  position: relative;
+  background-color: #f8b613;
+  width: 78px;
+  height: 78px;
+  color: #333232;
+  border-radius: 50%;
+  margin: 5px auto 10px; }
+  .stats-big-text span {
+    font-size: 4.25rem;
+    font-family: 'BebasNeue-Regular';
+    line-height: 1;
+    display: block;
+    position: absolute;
+    left: auto;
+    top: 7px;
+    z-index: 1;
+    transform: translateX(-50%);
+    margin-left: 50%; }
+  .stats-big-text::after, .stats-big-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background-color: #f8b613;
+    border-radius: 50%; }
+  .stats-big-text::after {
+    width: 39px;
+    height: 39px;
+    margin-top: -20px;
+    transition: all .6s ease-in-out; }
+  .stats-big-text::before {
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    transition: all .6s ease-in-out; }
+  .stats-big-text-left span {
+    left: -2px; }
+  .stats-big-text-left::after, .stats-big-text-left::before {
+    right: 0; }
+  .stats-big-text-right::after, .stats-big-text-right::before {
+    left: 0; }
+  .stats-big-text-center::after, .stats-big-text-center::before {
+    display: none; }
+
+.stats-component.in-view .stats-big-text-left::after {
+  right: -23px; }
+
+.stats-component.in-view .stats-big-text-left::before {
+  right: -44px; }
+
+.stats-component.in-view .stats-big-text-right::after {
+  left: -23px; }
+
+.stats-component.in-view .stats-big-text-right::before {
+  left: -44px; }
+
+@media (max-width: 767.98px) {
+  .stats-big-icon {
+    width: 40px; }
+  .stats-big-text {
+    width: 50px;
+    height: 50px; }
+    .stats-big-text span {
+      font-size: 3rem;
+      top: 3px; }
+    .stats-big-text::after {
+      width: 26px;
+      height: 26px;
+      margin-top: -13px; }
+    .stats-big-text::before {
+      width: 11px;
+      height: 11px;
+      margin-top: -5px; }
+  .stats-small-text {
+    font-size: 0.875rem; }
+  .stats-component.in-view .stats-big-text-left::after {
+    right: -16px; }
+  .stats-component.in-view .stats-big-text-left::before {
+    right: -31px; }
+  .stats-component.in-view .stats-big-text-right::after {
+    left: -16px; }
+  .stats-component.in-view .stats-big-text-right::before {
+    left: -31px; } }
 
 /*# sourceMappingURL=style.css.map */

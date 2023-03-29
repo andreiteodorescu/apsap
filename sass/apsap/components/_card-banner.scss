@@ -1,6 +1,6 @@
 .card-banner-component {
     padding-top: 15px;
-    
+
     .tns-inner {
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -15,6 +15,7 @@
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
+    display: block;
 
     &-image {
         display: block;

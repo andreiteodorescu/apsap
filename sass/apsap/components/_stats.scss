@@ -1,0 +1,150 @@
+.stats-component {
+    margin-top: 70px;
+}
+
+.stats-big-icon {
+    width: 60px;
+}
+
+.stats-big-text {
+    position: relative;
+    background-color: $yellow;
+    width: 78px;
+    height: 78px;
+    color: $grey-dark-2;
+    border-radius: 50%;
+    margin: 5px auto 10px;
+
+    span {
+        font-size: rem(68px);
+        font-family: 'BebasNeue-Regular';
+        line-height: 1;
+        display: block;
+        position: absolute;
+        left: auto;
+        top: 7px;
+        z-index: 1;
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: $yellow;
+        border-radius: 50%;
+    }
+
+    &::after {
+        width: 39px;
+        height: 39px;
+        margin-top: -20px;
+        transition: all .6s ease-in-out;
+    }
+
+    &::before {
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        transition: all .6s ease-in-out;
+    }
+
+    &-left {
+        span {
+            left: -2px;
+        }
+
+        &::after, &::before {
+            right: 0;
+        }
+    }
+
+    &-right {
+        &::after, &::before {
+            left: 0;
+        }
+    }
+
+    &-center {
+        &::after, &::before {
+            display: none;
+        }
+    }
+}
+
+.stats-component.in-view {
+    .stats-big-text-left {
+        &::after {
+            right: -23px;
+        }
+
+        &::before {
+            right: -44px;
+        }
+    }
+
+    .stats-big-text-right {
+        &::after {
+            left: -23px;
+        }
+
+        &::before {
+            left: -44px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .stats-big-icon {
+        width: 40px;
+    }
+
+    .stats-big-text {
+        width: 50px;
+        height: 50px;
+
+        span {
+            font-size: rem(48px);
+            top: 3px;
+        }
+
+        &::after {
+            width: 26px;
+            height: 26px;
+            margin-top: -13px;
+        }
+    
+        &::before {
+            width: 11px;
+            height: 11px;
+            margin-top: -5px;
+        }
+    }
+
+    .stats-small-text {
+        font-size: rem(14px);
+    }
+
+    .stats-component.in-view {
+        .stats-big-text-left {
+            &::after {
+                right: -16px;
+            }
+    
+            &::before {
+                right: -31px;
+            }
+        }
+    
+        .stats-big-text-right {
+            &::after {
+                left: -16px;
+            }
+    
+            &::before {
+                left: -31px;
+            }
+        }
+    }
+}
