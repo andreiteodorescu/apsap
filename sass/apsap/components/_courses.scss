@@ -1,0 +1,85 @@
+.courses-component {
+    margin-top: 100px;
+}
+
+.courses-slider-wrapper {
+    position: relative;
+    margin-top: 20px;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $blue-main;
+        top: 50%;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.courses-slider-inner {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .btn {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .current-active {
+        .btn {
+            background-color: $blue-main;
+        }
+    }
+
+    .slider-general.tns-slider {
+        display: block;
+    }
+
+    .tns-ovh {
+        background-color: $grey-extralight-2;
+        border-radius: 7px;
+    }
+
+    .tns-controls {
+        position: absolute;
+        top: 50%;
+        max-width: 685px;
+        left: 0;
+        right: 0;
+        margin: -20px auto;
+
+        button:first-child, button:last-child {
+            padding: 0;
+            position: absolute;
+            background-size: 20px 33px;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-indent: -9999em;
+            background-color: transparent;
+            height: 40px;
+            width: 40px;
+            border: none;
+        }
+
+        button:first-child {
+            left: 0;
+            background-image: url('../images/arrow-border-left.svg');
+        }
+
+        button:last-child {
+            right: 0;
+            background-image: url('../images/arrow-border-right.svg');
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .courses-slider-inner {
+        max-width: 300px;
+
+        .tns-controls {
+            max-width: 385px;
+        }
+    }
+}

@@ -10,7 +10,7 @@
     position: relative;
     z-index: 1001;
     text-transform: uppercase;
-    font-family: 'RubrikEdgeNew-Medium';
+    font-family: $font-family-medium;
     text-decoration: none;
     //font-size: rem(15px);
     color: $blue-menu;
@@ -121,7 +121,7 @@
             .main-submenu-list-link {
                 padding: 0;
                 color: $grey-light;
-                font-family: 'RubrikEdgeNew-Medium';
+                font-family: $font-family-medium;
                 font-size: rem(18px);
                 text-decoration: none;
                 display: inline-block;
@@ -220,7 +220,7 @@
     justify-content: center;
     width: 200px;
     height: 95px;
-    background-color: $blue-logo;
+    background-color: $blue-main;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     z-index: 1001;
     transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease;

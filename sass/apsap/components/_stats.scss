@@ -11,13 +11,12 @@
     background-color: $yellow;
     width: 78px;
     height: 78px;
-    color: $grey-dark-2;
     border-radius: 50%;
     margin: 5px auto 10px;
 
     span {
         font-size: rem(68px);
-        font-family: 'BebasNeue-Regular';
+        font-family: $font-family-bebas-regular;
         line-height: 1;
         display: block;
         position: absolute;

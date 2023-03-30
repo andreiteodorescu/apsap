@@ -69,3 +69,37 @@
   font-style: normal;
 
 }
+
+.main-title {
+  font-family: $font-family-bebas-regular;
+  font-size: rem(150px);
+  line-height: 1;
+  margin-bottom: 0;
+  color: $blue-main;
+
+  &-medium {
+    font-size: rem(100px);
+  }
+}
+
+.second-title {
+  font-size: rem(36px);
+  font-family: $font-family-bold;
+  margin-bottom: 0;
+  color: $blue-main;
+
+  &-thin {
+    font-family: $font-family-light;
+  }
+}
+
+.subtitle-text {
+  color: $blue-main;
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .second-title {
+      font-size: rem(28px);
+  }
+}

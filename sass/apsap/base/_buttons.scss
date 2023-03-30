@@ -1,0 +1,23 @@
+.btn-pill {
+    border: none;
+    background-color: $grey-extralight-2;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: background-color .3s ease-in-out;
+    border-radius: 7px;
+    font-family: $font-family-medium;
+    line-height: 1;
+
+    &:active, &:hover, &:first-child:active {
+        background-color: $grey-hover;
+        color: #fff;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: rem(12px);
+    }
+}

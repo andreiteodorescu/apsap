@@ -60,6 +60,7 @@ const cardBannerSlider = tns({
     "swipeAngle": false,
     "speed": 400,
     "rewind": true,
+    "preventScrollOnTouch": 'force',
     "responsive": {
         "370": {
           "edgePadding": 15,
@@ -82,4 +83,31 @@ const cardBannerSlider = tns({
         }
       }
 });
+
+// +++++++++++++ Courses slider START ++++++++++++++ //
+// Initialization for the courses slider.
+const coursesSlider = tns({
+    "container": "#courses-slider",
+    "nav": false,
+    "swipeAngle": false,
+    "speed": 600,
+    "preventScrollOnTouch": 'force',
+    "rewind": true,
+    //"controlsText": ['',''],
+    "responsive": {
+      "370": {
+        "fixedWidth": 100,
+        "controls": true
+      },
+      "768": {
+          "fixedWidth": 200,
+      }
+    }
+});
+
+// Pe clickul asta o sa faci tu ajax-ul. Muta-l, schimba selectorul daca e nevoie dar pastreaza linia cu clasa "current-active".
+$('#courses-slider .tns-item').on("click", function() {
+  $(this).addClass('current-active').siblings().removeClass('current-active');
+});
+// +++++++++++++ Courses slider END ++++++++++++++ //
 

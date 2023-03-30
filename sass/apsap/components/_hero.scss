@@ -26,8 +26,10 @@
             display: none;
         }
 
-        .search-title {
+        .second-title {
             color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
         }
     }
 
@@ -73,5 +75,9 @@
         .search-trigger-mobile {
             display: none;
         }
+    }
+
+    .hero-multiuse-search .second-title {
+        font-size: rem(28px);
     }
 }
