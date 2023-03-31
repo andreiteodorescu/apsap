@@ -83,3 +83,30 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+    .courses-slider-inner .tns-controls {
+        max-width: 95%;
+
+        button {
+            width: 20px !important;
+            background-size: 20px 34px !important;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .courses-slider-inner .tns-controls {
+        max-width: none;
+    }
+}
+
+@media (max-width: 370px) {
+    .courses-slider-inner .tns-controls button:first-child {
+        left: -5px;
+    }
+
+    .courses-slider-inner .tns-controls button:last-child {
+        right: -5px;
+    }
+}

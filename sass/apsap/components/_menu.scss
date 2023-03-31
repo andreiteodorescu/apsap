@@ -1,5 +1,5 @@
 .header {
-    overflow: hidden;
+    height: 95px;
 }
 
 .menu {
@@ -17,6 +17,8 @@
     display: flex;
     align-items: center;
     padding: 0;
+    top: -7px;
+    transition: all .3s ease-in-out;
 
     &-text {
         position: relative;
@@ -102,6 +104,7 @@
     margin: 0 !important;
     border: 0;
     overflow-y: auto;
+    padding: 0;
 
     &.dropdown-menu.show {
         opacity: 1;
@@ -218,15 +221,19 @@
 .logo {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 200px;
     height: 95px;
     background-color: $blue-main;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.3));
     z-index: 1001;
-    transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 
     &-icon {
-        width: 102px;
+        width: 104px;
+        height: 39px;
         fill: #fff;
     }
 }
@@ -245,6 +252,10 @@
             color: #fff;
         }
 
+        .menu-btn {
+            top: 1px;
+        }
+
         .menu-btn-icon {
             fill: $yellow;
         }
@@ -252,7 +263,14 @@
         .logo {
             background-color: transparent;
             box-shadow: none;
-            transform: scale(.9);
+            width: 168px;
+            height: 80px;
+            //transform: translateY(-7px);
+    
+            &-icon {
+                width: 100px;
+                height: 35px;
+            }
         }
 
         &-btn-active {
@@ -289,6 +307,53 @@
     display: none;
 }
 
+.header-sticky {
+    position: fixed !important;
+    width: 100%;
+    z-index: 3;
+    overflow: initial;
+    top: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 48px;
+        //background-color: $grey-dark-3;
+        animation: stickyMenuBG .3s ease-out .1s forwards;
+    }
+
+    .logo {
+        width: 168px;
+        height: 80px;
+
+        &-icon {
+            width: 100px;
+            height: 35px;
+        }
+    }
+
+    body:not(.nav-active) & {
+        .menu-btn {
+            top: -16px;
+        }
+    
+        .menu-btn-icon {
+            width: 24px;
+            height: 24px;
+            fill:#fff;
+        }
+    
+        .menu-btn-text {
+            color: #fff;
+            top: 2px;
+            font-size: rem(15px);
+        }
+    }
+}
+
 @media (max-width: 899px) {
     .main-submenu {
         background-size: cover;
@@ -303,17 +368,13 @@
 
 @media (max-height: 768px) {
     .nav-active {
-        .logo {
-            animation: activeMenuLogoHeight .3s ease-out .2s forwards;
-        }
-
         .header {
             position: relative;
     
             &::after {
                 content: "";
                 width: 100%;
-                height: 100%;
+                height: 80px;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -325,7 +386,7 @@
     }
 
     .main-submenu .search-wrapper {
-        padding-top: 90px;
+        padding-top: 100px;
     }
 }
 

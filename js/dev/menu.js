@@ -8,3 +8,16 @@ $('.menu-btn').on("click", function() {
         $('body').addClass('nav-active');
     }
 });
+
+// Sticky menu when scrolling
+const mainHeader = $(".header");
+const headerScrollThreshold = 80;
+$(window).scroll(function() {
+    const scroll = $(window).scrollTop();
+
+    if (scroll >= headerScrollThreshold) {
+        mainHeader.addClass('header-sticky');
+    } else {
+        mainHeader.removeClass("header-sticky");
+    }
+});

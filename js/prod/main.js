@@ -35,6 +35,19 @@ $('.menu-btn').on("click", function() {
         $('body').addClass('nav-active');
     }
 });
+
+// Sticky menu when scrolling
+const mainHeader = $(".header");
+const headerScrollThreshold = 80;
+$(window).scroll(function() {
+    const scroll = $(window).scrollTop();
+
+    if (scroll >= headerScrollThreshold) {
+        mainHeader.addClass('header-sticky');
+    } else {
+        mainHeader.removeClass("header-sticky");
+    }
+});
 // Show search console (from the menu)
 $('.search-toggler').on("click", function() {
     $(this).closest('.main-submenu-group').hide();
@@ -90,7 +103,7 @@ const cardFullImageSlider = tns({
     "autoplayButtonOutput": false,
     "preventScrollOnTouch": 'force',
     "responsive": {
-      "370": {
+      "350": {
         "edgePadding": 15,
         "controls": false,
         "center": true,
@@ -137,7 +150,7 @@ const cardBannerSlider = tns({
     "rewind": true,
     "preventScrollOnTouch": 'force',
     "responsive": {
-        "370": {
+        "350": {
           "edgePadding": 15,
           "controls": false,
           "center": true,
@@ -159,7 +172,7 @@ const cardBannerSlider = tns({
       }
 });
 
-// +++++++++++++ Courses slider START ++++++++++++++ //
+// +++++++++++++ Courses timeline slider START ++++++++++++++ //
 // Initialization for the courses slider.
 const coursesSlider = tns({
     "container": "#courses-slider",
@@ -168,9 +181,8 @@ const coursesSlider = tns({
     "speed": 600,
     "preventScrollOnTouch": 'force',
     "rewind": true,
-    //"controlsText": ['',''],
     "responsive": {
-      "370": {
+      "350": {
         "fixedWidth": 100,
         "controls": true
       },
@@ -180,11 +192,41 @@ const coursesSlider = tns({
     }
 });
 
-// Pe clickul asta o sa faci tu ajax-ul. Muta-l, schimba selectorul daca e nevoie dar pastreaza linia cu clasa "current-active".
+// Pe clickul asta o sa faci tu ajax-ul
 $('#courses-slider .tns-item').on("click", function() {
   $(this).addClass('current-active').siblings().removeClass('current-active');
 });
-// +++++++++++++ Courses slider END ++++++++++++++ //
+// +++++++++++++ Courses timeline slider END ++++++++++++++ //
+
+// +++++++++++++ Courses grid cards slider START. Only on mobile. ++++++++++++++ //
+// Remove this whole code if there is no need to have a slider on mobile. You can also remove the id "timeline-slider-mobile" from html if that is the case.
+const timelineSliderMobile = tns({
+  "container": "#timeline-slider-mobile",
+  "nav": false,
+  "swipeAngle": false,
+  "speed": 600,
+  "preventScrollOnTouch": 'force',
+  "disable": false,
+  "fixedWidth": 235,
+  "rewind": true,
+  "startIndex": 1,
+  "center": true,
+  "controls": false,
+  "responsive": {
+    728: {
+      // disable slider on big viewport
+      disable: true
+    }
+  }
+});
+// Add a class on the wrapper to help with the styling
+$('#timeline-slider-mobile').closest('.tns-outer').addClass('timeline-slider-mobile-inner');
+
+// +++++++++++++ Courses grid cards slider END ++++++++++++++ //
+
+
+
+
 
 
 //# sourceMappingURL=main.js.map

@@ -19,5 +19,7 @@
 
     @include media-breakpoint-down(md) {
         font-size: rem(12px);
+        padding-top: 15px;
+        padding-bottom: 13px;
     }
 }

@@ -99,7 +99,23 @@
 }
 
 @include media-breakpoint-down(md) {
+  .main-title {
+    font-family: $font-family-bebas-regular;
+    font-size: rem(80px);
+    line-height: 1;
+    margin-bottom: 0;
+    color: $blue-main;
+  
+    &-medium {
+      font-size: rem(50px);
+    }
+  }
+
   .second-title {
       font-size: rem(28px);
+  }
+
+  .subtitle-text {
+    font-size: rem(13px);
   }
 }
