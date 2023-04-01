@@ -2,17 +2,30 @@
     font-size: rem(12px) !important;
     color: #fff;
     text-align: left;
+    height: 198px;
+
+    @media (max-width: 480px) {
+        height: 160px;
+    }
 
     &-inner {
         border-radius: 10px;
         overflow: hidden;
         position: relative;
         margin: 0;
+        width: 388px;
+        height: 100%;
+
+        @media (max-width: 480px) {
+            width: 340px;
+        }
     }
 
     &-asset {
         display: block;
         object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 
     &-text {
@@ -22,6 +35,10 @@
         background: linear-gradient(to top, rgba(0,0,0, .6), rgba(0,0,0, .2) 50%, transparent);
         width: 100%;
         padding: 10px 20px;
+
+        @media (max-width: 480px) {
+            padding: 7px 20px;
+        }
     }
 
     &-pretitle {
@@ -40,7 +57,6 @@
 
         .card-full-image-inner, .card-full-image-asset {
             width: 340px;
-            height: 100%;
         }
 
         .card-full-image-text {

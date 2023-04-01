@@ -4,6 +4,42 @@
 // Bootstrap scss
 @import "../bootstrap/bootstrap";
 
+/* 
+For PUL: If you need to reduce the stylesheet file size delete de above lines and uncomment this code. It will reduce the size with about 80kb but it will not include some Bootstrap functionalities so give it some thought beforehand.
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/functions";
+
+// Custom variables and Bootstrap variable overwrites
+@import "abstracts/variables";
+
+// Include remainder of required parts
+@import "../bootstrap/variables";
+@import "../bootstrap/variables-dark";
+@import "../bootstrap/maps";
+@import "../bootstrap/mixins";
+@import "../bootstrap/root";
+
+// Optionally include any other parts as needed
+@import "../bootstrap/utilities";
+@import "../bootstrap/reboot";
+@import "../bootstrap/type";
+@import "../bootstrap/images";
+@import "../bootstrap/containers";
+@import "../bootstrap/grid";
+@import "../bootstrap/helpers";
+@import "../bootstrap/accordion";
+@import "../bootstrap/buttons";
+@import "../bootstrap/dropdown";
+@import "../bootstrap/forms";
+@import "../bootstrap/modal";
+@import "../bootstrap/nav";
+@import "../bootstrap/navbar";
+@import "../bootstrap/popover";
+
+// Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../bootstrap/utilities/api"; 
+*/
+
 // Custom code here
 @import "abstracts/functions";
 @import "abstracts/mixins";

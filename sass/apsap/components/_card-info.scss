@@ -18,6 +18,7 @@
 
     &-header {
         padding: 15px 15px 20px;
+        color: $grey-dark-2;
     }
 
     &-title {
@@ -25,6 +26,23 @@
         font-size: rem(21px);
         font-family: $font-family-extrabold;
         margin-bottom: 5px;
+
+        a {
+            color: $blue-main;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-subtitle {
+        color: $blue-main;
+        font-size: rem(14px);
+        font-family: $font-family-medium;
+        margin-bottom: 5px;
+        margin-top: -7px;
     }
 
     &-description {
@@ -111,6 +129,7 @@
 
         &-right-price {
             padding: 3px 5px 7px 8px;
+            color: $grey-dark-2;
         }
 
         &-right-info {
@@ -123,6 +142,25 @@
             font-family: $font-family-bold;
             margin: 0;
             line-height: 1;
+        }
+
+        &-acc-details {
+            font-family: $font-family-bold;
+            font-size: rem(10px);
+            border-bottom: 1px solid $grey-dark-2;
+            padding-bottom: 2px;
+            margin-bottom: 7px;
+            display: block;
+            max-width: 90%;
+        }
+
+        &-acc-title {
+            font-family: $font-family-bold;
+            font-size: rem(10px);
+            text-transform: uppercase;
+            display: block;
+            color: $blue-main;
+            line-height: 1.2;
         }
     }
 
@@ -137,6 +175,15 @@
     &-promo .card-info-bottom-half-tag {
         background-color: $red;
     }
+
+    &-image {
+        border-radius: 10px;
+        border: none;
+        
+        .card-info-description {
+            font-size: rem(14px);
+        }
+    }
 }
 
 .card-bottom-top {
@@ -150,6 +197,12 @@
 
 @media (max-width: 1493px) {
     .container-medium-large .cards-grid {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1665px) {
+    .container-large-custom .cards-grid {
         justify-content: center;
     }
 }

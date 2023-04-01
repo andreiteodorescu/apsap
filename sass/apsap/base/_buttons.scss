@@ -1,9 +1,15 @@
+.btns-align {
+    .btn {
+        margin: 5px 7px;
+    }
+}
+
 .btn-pill {
     border: none;
     background-color: $grey-extralight-2;
     color: #fff;
     text-transform: uppercase;
-    padding-top: 14px;
+    padding-top: 12px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -11,15 +17,56 @@
     border-radius: 7px;
     font-family: $font-family-medium;
     line-height: 1;
+    font-size: rem(18px);
+
+    span {
+        font-family: $font-family-light;
+    }
 
     &:active, &:hover, &:first-child:active {
-        background-color: $grey-hover;
-        color: #fff;
+        background-color: $grey-hover !important;
+        color: #fff !important;
+    }
+
+    &-long {
+        width: 32%;
+
+        @include media-breakpoint-down(xl) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 95%;
+        }
+    }
+
+    &-yellow {
+        background-color: $yellow;
+        color: $grey-dark-2;
+
+        &:active, &:hover, &:first-child:active {
+            background-color: #f7c750 !important;
+            color: $grey-dark-2 !important;
+        }
+    }
+
+    &-small {
+        min-width: 220px;
+        font-size: rem(14px);
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: $font-family-bold;
+
+        span {
+            font-family: $font-family-base;
+        }
     }
 
     @include media-breakpoint-down(md) {
-        font-size: rem(12px);
-        padding-top: 15px;
-        padding-bottom: 13px;
+        span {
+            font-family: $font-family-base;
+        }
     }
 }

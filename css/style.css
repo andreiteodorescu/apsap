@@ -9708,6 +9708,41 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+/* 
+For PUL: If you need to reduce the stylesheet file size delete de above lines and uncomment this code. It will reduce the size with about 80kb but it will not include some Bootstrap functionalities so give it some thought beforehand.
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/functions";
+
+// Custom variables and Bootstrap variable overwrites
+@import "abstracts/variables";
+
+// Include remainder of required parts
+@import "../bootstrap/variables";
+@import "../bootstrap/variables-dark";
+@import "../bootstrap/maps";
+@import "../bootstrap/mixins";
+@import "../bootstrap/root";
+
+// Optionally include any other parts as needed
+@import "../bootstrap/utilities";
+@import "../bootstrap/reboot";
+@import "../bootstrap/type";
+@import "../bootstrap/images";
+@import "../bootstrap/containers";
+@import "../bootstrap/grid";
+@import "../bootstrap/helpers";
+@import "../bootstrap/accordion";
+@import "../bootstrap/buttons";
+@import "../bootstrap/dropdown";
+@import "../bootstrap/forms";
+@import "../bootstrap/modal";
+@import "../bootstrap/nav";
+@import "../bootstrap/navbar";
+@import "../bootstrap/popover";
+
+// Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../bootstrap/utilities/api"; 
+*/
 @keyframes activeMenuBG {
   0% {
     background-color: transparent; }
@@ -9785,12 +9820,49 @@ body {
     .container-medium-large {
       max-width: 1494px; } }
 
+.container-large-custom {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 1667px) {
+    .container-large-custom {
+      max-width: 1666px; } }
+
 .main {
   background-image: url("../images/diamonds-bg.svg");
   background-position: center 945px;
   background-repeat: no-repeat; }
   .main.home {
     background-position: center 600px; }
+
+.component-block {
+  margin-top: 130px; }
+
+.component-skew {
+  background-image: url("../images/diamonds-bg.svg"), url("../images/diamonds-bg.svg"), linear-gradient(#1d3467, #121324);
+  background-position: center top, center bottom, center top;
+  background-repeat: no-repeat, no-repeat;
+  transform: skewY(-3deg);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .component-skew > * {
+    transform: skewY(3deg); }
+  .component-skew .component-block:first-child {
+    margin-top: 0; }
+  .component-skew .main-title, .component-skew .second-title, .component-skew .subtitle-text {
+    color: #fff; }
+
+.yellow-text {
+  color: #f8b613; }
+
+@media (max-width: 767.98px) {
+  .component-block {
+    margin-top: 80px; } }
 
 @font-face {
   font-family: 'RubrikEdgeNew-Bold';
@@ -9853,13 +9925,19 @@ body {
   font-size: 2.25rem;
   font-family: "RubrikEdgeNew-Bold";
   margin-bottom: 0;
-  color: #273266; }
+  color: #273266;
+  max-width: 1080px; }
   .second-title-thin {
     font-family: "RubrikEdgeNew-Light"; }
 
 .subtitle-text {
   color: #273266;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  max-width: 1080px; }
+
+.text-center .second-title, .text-center .subtitle-text {
+  margin-left: auto;
+  margin-right: auto; }
 
 @media (max-width: 767.98px) {
   .main-title {
@@ -9875,27 +9953,55 @@ body {
   .subtitle-text {
     font-size: 0.8125rem; } }
 
+.btns-align .btn {
+  margin: 5px 7px; }
+
 .btn-pill {
   border: none;
   background-color: #a1a1a1;
   color: #fff;
   text-transform: uppercase;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
   transition: background-color .3s ease-in-out;
   border-radius: 7px;
   font-family: "RubrikEdgeNew-Medium";
-  line-height: 1; }
+  line-height: 1;
+  font-size: 1.125rem; }
+  .btn-pill span {
+    font-family: "RubrikEdgeNew-Light"; }
   .btn-pill:active, .btn-pill:hover, .btn-pill:first-child:active {
-    background-color: #b5b5b5;
-    color: #fff; }
+    background-color: #b5b5b5 !important;
+    color: #fff !important; }
+  .btn-pill-long {
+    width: 32%; }
+    @media (max-width: 1199.98px) {
+      .btn-pill-long {
+        width: 50%; } }
+    @media (max-width: 767.98px) {
+      .btn-pill-long {
+        width: 95%; } }
+  .btn-pill-yellow {
+    background-color: #f8b613;
+    color: #333232; }
+    .btn-pill-yellow:active, .btn-pill-yellow:hover, .btn-pill-yellow:first-child:active {
+      background-color: #f7c750 !important;
+      color: #333232 !important; }
+  .btn-pill-small {
+    min-width: 220px;
+    font-size: 0.875rem;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "RubrikEdgeNew-Bold"; }
+    .btn-pill-small span {
+      font-family: "RubrikEdgeNew-Regular"; }
   @media (max-width: 767.98px) {
-    .btn-pill {
-      font-size: 0.75rem;
-      padding-top: 15px;
-      padding-bottom: 13px; } }
+    .btn-pill span {
+      font-family: "RubrikEdgeNew-Regular"; } }
 
 .header {
   height: 95px; }
@@ -10663,15 +10769,26 @@ body {
 .card-full-image {
   font-size: 0.75rem !important;
   color: #fff;
-  text-align: left; }
+  text-align: left;
+  height: 198px; }
+  @media (max-width: 480px) {
+    .card-full-image {
+      height: 160px; } }
   .card-full-image-inner {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    margin: 0; }
+    margin: 0;
+    width: 388px;
+    height: 100%; }
+    @media (max-width: 480px) {
+      .card-full-image-inner {
+        width: 340px; } }
   .card-full-image-asset {
     display: block;
-    object-fit: cover; }
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
   .card-full-image-text {
     position: absolute;
     left: 0;
@@ -10679,6 +10796,9 @@ body {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) 50%, transparent);
     width: 100%;
     padding: 10px 20px; }
+    @media (max-width: 480px) {
+      .card-full-image-text {
+        padding: 7px 20px; } }
   .card-full-image-pretitle {
     margin: 0;
     line-height: 1; }
@@ -10689,8 +10809,7 @@ body {
   .card-full-image-small {
     height: 160px; }
     .card-full-image-small .card-full-image-inner, .card-full-image-small .card-full-image-asset {
-      width: 340px;
-      height: 100%; }
+      width: 340px; }
     .card-full-image-small .card-full-image-text {
       padding: 7px 20px; }
 
@@ -10855,9 +10974,6 @@ body {
   .stats-component.in-view .stats-big-text-right::before {
     left: -31px; } }
 
-.courses-component {
-  margin-top: 100px; }
-
 .courses-slider-wrapper {
   position: relative;
   margin-top: 20px; }
@@ -10875,7 +10991,10 @@ body {
   margin: 0 auto; }
   .courses-slider-inner .btn {
     width: 100%;
-    border-radius: 0; }
+    border-radius: 0;
+    font-size: 1rem;
+    padding-top: 14px;
+    padding-bottom: 10px; }
   .courses-slider-inner .current-active .btn {
     background-color: #273266; }
   .courses-slider-inner .slider-general.tns-slider {
@@ -10911,6 +11030,10 @@ body {
 @media (max-width: 767.98px) {
   .courses-slider-inner {
     max-width: 300px; }
+    .courses-slider-inner .btn {
+      font-size: 0.75rem;
+      padding-top: 15px;
+      padding-bottom: 13px; }
     .courses-slider-inner .tns-controls {
       max-width: 385px; } }
 
@@ -10948,12 +11071,24 @@ body {
   display: flex;
   flex-direction: column; }
   .card-info-header {
-    padding: 15px 15px 20px; }
+    padding: 15px 15px 20px;
+    color: #333232; }
   .card-info-title {
     color: #273266;
     font-size: 1.3125rem;
     font-family: "RubrikEdgeNew-Extrabold";
     margin-bottom: 5px; }
+    .card-info-title a {
+      color: #273266;
+      text-decoration: none; }
+      .card-info-title a:hover {
+        text-decoration: underline; }
+  .card-info-subtitle {
+    color: #273266;
+    font-size: 0.875rem;
+    font-family: "RubrikEdgeNew-Medium";
+    margin-bottom: 5px;
+    margin-top: -7px; }
   .card-info-description {
     line-height: 1.3;
     margin-bottom: 10px; }
@@ -11008,7 +11143,8 @@ body {
       .card-info-bottom-half-right {
         background-color: #edebeb; }
     .card-info-bottom-right-price {
-      padding: 3px 5px 7px 8px; }
+      padding: 3px 5px 7px 8px;
+      color: #333232; }
     .card-info-bottom-right-info {
       display: block;
       font-size: 0.625rem; }
@@ -11017,12 +11153,32 @@ body {
       font-family: "RubrikEdgeNew-Bold";
       margin: 0;
       line-height: 1; }
+    .card-info-bottom-acc-details {
+      font-family: "RubrikEdgeNew-Bold";
+      font-size: 0.625rem;
+      border-bottom: 1px solid #333232;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
+      display: block;
+      max-width: 90%; }
+    .card-info-bottom-acc-title {
+      font-family: "RubrikEdgeNew-Bold";
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      display: block;
+      color: #273266;
+      line-height: 1.2; }
   .card-info-bonus .card-info-bottom-half-tag {
     background-color: #1d66af; }
   .card-info-discount .card-info-bottom-half-tag {
     background-color: #53ab56; }
   .card-info-promo .card-info-bottom-half-tag {
     background-color: #cd1c39; }
+  .card-info-image {
+    border-radius: 10px;
+    border: none; }
+    .card-info-image .card-info-description {
+      font-size: 0.875rem; }
 
 .card-bottom-top {
   padding-bottom: 7px; }
@@ -11033,6 +11189,10 @@ body {
 
 @media (max-width: 1493px) {
   .container-medium-large .cards-grid {
+    justify-content: center; } }
+
+@media (max-width: 1665px) {
+  .container-large-custom .cards-grid {
     justify-content: center; } }
 
 @media (max-width: 1199.98px) {

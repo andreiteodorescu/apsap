@@ -31,6 +31,14 @@ body {
     }
 }
 
+.container-large-custom {
+    @include make-container();
+
+    @media (min-width: 1667px) {
+        max-width: 1666px; 
+    }
+}
+
 .main {
     background-image: url('../images/diamonds-bg.svg');
     background-position: center 945px;
@@ -38,5 +46,41 @@ body {
 
     &.home {
         background-position: center 600px;
+    }
+}
+
+.component-block {
+    margin-top: 130px;
+}
+
+.component-skew {
+    background-image: url('../images/diamonds-bg.svg'), url('../images/diamonds-bg.svg'), linear-gradient($blue-medium-3, $blue-medium);
+    background-position: center top, center bottom, center top;
+    background-repeat: no-repeat, no-repeat;
+    transform: skewY(-3deg);
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    > * {
+        transform: skewY(3deg);
+    }
+
+    .component-block:first-child {
+        margin-top: 0;
+    }
+
+    .main-title, .second-title, .subtitle-text {
+        color: #fff;
+    }
+}
+
+.yellow-text {
+    color: $yellow;
+}
+
+@include media-breakpoint-down(md) {
+    .component-block {
+        margin-top: 80px;
     }
 }

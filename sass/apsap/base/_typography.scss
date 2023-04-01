@@ -87,6 +87,7 @@
   font-family: $font-family-bold;
   margin-bottom: 0;
   color: $blue-main;
+  max-width: 1080px;
 
   &-thin {
     font-family: $font-family-light;
@@ -96,6 +97,14 @@
 .subtitle-text {
   color: $blue-main;
   margin-bottom: 0;
+  max-width: 1080px;
+}
+
+.text-center {
+  .second-title, .subtitle-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @include media-breakpoint-down(md) {
