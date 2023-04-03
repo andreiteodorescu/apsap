@@ -9838,24 +9838,45 @@ body {
   background-repeat: no-repeat; }
   .main.home {
     background-position: center 600px; }
+    @media (max-width: 767.98px) {
+      .main.home {
+        background-position: center 310px; } }
+  @media (max-width: 1199.98px) {
+    .main {
+      background-size: 1920px 1040px; } }
 
 .component-block {
   margin-top: 130px; }
 
 .component-skew {
-  background-image: url("../images/diamonds-bg.svg"), url("../images/diamonds-bg.svg"), linear-gradient(#1d3467, #121324);
-  background-position: center top, center bottom, center top;
-  background-repeat: no-repeat, no-repeat;
+  background-image: linear-gradient(#1d3467, #121324);
   transform: skewY(-3deg);
-  color: #fff;
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  color: #fff; }
+  .component-skew-inner {
+    background-image: url("../images/diamonds-bg.svg"), url("../images/diamonds-bg.svg");
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 100px;
+    padding-bottom: 160px; }
+    @media (min-width: 2220px) {
+      .component-skew-inner {
+        background-image: url("../images/diamonds-bg.svg");
+        background-position: center top;
+        background-repeat: no-repeat; } }
+    @media (max-width: 1199.98px) {
+      .component-skew-inner {
+        background-size: 1920px 1040px; } }
   .component-skew > * {
     transform: skewY(3deg); }
   .component-skew .component-block:first-child {
     margin-top: 0; }
   .component-skew .main-title, .component-skew .second-title, .component-skew .subtitle-text {
     color: #fff; }
+
+.component-bubbles {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 800px 746px; }
 
 .yellow-text {
   color: #f8b613; }
@@ -10913,7 +10934,7 @@ body {
     content: "";
     position: absolute;
     top: 50%;
-    background-color: #f8b613;
+    background-color: inherit;
     border-radius: 50%; }
   .stats-big-text::after {
     width: 39px;
@@ -10927,23 +10948,33 @@ body {
     transition: all .6s ease-in-out; }
   .stats-big-text-left span {
     left: -2px; }
-  .stats-big-text-left::after, .stats-big-text-left::before {
-    right: 0; }
-  .stats-big-text-right::after, .stats-big-text-right::before {
-    left: 0; }
+  .stats-big-text-left::after {
+    right: -23px; }
+  .stats-big-text-left::before {
+    right: -44px; }
+  .stats-big-text-right::after {
+    left: -23px; }
+  .stats-big-text-right::before {
+    left: -44px; }
   .stats-big-text-center::after, .stats-big-text-center::before {
     display: none; }
 
-.stats-component.in-view .stats-big-text-left::after {
+.stats-component.observe .stats-big-text-left::after, .stats-component.observe .stats-big-text-left::before {
+  right: 0; }
+
+.stats-component.observe .stats-big-text-right::after, .stats-component.observe .stats-big-text-right::before {
+  left: 0; }
+
+.stats-component.observe.in-view .stats-big-text-left::after {
   right: -23px; }
 
-.stats-component.in-view .stats-big-text-left::before {
+.stats-component.observe.in-view .stats-big-text-left::before {
   right: -44px; }
 
-.stats-component.in-view .stats-big-text-right::after {
+.stats-component.observe.in-view .stats-big-text-right::after {
   left: -23px; }
 
-.stats-component.in-view .stats-big-text-right::before {
+.stats-component.observe.in-view .stats-big-text-right::before {
   left: -44px; }
 
 @media (max-width: 767.98px) {
@@ -10965,13 +10996,13 @@ body {
       margin-top: -5px; }
   .stats-small-text {
     font-size: 0.875rem; }
-  .stats-component.in-view .stats-big-text-left::after {
+  .stats-component.observe.in-view .stats-big-text-left::after {
     right: -16px; }
-  .stats-component.in-view .stats-big-text-left::before {
+  .stats-component.observe.in-view .stats-big-text-left::before {
     right: -31px; }
-  .stats-component.in-view .stats-big-text-right::after {
+  .stats-component.observe.in-view .stats-big-text-right::after {
     left: -16px; }
-  .stats-component.in-view .stats-big-text-right::before {
+  .stats-component.observe.in-view .stats-big-text-right::before {
     left: -31px; } }
 
 .courses-slider-wrapper {
@@ -10996,7 +11027,7 @@ body {
     padding-top: 14px;
     padding-bottom: 10px; }
   .courses-slider-inner .current-active .btn {
-    background-color: #273266; }
+    background-color: #273266 !important; }
   .courses-slider-inner .slider-general.tns-slider {
     display: block; }
   .courses-slider-inner .tns-ovh {
@@ -11187,6 +11218,12 @@ body {
   margin-top: auto;
   display: flex; }
 
+.card-info-slider {
+  display: flex !important;
+  gap: 30px; }
+  .card-info-slider .card-info {
+    display: inline-flex !important; }
+
 @media (max-width: 1493px) {
   .container-medium-large .cards-grid {
     justify-content: center; } }
@@ -11245,5 +11282,74 @@ body {
       display: inline-flex; }
     .timeline-slider-mobile-inner .card-info {
       display: flex !important; } }
+
+.huge-heading-wrapper {
+  position: relative;
+  text-align: center; }
+
+.huge-heading {
+  font-size: 25rem;
+  font-family: "BebasNeue-Regular";
+  color: rgba(171, 171, 171, 0.4);
+  line-height: 290px;
+  margin: 0; }
+
+.huge-heading-overlap {
+  position: absolute;
+  top: 50%;
+  width: 100%; }
+  .huge-heading-overlap-offset {
+    top: 65px; }
+  .huge-heading-overlap .ribbon {
+    margin-bottom: 25px; }
+
+.h-heading-title-small {
+  font-size: 1.3125rem;
+  font-family: "RubrikEdgeNew-Bold";
+  margin: 0; }
+
+.ribbon {
+  position: relative;
+  background-color: #273266;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; }
+  .ribbon-icon {
+    fill: #fff;
+    z-index: 1;
+    position: relative;
+    display: block; }
+    .ribbon-icon-book {
+      width: 53px;
+      height: 42px; }
+  .ribbon::after, .ribbon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background-color: inherit;
+    border-radius: 50%; }
+  .ribbon::after {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    transition: all .6s ease-in-out;
+    right: -50px; }
+  .ribbon::before {
+    width: 44px;
+    height: 44px;
+    margin-top: -22px;
+    transition: all .6s ease-in-out;
+    left: -50px; }
+  .ribbon.observe::after {
+    right: 0; }
+  .ribbon.observe::before {
+    left: 0; }
+  .ribbon.observe.in-view::after {
+    right: -50px; }
+  .ribbon.observe.in-view::before {
+    left: -50px; }
 
 /*# sourceMappingURL=style.css.map */

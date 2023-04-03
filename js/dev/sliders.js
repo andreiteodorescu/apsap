@@ -136,6 +136,21 @@ $('#timeline-slider-mobile').closest('.tns-outer').addClass('timeline-slider-mob
 
 // +++++++++++++ Courses grid cards slider END ++++++++++++++ //
 
+// Initialization overflowing slider in the big blue area
+const carsOverflowSlider = tns({
+  "container": "#card-overflow-slider",
+  "edgePadding": 30,
+  "nav": false,
+  "controls": false,
+  "swipeAngle": false,
+  "speed": 400,
+  "mouseDrag": true,
+  "arrowKeys": true,
+  "rewind": true,
+  "fixedWidth": 250,
+  "preventScrollOnTouch": 'force'
+});
+
 
 
 

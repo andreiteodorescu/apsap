@@ -20,10 +20,10 @@ const observer = new IntersectionObserver(
     { threshold: 0.5 }
 );
 
-// Check if elements exists on page and if yes then observe it when it enters the viewport
-if (document.querySelector('.stats-component')) {
-    observer.observe(document.querySelector('.stats-component'));
-}
+const observerTargets = document.querySelectorAll('.observe');
+observerTargets.forEach( observerTarget => {
+    observer.observe(observerTarget);
+});
 
 $('.menu-btn').on("click", function() {
     $('.menu-btn').removeClass('menu-btn-active');
@@ -223,6 +223,21 @@ const timelineSliderMobile = tns({
 $('#timeline-slider-mobile').closest('.tns-outer').addClass('timeline-slider-mobile-inner');
 
 // +++++++++++++ Courses grid cards slider END ++++++++++++++ //
+
+// Initialization overflowing slider in the big blue area
+const carsOverflowSlider = tns({
+  "container": "#card-overflow-slider",
+  "edgePadding": 30,
+  "nav": false,
+  "controls": false,
+  "swipeAngle": false,
+  "speed": 400,
+  "mouseDrag": true,
+  "arrowKeys": true,
+  "rewind": true,
+  "fixedWidth": 250,
+  "preventScrollOnTouch": 'force'
+});
 
 
 

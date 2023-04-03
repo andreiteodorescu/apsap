@@ -1,0 +1,32 @@
+.huge-heading-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.huge-heading {
+    font-size: rem(400px);
+    font-family: $font-family-bebas-regular;
+    color: rgba(171, 171, 171, .4);
+    line-height: 290px;
+    margin: 0;
+}
+
+.huge-heading-overlap {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    &-offset {
+        top: 65px;
+    }
+
+    .ribbon {
+        margin-bottom: 25px;
+    }
+}
+
+.h-heading-title-small {
+    font-size: rem(21px);
+    font-family: $font-family-bold;
+    margin: 0;
+}

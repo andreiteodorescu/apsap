@@ -31,7 +31,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        background-color: $yellow;
+        background-color: inherit;
         border-radius: 50%;
     }
 
@@ -54,14 +54,22 @@
             left: -2px;
         }
 
-        &::after, &::before {
-            right: 0;
+        &::after {
+            right: -23px;
+        }
+
+        &::before {
+            right: -44px;
         }
     }
 
     &-right {
-        &::after, &::before {
-            left: 0;
+        &::after {
+            left: -23px;
+        }
+
+        &::before {
+            left: -44px;
         }
     }
 
@@ -72,24 +80,38 @@
     }
 }
 
-.stats-component.in-view {
+.stats-component.observe {
     .stats-big-text-left {
-        &::after {
-            right: -23px;
-        }
-
-        &::before {
-            right: -44px;
+        &::after, &::before {
+            right: 0;
         }
     }
 
     .stats-big-text-right {
-        &::after {
-            left: -23px;
+        &::after, &::before {
+            left: 0;
         }
+    }
 
-        &::before {
-            left: -44px;
+    &.in-view {
+        .stats-big-text-left {
+            &::after {
+                right: -23px;
+            }
+    
+            &::before {
+                right: -44px;
+            }
+        }
+    
+        .stats-big-text-right {
+            &::after {
+                left: -23px;
+            }
+    
+            &::before {
+                left: -44px;
+            }
         }
     }
 }
@@ -125,7 +147,7 @@
         font-size: rem(14px);
     }
 
-    .stats-component.in-view {
+    .stats-component.observe.in-view {
         .stats-big-text-left {
             &::after {
                 right: -16px;

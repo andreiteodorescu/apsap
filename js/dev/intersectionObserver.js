@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(
     { threshold: 0.5 }
 );
 
-// Check if elements exists on page and if yes then observe it when it enters the viewport
-if (document.querySelector('.stats-component')) {
-    observer.observe(document.querySelector('.stats-component'));
-}
+const observerTargets = document.querySelectorAll('.observe');
+observerTargets.forEach( observerTarget => {
+    observer.observe(observerTarget);
+});

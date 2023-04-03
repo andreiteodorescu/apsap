@@ -179,7 +179,7 @@
     &-image {
         border-radius: 10px;
         border: none;
-        
+
         .card-info-description {
             font-size: rem(14px);
         }
@@ -193,6 +193,15 @@
 .card-bottom-down {
     margin-top: auto;
     display: flex;
+}
+
+.card-info-slider {
+    display: flex !important;
+    gap: 30px;
+
+    .card-info {
+        display: inline-flex !important;
+    }
 }
 
 @media (max-width: 1493px) {

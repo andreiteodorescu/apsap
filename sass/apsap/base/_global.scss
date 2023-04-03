@@ -46,6 +46,14 @@ body {
 
     &.home {
         background-position: center 600px;
+
+        @include media-breakpoint-down(md) {
+            background-position: center 310px;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        background-size: 1920px 1040px;
     }
 }
 
@@ -54,13 +62,27 @@ body {
 }
 
 .component-skew {
-    background-image: url('../images/diamonds-bg.svg'), url('../images/diamonds-bg.svg'), linear-gradient($blue-medium-3, $blue-medium);
-    background-position: center top, center bottom, center top;
-    background-repeat: no-repeat, no-repeat;
+    background-image: linear-gradient($blue-medium-3, $blue-medium);
     transform: skewY(-3deg);
     color: #fff;
-    padding-top: 100px;
-    padding-bottom: 100px;
+
+    &-inner {
+        background-image: url('../images/diamonds-bg.svg'), url('../images/diamonds-bg.svg');
+        background-position: center top, center bottom;
+        background-repeat: no-repeat, no-repeat;
+        padding-top: 100px;
+        padding-bottom: 160px;
+
+        @media (min-width: 2220px) {
+            background-image: url('../images/diamonds-bg.svg');
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        @include media-breakpoint-down(xl) {
+            background-size: 1920px 1040px;
+        }
+    }
 
     > * {
         transform: skewY(3deg);
@@ -73,6 +95,13 @@ body {
     .main-title, .second-title, .subtitle-text {
         color: #fff;
     }
+}
+
+.component-bubbles {
+    //background-image: url('../images/bubbles.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 800px 746px;
 }
 
 .yellow-text {
