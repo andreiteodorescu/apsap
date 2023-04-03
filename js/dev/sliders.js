@@ -136,7 +136,7 @@ $('#timeline-slider-mobile').closest('.tns-outer').addClass('timeline-slider-mob
 
 // +++++++++++++ Courses grid cards slider END ++++++++++++++ //
 
-// Initialization overflowing slider in the big blue area
+// Initialization for the overflowing cards slider in the big blue area
 const carsOverflowSlider = tns({
   "container": "#card-overflow-slider",
   "edgePadding": 30,
@@ -149,6 +149,47 @@ const carsOverflowSlider = tns({
   "rewind": true,
   "fixedWidth": 250,
   "preventScrollOnTouch": 'force'
+});
+
+// Initialization for the lectori slider (no fisheye)
+/* const simpleLectoriSlider = tns({
+  "container": "#simple-lectori-slider",
+  "disable": true,
+  "responsive": {
+    1200: {
+      // enable slider on big viewport
+      
+  "nav": false,
+  "swipeAngle": false,
+  "speed": 600,
+  "preventScrollOnTouch": 'force',
+  "fixedWidth": 200,
+  "gutter": 30,
+  "controls": false,
+  "autoplay": false,
+  "autoplayHoverPause": true,
+  "autoplayTimeout": 3000,
+  "autoplayButtonOutput": false,
+      "disable": false,
+    }
+  }
+}); */
+
+
+
+var swiper = new Swiper(".swiper-medallion", {
+  enabled: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  breakpoints: {
+    1200: {
+      enabled: true,
+      slidesPerView: 6,
+      spaceBetween: 30
+    },
+  },
 });
 
 

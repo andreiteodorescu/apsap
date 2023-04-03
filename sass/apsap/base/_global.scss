@@ -23,6 +23,14 @@ body {
     }
 }
 
+.container-medium-2 {
+    @include make-container();
+
+    @media (min-width: 1375px) {
+        max-width: 1374px; 
+    }
+}
+
 .container-medium-large {
     @include make-container();
 
@@ -72,6 +80,7 @@ body {
         background-repeat: no-repeat, no-repeat;
         padding-top: 100px;
         padding-bottom: 160px;
+        overflow: hidden;
 
         @media (min-width: 2220px) {
             background-image: url('../images/diamonds-bg.svg');
