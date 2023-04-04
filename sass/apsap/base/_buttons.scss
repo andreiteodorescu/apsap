@@ -50,6 +50,16 @@
         }
     }
 
+    &-blue {
+        background-color: $blue-main;
+        color: #fff;
+
+        &:active, &:hover, &:first-child:active {
+            background-color: #f7c750 !important;
+            color: #fff !important;
+        }
+    }
+
     &-small {
         min-width: 220px;
         font-size: rem(14px);

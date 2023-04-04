@@ -6,8 +6,9 @@
 .huge-heading {
     font-size: rem(400px);
     font-family: $font-family-bebas-regular;
-    color: rgba(171, 171, 171, .4);
-    line-height: 290px;
+    color: rgba(171, 171, 171, .3);
+    //line-height: 290px;
+    line-height: 0.8;
     margin: 0;
 }
 
@@ -17,7 +18,7 @@
     width: 100%;
 
     &-offset {
-        top: 65px;
+        top: 80px;
     }
 
     .ribbon {
@@ -29,4 +30,38 @@
     font-size: rem(21px);
     font-family: $font-family-bold;
     margin: 0;
+}
+
+.h-heading-subtitle {
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .huge-heading {
+        font-size: rem(250px);
+    }
+
+    .huge-heading-overlap-offset {
+        top: -28px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .huge-heading {
+        font-size: rem(150px);
+    }
+
+    .huge-heading-overlap-offset {
+        top: -85px;
+    }
+}
+
+@media (max-width: 640px) {
+    .huge-heading {
+        font-size: rem(120px);
+    }
+
+    .huge-heading-overlap-offset {
+        top: -100px;
+    }
 }

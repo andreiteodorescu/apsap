@@ -16,6 +16,8 @@
 .courses-slider-inner {
     max-width: 600px;
     margin: 0 auto;
+    background-color: $grey-extralight-2;
+    border-radius: 7px;
 
     .btn {
         width: 100%;
@@ -25,51 +27,44 @@
         padding-bottom: 10px;
     }
 
-    .current-active {
-        .btn {
-            background-color: $blue-main !important;
+    .current-active .btn {
+        background-color: $blue-main !important;
+    }
+}
+
+.courses-slider-nav {
+    position: absolute;
+    top: 50%;
+    max-width: 685px;
+    left: 0;
+    right: 0;
+    margin: -20px auto;
+
+    .swiper-button-prev, .swiper-button-next {
+        background-size: 20px 33px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        margin-top: 0;
+
+        &.swiper-button-disabled {
+            opacity: 1;
+        }
+
+        &::after {
+            display: none;
         }
     }
 
-    .slider-general.tns-slider {
-        display: block;
-    }
-
-    .tns-ovh {
-        background-color: $grey-extralight-2;
-        border-radius: 7px;
-    }
-
-    .tns-controls {
-        position: absolute;
-        top: 50%;
-        max-width: 685px;
+    .swiper-button-prev {
         left: 0;
+        background-image: url('../images/arrow-border-left.svg');
+    }
+
+    .swiper-button-next {
         right: 0;
-        margin: -20px auto;
-
-        button:first-child, button:last-child {
-            padding: 0;
-            position: absolute;
-            background-size: 20px 33px;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-indent: -9999em;
-            background-color: transparent;
-            height: 40px;
-            width: 40px;
-            border: none;
-        }
-
-        button:first-child {
-            left: 0;
-            background-image: url('../images/arrow-border-left.svg');
-        }
-
-        button:last-child {
-            right: 0;
-            background-image: url('../images/arrow-border-right.svg');
-        }
+        background-image: url('../images/arrow-border-right.svg');
     }
 }
 
@@ -82,18 +77,18 @@
             padding-top: 15px;
             padding-bottom: 13px;
         }
+    }
 
-        .tns-controls {
-            max-width: 385px;
-        }
+    .courses-slider-nav {
+        max-width: 385px;
     }
 }
 
 @media (max-width: 450px) {
-    .courses-slider-inner .tns-controls {
+    .courses-slider-nav {
         max-width: 95%;
 
-        button {
+        .swiper-button-prev, .swiper-button-next {
             width: 20px !important;
             background-size: 20px 34px !important;
         }
@@ -101,17 +96,17 @@
 }
 
 @media (max-width: 400px) {
-    .courses-slider-inner .tns-controls {
+    .courses-slider-nav {
         max-width: none;
     }
 }
 
 @media (max-width: 370px) {
-    .courses-slider-inner .tns-controls button:first-child {
+    .courses-slider-nav .swiper-button-prev {
         left: -5px;
     }
 
-    .courses-slider-inner .tns-controls button:last-child {
+    .courses-slider-nav .swiper-button-next {
         right: -5px;
     }
 }

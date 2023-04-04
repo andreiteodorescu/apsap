@@ -3,6 +3,7 @@
     color: #fff;
     text-align: left;
     height: 198px;
+    display: block;
 
     @media (max-width: 480px) {
         height: 160px;
@@ -62,5 +63,21 @@
         .card-full-image-text {
             padding: 7px 20px;
         }
+    }
+}
+
+.cards-full-image-small-slider {
+    margin-left: 5px;
+
+    .swiper-slide {
+        width: 340px;
+    }
+}
+
+.cards-full-image-large-slider {
+    margin-left: 5px;
+
+    .swiper-slide {
+        width: 388px;
     }
 }

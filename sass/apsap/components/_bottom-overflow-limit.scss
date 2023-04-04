@@ -1,0 +1,129 @@
+
+.bottom-overflow-limit {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    text-align: center;
+    display: none;
+
+    .btn {
+        width: 32%;
+
+        @include media-breakpoint-down(xl) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 95%;
+        }
+    }
+}
+
+@mixin bottom-overflow-shared {
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    .bottom-overflow-limit {
+        display: block;
+        height: 180px;
+        background: linear-gradient(to top,#FAFBFB 0,rgba(250, 251, 251, .6) 70%, transparent 100%);
+
+        .btn {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    + .btn {
+        display: none;
+    }
+}
+
+@mixin cards-overflow-shared {
+    position: relative;
+    overflow: initial;
+    
+    .swiper-slide, .card-info {
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto !important;
+
+        &:nth-child(1),  &:nth-child(2),  &:nth-child(3),  &:nth-child(4) {
+            opacity: 1;
+            position: relative;
+            margin: 0 !important;
+            left: auto;
+            right: auto;
+            z-index: 1;
+        }
+    }
+
+    .bottom-overflow-limit {
+        display: block;
+        bottom: -60px;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .cards-overflow-limit-wrap-xl {
+        @include cards-overflow-shared;
+    }
+
+    .bottom-overflow-limit-wrap-xl {
+        @include bottom-overflow-shared;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .cards-overflow-limit-wrap-lg {
+        @include cards-overflow-shared;
+    }
+
+    .bottom-overflow-limit-wrap-lg {
+        @include bottom-overflow-shared;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .cards-overflow-limit-wrap-md {
+        @include cards-overflow-shared;
+    }
+
+    .bottom-overflow-limit-wrap-md {
+        @include bottom-overflow-shared;
+    }
+}
+
+.cancel-overflow-limit {
+    .bottom-overflow-limit {
+        display: none;
+    }
+
+    &.bottom-overflow-limit-wrap-xl, &.bottom-overflow-limit-wrap-lg, &.bottom-overflow-limit-wrap-md {
+        max-height: none;
+        overflow: initial;
+
+        + .btn {
+            display: inline-block;
+        }
+    }
+
+    &.cards-overflow-limit-wrap-xl, &.cards-overflow-limit-wrap-lg, &.cards-overflow-limit-wrap-md {
+        .swiper-slide, .card-info {
+            opacity: 1;
+            position: relative;
+            margin: 0 !important;
+            left: auto;
+            right: auto;
+        }
+    }
+}

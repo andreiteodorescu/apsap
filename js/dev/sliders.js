@@ -1,39 +1,24 @@
-// Initialization for the first slider with full image cards
-const cardFullImageSlider = tns({
-    "container": "#card-full-image-slider-1",
-    "center": false,
-    "edgePadding": 30,
-    "nav": false,
-    "swipeAngle": false,
-    "speed": 400,
-    "mouseDrag": false, // For Pul: Should be "false" for this type of slider where each slide is an anchor. The plugin works just fine but in this case each slide being an anchor the browser confuses the gesture of draging by the slider with draging by the anchor and is acting weird.
-    "gutter": 5,
-    "arrowKeys": true,
-    "rewind": true,
-    "autoplayHoverPause": true,
-    "autoplayTimeout": 3000,
-    "autoplayButtonOutput": false,
-    "preventScrollOnTouch": 'force',
-    "responsive": {
-      "350": {
-        "edgePadding": 15,
-        "controls": false,
-        "center": true,
-        "autoplay": false,
-        "fixedWidth": 340 // This is important, it should be the exact width of the card/item/slide from the css
-      },
-      "400": {
-        "center": false,
-      },
-      "1280": {
-        "center": false,
-        "autoplay": true
+// Initialization for the first slider with full image cards from the main submenu under the search console
+const cardFullImageSlider = new Swiper("#card-full-image-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 5,
+  centerInsufficientSlides: true,
+  breakpoints: {
+    320: {
+      centeredSlides: true
+    },
+    400: {
+      centeredSlides: false
+    },
+    1280: {
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true
       }
     }
+  },
 });
-
-// Add text align center class in order to center the items when the slider is inactive (the slider is inactive when there are no items enough to active it, to exceed the viewport)
-cardFullImageSlider.getInfo().container.parentElement.classList.add("text-center");
 
 // Initialization for the hero slider. Uncomment this code only if you use the slider.
 /* const heroSlider = tns({
@@ -52,142 +37,70 @@ cardFullImageSlider.getInfo().container.parentElement.classList.add("text-center
     "animateOut": "tns-fadeOut",
 }); */
 
-// Initialization for the card banner slider
-const cardBannerSlider = tns({
-    "container": "#card-banner-slider",
-    "nav": false,
-    "controls": false,
-    "swipeAngle": false,
-    "speed": 400,
-    "rewind": true,
-    "preventScrollOnTouch": 'force',
-    "responsive": {
-        "350": {
-          "edgePadding": 15,
-          "controls": false,
-          "center": true,
-          "gutter": 10,
-          "fixedWidth": 248,
-          "startIndex": 1
-        },
-        "400": {
-            "center": false,
-            "startIndex": 0
-        },
-        "768": {
-            "fixedWidth": 310,
-        },
-        "1295": {
-            "fixedWidth": 388,
-            "gutter": 16,
-        }
-      }
+// +++++++++++++ Courses timeline slider START ++++++++++++++ //
+// Initialization for the courses slider, the one with months's names
+const coursesSlider = new Swiper("#courses-slider", {
+  slidesPerView: 3,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
 });
 
-// +++++++++++++ Courses timeline slider START ++++++++++++++ //
-// Initialization for the courses slider.
-const coursesSlider = tns({
-    "container": "#courses-slider",
-    "nav": false,
-    "swipeAngle": false,
-    "speed": 600,
-    "preventScrollOnTouch": 'force',
-    "rewind": true,
-    "responsive": {
-      "350": {
-        "fixedWidth": 100,
-        "controls": true
-      },
-      "768": {
-          "fixedWidth": 200,
-      }
-    }
-});
 
 // Pe clickul asta o sa faci tu ajax-ul
-$('#courses-slider .tns-item').on("click", function() {
+$('#courses-slider .swiper-slide').on("click", function() {
   $(this).addClass('current-active').siblings().removeClass('current-active');
 });
 // +++++++++++++ Courses timeline slider END ++++++++++++++ //
 
-// +++++++++++++ Courses grid cards slider START. Only on mobile. ++++++++++++++ //
-// Remove this whole code if there is no need to have a slider on mobile. You can also remove the id "timeline-slider-mobile" from html if that is the case.
-const timelineSliderMobile = tns({
-  "container": "#timeline-slider-mobile",
-  "nav": false,
-  "swipeAngle": false,
-  "speed": 600,
-  "preventScrollOnTouch": 'force',
-  "disable": false,
-  "fixedWidth": 235,
-  "rewind": true,
-  "startIndex": 1,
-  "center": true,
-  "controls": false,
-  "responsive": {
-    728: {
-      // disable slider on big viewport
-      disable: true
-    }
-  }
-});
-// Add a class on the wrapper to help with the styling
-$('#timeline-slider-mobile').closest('.tns-outer').addClass('timeline-slider-mobile-inner');
-
-// +++++++++++++ Courses grid cards slider END ++++++++++++++ //
-
 // Initialization for the overflowing cards slider in the big blue area
-const carsOverflowSlider = tns({
-  "container": "#card-overflow-slider",
-  "edgePadding": 30,
-  "nav": false,
-  "controls": false,
-  "swipeAngle": false,
-  "speed": 400,
-  "mouseDrag": true,
-  "arrowKeys": true,
-  "rewind": true,
-  "fixedWidth": 250,
-  "preventScrollOnTouch": 'force'
+const carsOverflowSlider2 = new Swiper("#card-overflow-slider", {
+  slidesPerView: "auto",
+  centerInsufficientSlides: true,
+  breakpoints: {
+    320: {
+      enabled: false
+    },
+    1200: {
+      enabled: true,
+      spaceBetween: 30,
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true
+      }
+    },
+  },
 });
 
 // Initialization for the lectori slider (no fisheye)
-/* const simpleLectoriSlider = tns({
-  "container": "#simple-lectori-slider",
-  "disable": true,
-  "responsive": {
-    1200: {
-      // enable slider on big viewport
-      
-  "nav": false,
-  "swipeAngle": false,
-  "speed": 600,
-  "preventScrollOnTouch": 'force',
-  "fixedWidth": 200,
-  "gutter": 30,
-  "controls": false,
-  "autoplay": false,
-  "autoplayHoverPause": true,
-  "autoplayTimeout": 3000,
-  "autoplayButtonOutput": false,
-      "disable": false,
-    }
-  }
-}); */
-
-
-
-var swiper = new Swiper(".swiper-medallion", {
-  enabled: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
+const simpleLectoriSlider = new Swiper(".swiper-medallion", {
+  slidesPerView: "auto",
+  centerInsufficientSlides: true,
   breakpoints: {
+    320: {
+      enabled: false
+    },
     1200: {
       enabled: true,
+      slidesPerView: 5,
+      spaceBetween: 15,
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true
+      }
+    },
+    1374: {
+      enabled: true,
       slidesPerView: 6,
-      spaceBetween: 30
+      spaceBetween: 30,
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true
+      }
     },
   },
 });
