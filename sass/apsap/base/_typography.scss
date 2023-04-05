@@ -70,6 +70,11 @@
 
 }
 
+b, strong {
+  font-weight: normal;
+  font-family: $font-family-bold;
+}
+
 .main-title {
   font-family: $font-family-bebas-regular;
   font-size: rem(150px);
@@ -89,8 +94,16 @@
   color: $blue-main;
   max-width: 1080px;
 
+  &-black {
+    color: inherit;
+  }
+
   &-thin {
     font-family: $font-family-light;
+  }
+
+  &-bolder {
+    font-family: $font-family-extrabold;
   }
 }
 
@@ -98,6 +111,14 @@
   color: $blue-main;
   margin-bottom: 0;
   max-width: 1080px;
+
+  &-black {
+    color: inherit;
+  }
+
+  span {
+    font-family: $font-family-bold;
+  }
 }
 
 .text-center {

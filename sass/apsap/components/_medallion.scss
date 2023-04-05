@@ -1,0 +1,144 @@
+.medallion {
+    text-align: center;
+    margin-bottom: 0;
+
+    &-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    &-title {
+        font-family: $font-family-bebas-regular;
+        font-size: rem(21px);
+        font-weight: normal;
+        position: relative;
+        margin: 10px auto 0;
+        max-width: 180px;
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 2px;
+            background-color: $grey-dark-2;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+        }
+
+        span {
+            display: block;
+            position: relative;
+            padding-bottom: 5px;
+
+            &::after, &::before {
+                content: "";
+                width: 10px;
+                height: 2px;
+                background-color: $grey-dark-2;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0 auto;
+            }
+
+            &::after {
+                transform: translateX(12px);
+            }
+
+            &::before {
+                transform: translateX(-12px);
+            }
+        }
+    }
+
+    &-caption {
+        font-size: rem(12px);
+        margin: 10px auto 0;
+        max-width: 180px;
+    }
+
+    
+}
+
+@include media-breakpoint-up(xl) {
+    .medallion-fisheye .medallion {
+        width: 200px;
+        margin-top: 100px;
+        
+        &-image {
+            transition: all .3s ease-in-out;
+            transform: translateX(-50%);
+            margin-left: 50%;
+        }
+
+        &-title, &-caption {
+            display: none;
+        }
+    }
+
+    .medallion-zoom {
+        width: 400px !important;
+
+        .medallion-image {
+            width: 400px;
+            height: 400px;
+            margin-top: -100px;
+        }
+
+        .medallion-title, .medallion-caption {
+            max-width: none;
+            display: block;
+        }
+
+        .medallion-title {
+            font-size: rem(36px);
+            margin-top: 30px;
+
+            &::after, span::after, span::before {
+                display: none;
+            }
+        }
+
+        .medallion-caption {
+            font-size: rem(18px);
+            margin-top: 8px;
+            width: 830px;
+            transform: translateX(-50%);
+            margin-left: 50%;
+
+            a {
+                color: inherit;
+                font-family: $font-family-extrabold;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .medallion-wrapper {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            transform: translateX(0) !important;
+        }
+
+        .medallion {
+            width: 200px !important;
+            margin: 0 !important;
+
+            &-image {
+                box-shadow: 0 3px 7px rgba(0, 0, 0, .2);
+            }
+        }
+    }
+}

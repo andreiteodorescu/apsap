@@ -117,7 +117,8 @@ const cardFullImageSlider = new Swiper("#card-full-image-slider", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
       }
     }
   },
@@ -171,16 +172,16 @@ const carsOverflowSlider2 = new Swiper("#card-overflow-slider", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
       }
     },
   },
 });
 
 // Initialization for the lectori slider (no fisheye)
-const simpleLectoriSlider = new Swiper(".swiper-medallion", {
-  slidesPerView: "auto",
-  centerInsufficientSlides: true,
+const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
+  loop: true,
   breakpoints: {
     320: {
       enabled: false
@@ -192,7 +193,8 @@ const simpleLectoriSlider = new Swiper(".swiper-medallion", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
       }
     },
     1374: {
@@ -202,7 +204,44 @@ const simpleLectoriSlider = new Swiper(".swiper-medallion", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
+      }
+    },
+  },
+});
+
+// Initialization for the lectori slider (no fisheye)
+const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
+  centeredSlides: true,
+  initialSlide: 2,
+  loop: true,
+  loopedSlides: 3,
+  slideActiveClass: 'medallion-zoom',
+  breakpoints: {
+    320: {
+      enabled: false
+    },
+    1200: {
+      enabled: true,
+      slidesPerView: 3,
+      spaceBetween: 15,
+      autoplay: {
+        enabled: true,
+        delay: 4000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
+      }
+    },
+    1374: {
+      enabled: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoplay: {
+        enabled: true,
+        delay: 4000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
       }
     },
   },

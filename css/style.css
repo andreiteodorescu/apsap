@@ -9894,6 +9894,10 @@ body {
 .yellow-text {
   color: #f8b613; }
 
+@media (max-width: 1199.98px) {
+  .component-block {
+    margin-top: 100px; } }
+
 @media (max-width: 767.98px) {
   .component-block {
     margin-top: 80px; } }
@@ -9946,6 +9950,11 @@ body {
   font-weight: normal;
   font-style: normal; }
 
+b,
+strong {
+  font-weight: normal;
+  font-family: "RubrikEdgeNew-Bold"; }
+
 .main-title {
   font-family: "BebasNeue-Regular";
   font-size: 9.375rem;
@@ -9961,13 +9970,21 @@ body {
   margin-bottom: 0;
   color: #273266;
   max-width: 1080px; }
+  .second-title-black {
+    color: inherit; }
   .second-title-thin {
     font-family: "RubrikEdgeNew-Light"; }
+  .second-title-bolder {
+    font-family: "RubrikEdgeNew-Extrabold"; }
 
 .subtitle-text {
   color: #273266;
   margin-bottom: 0;
   max-width: 1080px; }
+  .subtitle-text-black {
+    color: inherit; }
+  .subtitle-text span {
+    font-family: "RubrikEdgeNew-Bold"; }
 
 .text-center .second-title, .text-center .subtitle-text {
   margin-left: auto;
@@ -11811,20 +11828,21 @@ button.swiper-pagination-bullet {
   .ribbon.observe.in-view::before {
     left: -50px; }
 
-.thumbnail-presentation {
+.medallion {
   text-align: center;
   margin-bottom: 0; }
-  .thumbnail-presentation-image {
+  .medallion-image {
     width: 200px;
     height: 200px;
     border-radius: 50%; }
-  .thumbnail-presentation-title {
+  .medallion-title {
     font-family: "BebasNeue-Regular";
     font-size: 1.3125rem;
     font-weight: normal;
-    margin: 10px 0;
-    position: relative; }
-    .thumbnail-presentation-title::after {
+    position: relative;
+    margin: 10px auto 0;
+    max-width: 180px; }
+    .medallion-title::after {
       content: "";
       width: 10px;
       height: 2px;
@@ -11834,11 +11852,11 @@ button.swiper-pagination-bullet {
       right: 0;
       bottom: 0;
       margin: 0 auto; }
-    .thumbnail-presentation-title span {
+    .medallion-title span {
       display: block;
       position: relative;
       padding-bottom: 5px; }
-      .thumbnail-presentation-title span::after, .thumbnail-presentation-title span::before {
+      .medallion-title span::after, .medallion-title span::before {
         content: "";
         width: 10px;
         height: 2px;
@@ -11848,22 +11866,63 @@ button.swiper-pagination-bullet {
         right: 0;
         bottom: 0;
         margin: 0 auto; }
-      .thumbnail-presentation-title span::after {
+      .medallion-title span::after {
         transform: translateX(12px); }
-      .thumbnail-presentation-title span::before {
+      .medallion-title span::before {
         transform: translateX(-12px); }
-  .thumbnail-presentation-caption {
-    font-size: 0.75rem; }
+  .medallion-caption {
+    font-size: 0.75rem;
+    margin: 10px auto 0;
+    max-width: 180px; }
+
+@media (min-width: 1200px) {
+  .medallion-fisheye .medallion {
+    width: 200px;
+    margin-top: 100px; }
+    .medallion-fisheye .medallion-image {
+      transition: all .3s ease-in-out;
+      transform: translateX(-50%);
+      margin-left: 50%; }
+    .medallion-fisheye .medallion-title, .medallion-fisheye .medallion-caption {
+      display: none; }
+  .medallion-zoom {
+    width: 400px !important; }
+    .medallion-zoom .medallion-image {
+      width: 400px;
+      height: 400px;
+      margin-top: -100px; }
+    .medallion-zoom .medallion-title, .medallion-zoom .medallion-caption {
+      max-width: none;
+      display: block; }
+    .medallion-zoom .medallion-title {
+      font-size: 2.25rem;
+      margin-top: 30px; }
+      .medallion-zoom .medallion-title::after, .medallion-zoom .medallion-title span::after, .medallion-zoom .medallion-title span::before {
+        display: none; }
+    .medallion-zoom .medallion-caption {
+      font-size: 1.125rem;
+      margin-top: 8px;
+      width: 830px;
+      transform: translateX(-50%);
+      margin-left: 50%; }
+      .medallion-zoom .medallion-caption a {
+        color: inherit;
+        font-family: "RubrikEdgeNew-Extrabold";
+        text-decoration: none; }
+        .medallion-zoom .medallion-caption a:hover {
+          text-decoration: underline; } }
 
 @media (max-width: 1199.98px) {
-  .swiper-medallion .swiper-wrapper {
+  .medallion-wrapper .swiper-wrapper {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     transform: translateX(0) !important; }
-  .swiper-medallion .thumbnail-presentation {
+  .medallion-wrapper .medallion {
     width: 200px !important;
-    margin: 0 !important; } }
+    margin: 0 !important; }
+    .medallion-wrapper .medallion-image {
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); } }
 
 .bottom-overflow-limit {
   position: absolute;
