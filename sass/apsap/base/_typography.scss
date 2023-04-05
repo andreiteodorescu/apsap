@@ -92,7 +92,7 @@ b, strong {
   font-family: $font-family-bold;
   margin-bottom: 0;
   color: $blue-main;
-  max-width: 1080px;
+  max-width: rem(1080px);
 
   &-black {
     color: inherit;
@@ -110,7 +110,7 @@ b, strong {
 .subtitle-text {
   color: $blue-main;
   margin-bottom: 0;
-  max-width: 1080px;
+  max-width: rem(1080px);
 
   &-black {
     color: inherit;

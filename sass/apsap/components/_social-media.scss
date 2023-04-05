@@ -4,7 +4,7 @@
     text-align: center;
 
     p {
-        margin-bottom: 30px;
+        margin-bottom: rem(30px);
     }
 
     &-list {
@@ -14,7 +14,7 @@
         display: inline-flex;
 
         &-item {
-            margin-left: 30px;
+            margin-left: rem(30px);
 
             &:first-child {
                 margin-left: 0;
@@ -22,8 +22,8 @@
 
             a {
                 border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                width: rem(40px);
+                height: rem(40px);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -31,7 +31,7 @@
             }
 
             &-icon {
-                height: 22px;
+                height: rem(22px);
                 fill: $blue-medium-2;
             }
         }
@@ -62,10 +62,10 @@
     }
 }
 
-@media (min-height: 1080px) {
+@media (min-height: rem(1080px)) {
     .social-media-absolute {
         position: absolute;
-        bottom: 100px;
+        bottom: rem(100px);
         left: 0;
         right: 0;
 
@@ -79,10 +79,10 @@
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: rem(899px)) {
     .social-media {
         p {
-            margin-bottom: 20px;
+            margin-bottom: rem(20px);
         }
     }
 }

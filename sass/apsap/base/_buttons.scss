@@ -1,6 +1,6 @@
 .btns-align {
     .btn {
-        margin: 5px 7px;
+        margin: rem(5px) rem(7px);
     }
 }
 
@@ -9,12 +9,12 @@
     background-color: $grey-extralight-2;
     color: #fff;
     text-transform: uppercase;
-    padding-top: 12px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: rem(12px);
+    padding-bottom: rem(10px);
+    padding-left: rem(15px);
+    padding-right: rem(15px);
     transition: background-color .3s ease-in-out;
-    border-radius: 7px;
+    border-radius: rem(7px);
     font-family: $font-family-medium;
     line-height: 1;
     font-size: rem(18px);
@@ -61,12 +61,12 @@
     }
 
     &-small {
-        min-width: 220px;
+        min-width: rem(220px);
         font-size: rem(14px);
-        padding-top: 10px;
-        padding-bottom: 8px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: rem(10px);
+        padding-bottom: rem(8px);
+        padding-left: rem(10px);
+        padding-right: rem(10px);
         font-family: $font-family-bold;
 
         span {

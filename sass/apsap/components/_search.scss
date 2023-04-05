@@ -1,13 +1,13 @@
 .search-toggler {
     padding: 0;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: rem(20px);
 
     &-icon {
-        width: 17px;
-        height: 17px;
+        width: rem(17px);
+        height: rem(17px);
         fill: $blue-light;
-        margin-right: 5px;
+        margin-right: rem(5px);
     }
 
     &-text {
@@ -16,7 +16,7 @@
         color: $blue-light;
         text-transform: uppercase;
         position: relative;
-        top: 1px;
+        top: rem(1px);
     }
 
     &:hover {
@@ -33,8 +33,8 @@
 
     &-inner {
         background-color: #fff;
-        border-radius: 100px;
-        height: 65px;
+        border-radius: rem(100px);
+        height: rem(65px);
         display: flex;
     }
 
@@ -43,13 +43,13 @@
 
         &::before {
             content: "";
-            height: 40px;
-            width: 1px;
+            height: rem(40px);
+            width: rem(1px);
             background-color: $grey-extralight-2;
             position: absolute;
             left: 0;
             top: 50%;
-            margin-top: -20px;
+            margin-top: rem(-20px);
         }
 
         &:first-child {
@@ -60,14 +60,14 @@
             }
 
             .search-console-slice-btn {
-                border-top-left-radius: 100px;
-                border-bottom-left-radius: 100px;
-                padding-left: 30px;
+                border-top-left-radius: rem(100px);
+                border-bottom-left-radius: rem(100px);
+                padding-left: rem(30px);
             }
 
             .search-console-slice-dropdown {
                 width: 115%;
-                border-top-left-radius: 20px;
+                border-top-left-radius: rem(20px);
             }
         }
 
@@ -88,9 +88,9 @@
             width: 35%;
 
             .search-console-slice-btn {
-                border-top-right-radius: 100px;
-                border-bottom-right-radius: 100px;
-                padding-right: 80px;
+                border-top-right-radius: rem(100px);
+                border-bottom-right-radius: rem(100px);
+                padding-right: rem(80px);
             }
 
             .search-console-slice-dropdown {
@@ -110,7 +110,7 @@
             color: $grey-extralight-2;
             text-transform: uppercase;
             position: relative;
-            top: -6px;
+            top: rem(-6px);
         }
 
         &-btn {
@@ -121,7 +121,7 @@
             height: 100%;
             font-family: $font-family-medium;
             text-align: left;
-            padding: 9px 15px 0;
+            padding: rem(9px) rem(15px) 0;
             border: none;
             border-radius: 0;
 
@@ -136,10 +136,10 @@
         }
 
         &-dropdown {
-            max-width: 300px;
-            border-radius: 20px;
+            max-width: rem(300px);
+            border-radius: rem(20px);
             border-top-left-radius: 0;
-            padding: 17px 15px;
+            padding: rem(17px) rem(15px);
             font-size: rem(18px);
             font-family: $font-family-base;
             background-color: $grey-extralight-3;
@@ -148,13 +148,13 @@
                 padding: 0;
                 margin: 0;
                 list-style-type: none;
-                max-height: 220px;
+                max-height: rem(220px);
                 overflow: scroll;
             }
 
             li {
-                border-bottom: 1px solid $grey-extralight;
-                padding: 8px 0;
+                border-bottom: rem(1px) solid $grey-extralight;
+                padding: rem(8px) 0;
                 cursor: pointer;
                 transition: transform .2s ease-in-out;
 
@@ -163,7 +163,7 @@
                 }
 
                 &:hover {
-                    transform: translateX(2px);
+                    transform: translateX(rem(2px));
                 }
 
                 &.selected {
@@ -179,11 +179,11 @@
                 padding-right: 0;
 
                 ul {
-                    padding-right: 15px;
+                    padding-right: rem(15px);
 
                     &::-webkit-scrollbar {
                         background-color: transparent;
-                        width: 10px;
+                        width: rem(10px);
                         height: 0;
                     }
                     &::-webkit-scrollbar-thumb {
@@ -196,7 +196,7 @@
 
     &-selection {
         position: relative;
-        top: -2px;
+        top: rem(-2px);
         line-height: 1;
 
         &.scs-active {
@@ -206,22 +206,22 @@
 
     &-bubbles {
         position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 55px;
-        height: 55px;
+        top: rem(5px);
+        right: rem(5px);
+        width: rem(55px);
+        height: rem(55px);
         border: none;
 
         &::before {
             content: "";
             position: absolute;
-            left: -18px;
+            left: rem(-18px);
             top: 50%;
-            margin-top: -17px;
+            margin-top: rem(-17px);
             border-radius: 50%;
             background-color: $red;
-            width: 35px;
-            height: 35px;
+            width: rem(35px);
+            height: rem(35px);
             transition: all .2s ease-in-out;
         }
 
@@ -246,7 +246,7 @@
         }
 
         &:hover::before {
-            transform: translateX(-2px);
+            transform: translateX(rem(-2px));
         }
 
         span {
@@ -255,29 +255,29 @@
             color: #fff;
             font-size: rem(17px);
             font-family: $font-family-medium;
-            left: -16px;
-            top: 1px;
+            left: rem(-16px);
+            top: rem(1px);
         }
     }
 }
 
 .search-back-btn {
-    width: 25px;
-    height: 46px;
+    width: rem(25px);
+    height: rem(46px);
     padding: 0;
     border: none;
     display: block;
-    margin:0 auto 25px;
+    margin:0 auto rem(25px);
     transition: transform .2s ease-in-out;
 
     &-icon {
         fill: #fff;
-        width: 25px;
-        height: 46px;
+        width: rem(25px);
+        height: rem(46px);
     }
 
     &:hover {
-        transform: translateX(-4px);
+        transform: translateX(rem(-4px));
     }
 }
 
@@ -285,7 +285,7 @@
     display: none;
 }
 
-@media (max-width: 899px) {
+@media (max-width: rem(899px)) {
     .search-wrapper-general {
         display: none;
         background-image: url('../images/diamonds-bg.svg');
@@ -297,7 +297,7 @@
         top: 0;
         left: 0;
         position: absolute;
-        padding-top: 130px;
+        padding-top: rem(130px);
         background-size: cover;
         overflow-y: auto;
         z-index: 2;
@@ -311,8 +311,8 @@
 
     .search-console-slice {
         width: 100% !important;
-        height: 65px;
-        margin-bottom: 5px;
+        height: rem(65px);
+        margin-bottom: rem(5px);
 
         &::before {
             display: none;
@@ -320,17 +320,17 @@
 
         &-btn {
             background-color: #fff !important;
-            border-radius: 100px;
-            padding-left: 30px;
-            padding-right: 70px;
+            border-radius: rem(100px);
+            padding-left: rem(30px);
+            padding-right: rem(70px);
 
             &::after {
                 content: "";
                 position: absolute;
-                right: 5px;
-                top: 5px;
-                height: 55px;
-                width: 55px;
+                right: rem(5px);
+                top: rem(5px);
+                height: rem(55px);
+                width: rem(55px);
                 background-color: $grey-extralight-4;
                 border-radius: 50%;
             }
@@ -338,10 +338,10 @@
             &::before {
                 content: "";
                 position: absolute;
-                right: 17px;
-                top: 27px;
-                height: 15px;
-                width: 30px;
+                right: rem(17px);
+                top: rem(27px);
+                height: rem(15px);
+                width: rem(30px);
                 z-index: 1;
                 background-image: url('../images/down-arrow.svg');
                 background-position: center;
@@ -356,7 +356,7 @@
         &-dropdown {
             width: 100% !important;
             max-width: none;
-            border-radius: 20px;
+            border-radius: rem(20px);
         }
     }
 
@@ -364,9 +364,9 @@
         position: static;
         top: auto;
         width: 100%;
-        border-radius: 7px;
+        border-radius: rem(7px);
         background-color: $red !important;
-        margin-top: 20px;
+        margin-top: rem(20px);
 
         span {
             left: auto;
@@ -379,18 +379,18 @@
 
     .search-trigger-mobile {
         display: block;
-        width: 55px;
+        width: rem(55px);
         position: absolute;
         border-radius: 0;
         background-color: transparent !important;
         right: 0;
         left: 0;
         margin: 0 auto;
-        transform: translateX(10px);
+        transform: translateX(rem(10px));
         z-index: 1;
 
         span {
-            left: -16px;
+            left: rem(-16px);
         }
 
         &::before, &::after {
@@ -399,7 +399,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: rem(900px)) {
     .search-wrapper-general {
         display: block !important;
     }

@@ -1,11 +1,11 @@
 .courses-slider-wrapper {
     position: relative;
-    margin-top: 20px;
+    margin-top: rem(20px);
 
     &::before {
         content: "";
         width: 100%;
-        height: 1px;
+        height: rem(1px);
         background-color: $blue-main;
         top: 50%;
         position: absolute;
@@ -14,17 +14,17 @@
 }
 
 .courses-slider-inner {
-    max-width: 600px;
+    max-width: rem(600px);
     margin: 0 auto;
     background-color: $grey-extralight-2;
-    border-radius: 7px;
+    border-radius: rem(7px);
 
     .btn {
         width: 100%;
         border-radius: 0;
         font-size: rem(16px);
-        padding-top: 14px;
-        padding-bottom: 10px;
+        padding-top: rem(14px);
+        padding-bottom: rem(10px);
     }
 
     .current-active .btn {
@@ -35,17 +35,17 @@
 .courses-slider-nav {
     position: absolute;
     top: 50%;
-    max-width: 685px;
+    max-width: rem(685px);
     left: 0;
     right: 0;
-    margin: -20px auto;
+    margin: rem(-20px) auto;
 
     .swiper-button-prev, .swiper-button-next {
-        background-size: 20px 33px;
+        background-size: rem(20px) rem(33px);
         background-position: center;
         background-repeat: no-repeat;
-        height: 40px;
-        width: 40px;
+        height: rem(40px);
+        width: rem(40px);
         margin-top: 0;
 
         &.swiper-button-disabled {
@@ -70,43 +70,43 @@
 
 @include media-breakpoint-down(md) {
     .courses-slider-inner {
-        max-width: 300px;
+        max-width: rem(300px);
 
         .btn {
             font-size: rem(12px);
-            padding-top: 15px;
-            padding-bottom: 13px;
+            padding-top: rem(15px);
+            padding-bottom: rem(13px);
         }
     }
 
     .courses-slider-nav {
-        max-width: 385px;
+        max-width: rem(385px);
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: rem(450px)) {
     .courses-slider-nav {
         max-width: 95%;
 
         .swiper-button-prev, .swiper-button-next {
-            width: 20px !important;
-            background-size: 20px 34px !important;
+            width: rem(20px) !important;
+            background-size: rem(20px) rem(34px) !important;
         }
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: rem(400px)) {
     .courses-slider-nav {
         max-width: none;
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: rem(370px)) {
     .courses-slider-nav .swiper-button-prev {
-        left: -5px;
+        left: rem(-5px);
     }
 
     .courses-slider-nav .swiper-button-next {
-        right: -5px;
+        right: rem(-5px);
     }
 }

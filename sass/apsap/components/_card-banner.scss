@@ -1,23 +1,23 @@
 .card-banner-component {
-    padding-top: 15px;
+    padding-top: rem(15px);
 }
 
 .card-banner {
-    border-radius: 20px;
+    border-radius: rem(20px);
     overflow: hidden;
-    width: 248px;
+    width: rem(248px);
     display: block;
 
     @include media-breakpoint-up(md) {
-        width: 310px;
+        width: rem(310px);
     }
 
     @include media-breakpoint-up(xl) {
-        width: 388px;
+        width: rem(388px);
     }
 
-    @media (max-width: 520px) {
-        width: 310px;
+    @media (max-width: rem(520px)) {
+        width: rem(310px);
     }
 
     &-image {

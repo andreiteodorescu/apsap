@@ -22,18 +22,18 @@
 }
 
 @mixin bottom-overflow-shared {
-    max-height: 600px;
+    max-height: rem(600px);
     position: relative;
     overflow: hidden;
 
     .bottom-overflow-limit {
         display: block;
-        height: 180px;
+        height: rem(180px);
         background: linear-gradient(to top,#FAFBFB 0,rgba(250, 251, 251, .6) 70%, transparent 100%);
 
         .btn {
             position: absolute;
-            bottom: 15px;
+            bottom: rem(15px);
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -69,7 +69,7 @@
 
     .bottom-overflow-limit {
         display: block;
-        bottom: -60px;
+        bottom: rem(-60px);
     }
 }
 

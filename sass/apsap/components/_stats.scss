@@ -1,18 +1,18 @@
 .stats-component {
-    margin-top: 70px;
+    margin-top: rem(70px);
 }
 
 .stats-big-icon {
-    width: 60px;
+    width: rem(60px);
 }
 
 .stats-big-text {
     position: relative;
     background-color: $yellow;
-    width: 78px;
-    height: 78px;
+    width: rem(78px);
+    height: rem(78px);
     border-radius: 50%;
-    margin: 5px auto 10px;
+    margin: rem(5px) auto rem(10px);
 
     span {
         font-size: rem(68px);
@@ -21,7 +21,7 @@
         display: block;
         position: absolute;
         left: auto;
-        top: 7px;
+        top: rem(7px);
         z-index: 1;
         transform: translateX(-50%);
         margin-left: 50%;
@@ -36,40 +36,40 @@
     }
 
     &::after {
-        width: 39px;
-        height: 39px;
-        margin-top: -20px;
+        width: rem(39px);
+        height: rem(39px);
+        margin-top: rem(-20px);
         transition: all .6s ease-in-out;
     }
 
     &::before {
-        width: 16px;
-        height: 16px;
-        margin-top: -8px;
+        width: rem(16px);
+        height: rem(16px);
+        margin-top: rem(-8px);
         transition: all .6s ease-in-out;
     }
 
     &-left {
         span {
-            left: -2px;
+            left: rem(-2px);
         }
 
         &::after {
-            right: -23px;
+            right: rem(-23px);
         }
 
         &::before {
-            right: -44px;
+            right: rem(-44px);
         }
     }
 
     &-right {
         &::after {
-            left: -23px;
+            left: rem(-23px);
         }
 
         &::before {
-            left: -44px;
+            left: rem(-44px);
         }
     }
 
@@ -96,21 +96,21 @@
     &.in-view {
         .stats-big-text-left {
             &::after {
-                right: -23px;
+                right: rem(-23px);
             }
     
             &::before {
-                right: -44px;
+                right: rem(-44px);
             }
         }
     
         .stats-big-text-right {
             &::after {
-                left: -23px;
+                left: rem(-23px);
             }
     
             &::before {
-                left: -44px;
+                left: rem(-44px);
             }
         }
     }
@@ -118,28 +118,28 @@
 
 @include media-breakpoint-down(md) {
     .stats-big-icon {
-        width: 40px;
+        width: rem(40px);
     }
 
     .stats-big-text {
-        width: 50px;
-        height: 50px;
+        width: rem(50px);
+        height: rem(50px);
 
         span {
             font-size: rem(48px);
-            top: 3px;
+            top: rem(3px);
         }
 
         &::after {
-            width: 26px;
-            height: 26px;
-            margin-top: -13px;
+            width: rem(26px);
+            height: rem(26px);
+            margin-top: rem(-13px);
         }
     
         &::before {
-            width: 11px;
-            height: 11px;
-            margin-top: -5px;
+            width: rem(11px);
+            height: rem(11px);
+            margin-top: rem(-5px);
         }
     }
 
@@ -150,21 +150,21 @@
     .stats-component.observe.in-view {
         .stats-big-text-left {
             &::after {
-                right: -16px;
+                right: rem(-16px);
             }
     
             &::before {
-                right: -31px;
+                right: rem(-31px);
             }
         }
     
         .stats-big-text-right {
             &::after {
-                left: -16px;
+                left: rem(-16px);
             }
     
             &::before {
-                left: -31px;
+                left: rem(-31px);
             }
         }
     }

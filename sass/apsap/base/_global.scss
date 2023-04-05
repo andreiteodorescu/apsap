@@ -5,68 +5,76 @@ body {
 .container-narrow {
     @include make-container();
 
-    @media (min-width: 900px) {
-        max-width: 874px; 
+    @media (min-width: rem(900px)) {
+        max-width: rem(874px); 
     }
 
-    @media (max-width: 899px) {
-        padding-left: 20px;
-        padding-right: 20px;
+    @media (max-width: rem(899px)) {
+        padding-left: rem(20px);
+        padding-right: rem(20px);
     }
 }
 
 .container-medium {
     @include make-container();
 
-    @media (min-width: 1251px) {
-        max-width: 1250px; 
+    @media (min-width: rem(1251px)) {
+        max-width: rem(1250px); 
     }
 }
 
 .container-medium-2 {
     @include make-container();
 
-    @media (min-width: 1375px) {
-        max-width: 1374px; 
+    @media (min-width: rem(1375px)) {
+        max-width: rem(1374px); 
     }
 }
 
 .container-medium-large {
     @include make-container();
 
-    @media (min-width: 1495px) {
-        max-width: 1494px; 
+    @media (min-width: rem(1495px)) {
+        max-width: rem(1494px); 
     }
 }
 
 .container-large-custom {
     @include make-container();
 
-    @media (min-width: 1667px) {
-        max-width: 1666px; 
+    @media (min-width: rem(1667px)) {
+        max-width: rem(1666px); 
+    }
+}
+
+.container-xxxl {
+    @include make-container();
+
+    @media (min-width: rem(1625px)) {
+        max-width: rem(1624px); 
     }
 }
 
 .main {
     background-image: url('../images/diamonds-bg.svg');
-    background-position: center 945px;
+    background-position: center rem(945px);
     background-repeat: no-repeat;
 
     &.home {
-        background-position: center 600px;
+        background-position: center rem(600px);
 
         @include media-breakpoint-down(md) {
-            background-position: center 310px;
+            background-position: center rem(310px);
         }
     }
 
     @include media-breakpoint-down(xl) {
-        background-size: 1920px 1040px;
+        background-size: rem(1920px) rem(1040px);
     }
 }
 
 .component-block {
-    margin-top: 130px;
+    margin-top: rem(130px);
 }
 
 .component-skew {
@@ -78,23 +86,31 @@ body {
         background-image: url('../images/diamonds-bg.svg'), url('../images/diamonds-bg.svg');
         background-position: center top, center bottom;
         background-repeat: no-repeat, no-repeat;
-        padding-top: 100px;
-        padding-bottom: 160px;
+        padding-top: rem(100px);
+        padding-bottom: rem(160px);
         overflow: hidden;
 
-        @media (min-width: 2220px) {
+        @media (min-width: rem(2220px)) {
             background-image: url('../images/diamonds-bg.svg');
             background-position: center top;
             background-repeat: no-repeat;
         }
 
         @include media-breakpoint-down(xl) {
-            background-size: 1920px 1040px;
+            background-size: rem(1920px) rem(1040px);
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-top: rem(80px);
         }
     }
 
     > * {
         transform: skewY(3deg);
+    }
+
+    &.component-block {
+        margin-top: rem(160px);
     }
 
     .component-block:first-child {
@@ -110,7 +126,7 @@ body {
     //background-image: url('../images/bubbles.svg');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 800px 746px;
+    background-size: rem(800px) rem(746px);
 }
 
 .yellow-text {
@@ -119,12 +135,20 @@ body {
 
 @include media-breakpoint-down(xl) {
     .component-block {
-        margin-top: 100px;
+        margin-top: rem(100px);
+
+        &.component-skew {
+            margin-top: rem(130px);
+        }
     }
 }
 
 @include media-breakpoint-down(md) {
     .component-block {
-        margin-top: 80px;
+        margin-top: rem(80px);
+
+        &.component-skew {
+            margin-top: rem(90px);
+        }
     }
 }

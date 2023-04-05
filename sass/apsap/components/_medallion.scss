@@ -3,8 +3,8 @@
     margin-bottom: 0;
 
     &-image {
-        width: 200px;
-        height: 200px;
+        width: rem(200px);
+        height: rem(200px);
         border-radius: 50%;
     }
 
@@ -13,13 +13,13 @@
         font-size: rem(21px);
         font-weight: normal;
         position: relative;
-        margin: 10px auto 0;
-        max-width: 180px;
+        margin: rem(10px) auto 0;
+        max-width: rem(180px);
 
         &::after {
             content: "";
-            width: 10px;
-            height: 2px;
+            width: rem(10px);
+            height: rem(2px);
             background-color: $grey-dark-2;
             position: absolute;
             left: 0;
@@ -35,8 +35,8 @@
 
             &::after, &::before {
                 content: "";
-                width: 10px;
-                height: 2px;
+                width: rem(10px);
+                height: rem(2px);
                 background-color: $grey-dark-2;
                 position: absolute;
                 left: 0;
@@ -57,8 +57,8 @@
 
     &-caption {
         font-size: rem(12px);
-        margin: 10px auto 0;
-        max-width: 180px;
+        margin: rem(10px) auto 0;
+        max-width: rem(180px);
     }
 
     
@@ -66,8 +66,8 @@
 
 @include media-breakpoint-up(xl) {
     .medallion-fisheye .medallion {
-        width: 200px;
-        margin-top: 100px;
+        width: rem(200px);
+        margin-top: rem(100px);
         
         &-image {
             transition: all .3s ease-in-out;
@@ -81,12 +81,12 @@
     }
 
     .medallion-zoom {
-        width: 400px !important;
+        width: rem(400px) !important;
 
         .medallion-image {
-            width: 400px;
-            height: 400px;
-            margin-top: -100px;
+            width: rem(400px);
+            height: rem(400px);
+            margin-top: rem(-100px);
         }
 
         .medallion-title, .medallion-caption {
@@ -96,7 +96,7 @@
 
         .medallion-title {
             font-size: rem(36px);
-            margin-top: 30px;
+            margin-top: rem(30px);
 
             &::after, span::after, span::before {
                 display: none;
@@ -105,8 +105,8 @@
 
         .medallion-caption {
             font-size: rem(18px);
-            margin-top: 8px;
-            width: 830px;
+            margin-top: rem(8px);
+            width: rem(830px);
             transform: translateX(-50%);
             margin-left: 50%;
 
@@ -127,17 +127,17 @@
     .medallion-wrapper {
         .swiper-wrapper {
             flex-wrap: wrap;
-            gap: 30px;
+            gap: rem(30px);
             justify-content: center;
             transform: translateX(0) !important;
         }
 
         .medallion {
-            width: 200px !important;
+            width: rem(200px) !important;
             margin: 0 !important;
 
             &-image {
-                box-shadow: 0 3px 7px rgba(0, 0, 0, .2);
+                box-shadow: 0 rem(3px) rem(7px) rgba(0, 0, 0, .2);
             }
         }
     }

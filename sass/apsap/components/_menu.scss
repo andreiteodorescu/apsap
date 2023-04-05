@@ -1,5 +1,5 @@
 .header {
-    height: 95px;
+    height: rem(95px);
 }
 
 .menu {
@@ -17,12 +17,12 @@
     display: flex;
     align-items: center;
     padding: 0;
-    top: -7px;
+    top: rem(-7px);
     transition: all .3s ease-in-out;
 
     &-text {
         position: relative;
-        top: 1px;
+        top: rem(1px);
         font-style: normal;
     }
 
@@ -35,8 +35,8 @@
 
         &::after, &::before {
             content: "";
-            width: 40px;
-            height: 2px;
+            width: rem(40px);
+            height: rem(2px);
             background: $grey-light;
             position: absolute;
             left: 0;
@@ -47,11 +47,11 @@
         }
 
         &::after {
-            transform: rotate(45deg) translate(-35px, 14px);
+            transform: rotate(45deg) translate(rem(-35px), rem(14px));
         }
 
         &::before {
-            transform: rotate(-45deg) translate(28px, 6px);
+            transform: rotate(-45deg) translate(rem(28px), rem(6px));
             
         }
     }
@@ -64,13 +64,13 @@
 }
 
 .menu-btn-icon {
-    width: 32px;
-    height: 32px;
+    width: rem(32px);
+    height: rem(32px);
     fill: $blue-menu;
 }
 
 .menu-left .menu-btn-icon {
-    margin-right: 8px;
+    margin-right: rem(8px);
 }
 
 .menu-right {
@@ -84,7 +84,7 @@
     }
 
     .menu-btn-icon {
-        margin-left: 8px;
+        margin-left: rem(8px);
     }
 }
 
@@ -112,7 +112,7 @@
     }
 
     &-list {
-        padding-top: 155px;
+        padding-top: rem(155px);
 
         .list-group-item {
             background-color: transparent;
@@ -135,18 +135,18 @@
                 }
 
                 &:hover {
-                    transform: translateX(2px);
+                    transform: translateX(rem(2px));
                 }
 
                 &.main-submenu-list-dropdown-toggler:hover::after {
-                    transform: translateX(-2px);
+                    transform: translateX(rem(-2px));
                 }
             }
 
             &.has-submenu {
                 li:first-child {
-                    margin-top: 8px;
-                    border-top: 1px solid rgba(207, 207, 206, .2);
+                    margin-top: rem(8px);
+                    border-top: rem(1px) solid rgba(207, 207, 206, .2);
                 }
 
                 li:last-child {
@@ -174,7 +174,7 @@
         }
 
         > .list-group-item:last-child {
-            border-bottom: 1px solid rgba(207, 207, 206, .2);
+            border-bottom: rem(1px) solid rgba(207, 207, 206, .2);
         }
     }
 
@@ -188,7 +188,7 @@
             background: linear-gradient(to right, transparent, rgba(255,255,255, .1) 45%, rgba(255,255,255, .1) 50%, transparent);
             position: absolute;
             left: 0;
-            top: 8px;
+            top: rem(8px);
         }
 
         .list-group-item {
@@ -198,15 +198,15 @@
             // Second level
             .main-submenu-list-link {
                 position: relative;
-                padding-left: 15px;
+                padding-left: rem(15px);
                 color: $grey-medium;
 
                 &::before {
                     content: ">";
                     position: absolute;
                     left: 0;
-                    top: 4px;
-                    font-size: 12px;
+                    top: rem(4px);
+                    font-size: rem(12px);
                 }
             }
         }
@@ -214,7 +214,7 @@
 
     .search-wrapper {
         display: none;
-        padding-top: 80px;
+        padding-top: rem(80px);
     }
 }
 
@@ -222,18 +222,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 95px;
+    width: rem(200px);
+    height: rem(95px);
     background-color: $blue-main;
-    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 rem(3px) rem(3px) rgba(0, 0, 0, 0.3));
     z-index: 1001;
     transition-property: all;
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
 
     &-icon {
-        width: 104px;
-        height: 39px;
+        width: rem(104px);
+        height: rem(39px);
         fill: #fff;
     }
 }
@@ -253,7 +253,7 @@
         }
 
         .menu-btn {
-            top: 1px;
+            top: rem(1px);
         }
 
         .menu-btn-icon {
@@ -263,13 +263,13 @@
         .logo {
             background-color: transparent;
             box-shadow: none;
-            width: 168px;
-            height: 80px;
+            width: rem(168px);
+            height: rem(80px);
             //transform: translateY(-7px);
     
             &-icon {
-                width: 100px;
-                height: 35px;
+                width: rem(100px);
+                height: rem(35px);
             }
         }
 
@@ -284,16 +284,16 @@
 
             .menu-btn-close {
                 visibility: visible;
-                width: 30px;
-                height: 30px;
+                width: rem(30px);
+                height: rem(30px);
     
                 &::after {
-                    transform: rotate(45deg) translate(6px, 14px);
+                    transform: rotate(45deg) translate(rem(6px), rem(14px));
                     opacity: 1;
                 }
     
                 &::before {
-                    transform: rotate(-45deg) translate(-14px, 6px);
+                    transform: rotate(-45deg) translate(rem(-14px), rem(6px));
                     opacity: 1;
                 }
             }            
@@ -310,7 +310,7 @@
 .header-sticky {
     position: fixed !important;
     width: 100%;
-    z-index: 3;
+    z-index: 11;
     overflow: initial;
     top: 0;
 
@@ -320,53 +320,53 @@
         left: 0;
         top: 0;
         width: 100%;
-        height: 48px;
+        height: rem(48px);
         //background-color: $grey-dark-3;
         animation: stickyMenuBG .3s ease-out .1s forwards;
     }
 
     .logo {
-        width: 168px;
-        height: 80px;
+        width: rem(168px);
+        height: rem(80px);
 
         &-icon {
-            width: 100px;
-            height: 35px;
+            width: rem(100px);
+            height: rem(35px);
         }
     }
 
     body:not(.nav-active) & {
         .menu-btn {
-            top: -16px;
+            top: rem(-16px);
         }
     
         .menu-btn-icon {
-            width: 24px;
-            height: 24px;
+            width: rem(24px);
+            height: rem(24px);
             fill:#fff;
         }
     
         .menu-btn-text {
             color: #fff;
-            top: 2px;
+            top: rem(2px);
             font-size: rem(15px);
         }
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: rem(899px)) {
     .main-submenu {
         background-size: cover;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: rem(640px)) {
     .menu-btn-text {
         display: none;
     }
 }
 
-@media (max-height: 768px) {
+@media (max-height: rem(768px)) {
     .nav-active {
         .header {
             position: relative;
@@ -374,7 +374,7 @@
             &::after {
                 content: "";
                 width: 100%;
-                height: 80px;
+                height: rem(80px);
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -386,11 +386,11 @@
     }
 
     .main-submenu .search-wrapper {
-        padding-top: 100px;
+        padding-top: rem(100px);
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: rem(1200px)) {
     .menu-btn-close {
         overflow: initial;
     }
@@ -405,8 +405,8 @@
 
         &::after, &::before {
             content: "";
-            width: 40px;
-            height: 2px;
+            width: rem(40px);
+            height: rem(2px);
             background: $grey-light;
             position: absolute;
             left: 0;
@@ -417,19 +417,19 @@
         }
 
         &::after {
-            transform: rotate(45deg) translate(-35px, 14px);
+            transform: rotate(45deg) translate(rem(-35px), rem(14px));
         }
 
         &::before {
-            transform: rotate(-45deg) translate(28px, 6px);
+            transform: rotate(-45deg) translate(rem(28px), rem(6px));
             
         }
     }
 
     .nav-active .menu-btn-active .menu-btn-close-effect {
         visibility: visible;
-        width: 30px;
-        height: 30px;
+        width: rem(30px);
+        height: rem(30px);
 
         &::after {
             animation: activeMenuXEffectAfter .3s ease-in-out .4s forwards;

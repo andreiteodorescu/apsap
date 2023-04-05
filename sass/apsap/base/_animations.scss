@@ -19,29 +19,29 @@
 @keyframes activeMenuXEffectAfter {
   0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-35px, 14px);
+    transform: rotate(45deg) translate(rem(-35px), rem(14px));
   }
   50% {
     opacity: 1;
-    transform: rotate(45deg) translate(6px, 14px);
+    transform: rotate(45deg) translate(rem(6px), rem(14px));
   }
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(46px, 14px);
+    transform: rotate(45deg) translate(rem(46px), rem(14px));
   }
 }
 
 @keyframes activeMenuXEffectBefore {
   0% {
     opacity: 0;
-    transform: rotate(-45deg) translate(28px, 6px);
+    transform: rotate(-45deg) translate(rem(28px), rem(6px));
   }
   50% {
     opacity: 1;
-    transform: rotate(-45deg) translate(-14px, 6px);
+    transform: rotate(-45deg) translate(rem(-14px), rem(6px));
   }
   100% {
     opacity: 0;
-    transform: rotate(-45deg) translate(-54px, 6px);
+    transform: rotate(-45deg) translate(rem(-54px), rem(6px));
   }
 }

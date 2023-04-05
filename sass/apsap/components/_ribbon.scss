@@ -1,8 +1,8 @@
 .ribbon {
     position: relative;
     background-color: $blue-main;
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -15,8 +15,8 @@
         display: block;
 
         &-book {
-            width: 53px;
-            height: 42px;
+            width: rem(53px);
+            height: rem(42px);
         }
     }
 
@@ -29,19 +29,19 @@
     }
 
     &::after {
-        width: 60px;
-        height: 60px;
-        margin-top: -30px;
+        width: rem(60px);
+        height: rem(60px);
+        margin-top: rem(-30px);
         transition: all .6s ease-in-out;
-        right: -50px;
+        right: rem(-50px);
     }
 
     &::before {
-        width: 44px;
-        height: 44px;
-        margin-top: -22px;
+        width: rem(44px);
+        height: rem(44px);
+        margin-top: rem(-22px);
         transition: all .6s ease-in-out;
-        left: -50px;
+        left: rem(-50px);
     }
 
     &.observe {
@@ -55,11 +55,11 @@
 
         &.in-view {
             &::after {
-                right: -50px;
+                right: rem(-50px);
             }
     
             &::before {
-                left: -50px;
+                left: rem(-50px);
             }
         }
     }

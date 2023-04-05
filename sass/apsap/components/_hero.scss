@@ -1,13 +1,13 @@
 .hero-contain {
     position: relative;
-    height: 350px;
+    height: rem(350px);
 }
 
 .hero-multiuse {
-    border-radius: 20px;
+    border-radius: rem(20px);
     overflow: hidden;
     height: 100%;
-    margin-top: -15px;
+    margin-top: rem(-15px);
 
     &-image, &-video {
         display: block;
@@ -19,7 +19,7 @@
 
     &-search {
         position: absolute;
-        bottom: 30px;
+        bottom: rem(30px);
         width: 100%;
 
         .search-back-btn {
@@ -29,27 +29,25 @@
         .second-title {
             color: #fff;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: rem(15px);
         }
-    }
-
-    .slider-general.tns-slider {
-        display: block;
     }
 }
 
 @include media-breakpoint-down(xl) {
     .hero-contain {
-        height: 300px;
+        height: rem(300px);
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: rem(899px)) {
     .hero-contain {
-        height: 180px;
+        height: rem(180px);
     }
 
     .search-general-active {
+        overflow: hidden;
+        
         .hero-contain {
             position: static;
         }
@@ -60,14 +58,14 @@
 
             .search-back-btn {
                 display: block;
-                width: 55px;
-                height: 55px;
+                width: rem(55px);
+                height: rem(55px);
                 border-radius: 50%;
                 background-color: $grey-extralight-2;
 
                 &-icon {
-                    width: 15px;
-                    height: 30px;
+                    width: rem(15px);
+                    height: rem(30px);
                 }
             }
         }
