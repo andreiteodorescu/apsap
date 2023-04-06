@@ -1,0 +1,271 @@
+.footer {
+    margin-top: rem(30px);
+    background-image: linear-gradient(to top, $grey-medium-2, $grey-medium-3);
+    position: relative;
+    font-size: rem(14px);
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0; 
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/waves.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        opacity: .4;
+    }
+
+    &-inner {
+        position: relative;
+        padding: rem(55px) 0;
+
+        &::before, &::after {
+            content: "";
+            width: 0; 
+            height: 0; 
+            border-left: rem(100px) solid transparent;
+            border-right: rem(100px) solid transparent;
+            position: absolute;
+            left: 50%;
+            margin-left: rem(-100px);
+        }
+
+        &::before {
+            top: 0;
+            border-top: rem(30px) solid $body-bg;
+        }
+
+        &::after {
+            bottom: 0;
+            border-bottom: rem(30px) solid $body-bg;
+        }
+    }
+
+    &-content {
+        display: flex;
+        gap: rem(35px);
+        justify-content: space-between;
+
+        &-col-small {
+            width: 32%;
+        }
+
+        &-col-large {
+            width: 38%;
+        }
+    }
+
+    &-title-dashed {
+        font-family: $font-family-bold;
+        border-bottom: rem(1px) dashed $grey-medium;
+        font-size: inherit;
+        padding-bottom: rem(10px);
+        margin-bottom: rem(10px);
+    }
+
+    &-list {
+        li {
+            border-bottom: rem(1px) solid $grey-medium;
+            padding-bottom: rem(10px);
+            margin-bottom: rem(10px);
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &-form {
+        background-color: $yellow;
+        border-radius: rem(5px);
+        padding: rem(20px);
+
+        &-title {
+            font-size: rem(21px);
+            margin-bottom: rem(2px);
+        }
+
+        &-innertitle {
+            font-family: $font-family-bold;
+            color: $blue-violet;
+            margin-bottom: rem(10px);
+        }
+
+        &-check {
+            display: flex;
+        }
+
+        .form-check {
+            min-width: rem(100px);
+            padding-right: rem(5px);
+            color: $blue-violet;
+            font-size: rem(13px);
+            font-family: $font-family-bold;
+            padding-left: rem(24px);
+            min-height: rem(24px);
+        }
+
+        .form-check-input {
+            width: rem(17px);
+            height: rem(17px);
+            margin-left: rem(-24px);
+            border: rem(2px) solid $blue-violet;
+            background-color: transparent;
+
+            &:checked {
+                background-color: $blue-violet;
+                border-color: $blue-violet;
+            }
+        }
+
+        .form-check-label {
+            position: relative;
+            top: rem(3px);
+        }
+
+        &-check-policy {
+            font-family: $font-family-medium !important;
+        }
+
+        .btn-pill {
+            border-radius: rem(5px);
+            background-color: $blue-violet;
+            width: 100%;
+            text-transform: none;
+            box-shadow: 0 rem(3px) rem(3px) rgba(0, 0, 0, .3);
+
+            &:active, &:hover, &:first-child:active {
+                background-color: #3158a1 !important;
+            }
+        }
+    }
+
+    &-address {
+        margin: 0;
+        color: $blue-main;
+
+        a {
+            color: $blue-main;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin-bottom: rem(10px);
+        }
+
+        strong {
+            min-width: rem(60px);
+            padding-right: rem(5px);
+            display: inline-block;
+        }
+
+        &-title {
+            font-size: rem(16px);
+            font-family: $font-family-extrabold;
+        }
+    }
+
+    &-copy {
+        margin: 0;
+        padding-right: rem(10px);
+    }
+
+    &-payment-logos {
+        max-width: rem(200px);
+    }
+
+    &-bottom {
+        background-color: $body-bg;
+        padding: rem(20px) 0;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .footer-content {
+        gap: rem(15px);
+    }
+
+    .footer-form {
+        padding: rem(15px);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 0;
+
+        &-col-small {
+            width: 47%;
+
+            &:last-child {
+                width: 100%;
+                margin-top: rem(30px);
+            }
+        }
+
+        &-col-large {
+            width: 47%;
+        }
+    }
+
+    .footer-form {
+        padding: rem(20px);
+    }
+
+    .footer-bottom {
+        padding: rem(10px) 0;
+
+        .footer-copy, .footer-payment-logos {
+            margin: rem(10px) 0;
+            display: inline-block;
+        }
+    }
+}
+
+@media (max-width: rem(640px)) {
+    .footer-content {
+        display: block;
+    }
+
+    .footer-content-col-small, .footer-content-col-large {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer-content-col-large {
+        margin: rem(30px) 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+
+        &-content {
+            display: block !important;
+
+            .footer-copy {
+                display: block;
+            }
+        }
+    }
+}

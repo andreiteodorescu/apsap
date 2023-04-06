@@ -60,6 +60,15 @@
             background-color: #e0292a;
         }
     }
+
+    &-footer {
+        padding: rem(230px) 0 0;
+        color: $grey-dark-2;
+
+        .social-media-list-item-icon {
+            fill: #fff;
+        }
+    }
 }
 
 @media (min-height: rem(1080px)) {
@@ -76,6 +85,12 @@
         &.mb-5 {
             margin-bottom: 0 !important;
         }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .social-media-footer {
+        padding: rem(130px) 0 0;
     }
 }
 

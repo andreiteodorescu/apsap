@@ -47,6 +47,7 @@ For PUL: If you need to reduce the stylesheet file size delete de above lines an
 @import "base/global";
 @import "base/typography";
 @import "base/buttons";
+@import "base/forms";
 @import "components/menu";
 @import "components/search";
 @import "components/social-media";
@@ -61,3 +62,4 @@ For PUL: If you need to reduce the stylesheet file size delete de above lines an
 @import "components/ribbon";
 @import "components/medallion";
 @import "components/bottom-overflow-limit";
+@import "components/footer";

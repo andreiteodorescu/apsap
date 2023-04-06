@@ -12,7 +12,7 @@ $('.menu-btn').on("click", function() {
 // Sticky menu when scrolling
 const mainHeader = $(".header");
 const headerScrollThreshold = 80;
-$(window).scroll(function() {
+$(window).on("scroll", function() {
     const scroll = $(window).scrollTop();
 
     if (scroll >= headerScrollThreshold) {

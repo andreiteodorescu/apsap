@@ -142,3 +142,19 @@
         }
     }
 }
+
+@include media-breakpoint-down(md) {
+    .medallion-title, .medallion-caption {
+        max-width: none;
+    }
+
+    .medallion-fisheye .medallion {
+        &:nth-child(2) {
+            order: -1;
+        }
+
+        &:nth-child(3) {
+            order: -2;
+        }
+    }
+}

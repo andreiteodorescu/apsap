@@ -402,5 +402,7 @@
 @media (min-width: rem(900px)) {
     .search-wrapper-general {
         display: block !important;
+        position: relative;
+        z-index: 1;
     }
 }

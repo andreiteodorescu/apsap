@@ -54,7 +54,7 @@ $('.menu-btn').on("click", function() {
 // Sticky menu when scrolling
 const mainHeader = $(".header");
 const headerScrollThreshold = 80;
-$(window).scroll(function() {
+$(window).on("scroll", function() {
     const scroll = $(window).scrollTop();
 
     if (scroll >= headerScrollThreshold) {
@@ -124,22 +124,16 @@ const cardFullImageSlider = new Swiper("#card-full-image-slider", {
   },
 });
 
-// Initialization for the hero slider. Uncomment this code only if you use the slider.
-/* const heroSlider = tns({
-    "container": "#hero-slider",
-    "mode": "gallery",
-    "nav": false,
-    "controls": false,
-    "swipeAngle": false,
-    "speed": 600,
-    "autoplay": true,
-    "autoplayHoverPause": true,
-    "autoplayTimeout": 3000,
-    "autoplayButtonOutput": false,
-    "preventScrollOnTouch": 'force',
-    "animateIn": "tns-fadeIn",
-    "animateOut": "tns-fadeOut",
-}); */
+// Initialization for the hero slider
+const heroSlider = new Swiper("#hero-slider", {
+  effect: 'fade',
+  autoplay: {
+    enabled: true,
+    delay: 4000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false
+  }
+});
 
 // +++++++++++++ Courses timeline slider START ++++++++++++++ //
 // Initialization for the courses slider, the one with months's names
@@ -211,12 +205,8 @@ const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
   },
 });
 
-// Initialization for the lectori slider (no fisheye)
+// Initialization for the team slider with fisheye
 const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
-  centeredSlides: true,
-  initialSlide: 2,
-  loop: true,
-  loopedSlides: 3,
   slideActiveClass: 'medallion-zoom',
   breakpoints: {
     320: {
@@ -226,6 +216,10 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
       enabled: true,
       slidesPerView: 3,
       spaceBetween: 15,
+      initialSlide: 2,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 3,
       autoplay: {
         enabled: true,
         delay: 4000,
@@ -237,6 +231,10 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
       enabled: true,
       slidesPerView: "auto",
       spaceBetween: 30,
+      initialSlide: 2,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 3,
       autoplay: {
         enabled: true,
         delay: 4000,
@@ -246,6 +244,47 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
     },
   },
 });
+
+// Add min height on the fisheye wrapper so that it doesn't move the page when it zooms
+setTimeout(function() {
+  const jsMedallionFisheye = $('.js-medallion-fisheye').outerHeight();
+  $('.js-medallion-fisheye').css('min-height', jsMedallionFisheye)
+}, 1000);
+
+
+// Initialization for the documents/certifications slider
+const certificationsSlider = new Swiper(".js-swiper-certification", {
+  rewind: true,
+  centerInsufficientSlides: true,
+  breakpoints: {
+    320: {
+      enabled: false
+    },
+    1200: {
+      enabled: true,
+      slidesPerView: 5,
+      spaceBetween: 15,
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
+      }
+    },
+    1374: {
+      enabled: true,
+      slidesPerView: 6,
+      spaceBetween: 15,
+      autoplay: {
+        enabled: true,
+        delay: 3000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
+      }
+    },
+  },
+});
+
 
 
 

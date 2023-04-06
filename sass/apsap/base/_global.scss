@@ -15,6 +15,14 @@ body {
     }
 }
 
+.container-1000 {
+    @include make-container();
+
+    @media (min-width: rem(1025px)) {
+        max-width: rem(1024px); 
+    }
+}
+
 .container-medium {
     @include make-container();
 
@@ -123,14 +131,66 @@ body {
 }
 
 .component-bubbles {
-    //background-image: url('../images/bubbles.svg');
+    background-image: url('../images/bubbles.png');
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: rem(800px) rem(746px);
+    background-size: rem(760px) rem(706px);
+}
+
+.bubbles-padding-increase {
+    padding-top: rem(180px);
+
+    &.component-block {
+        margin-top: 0;
+    }
+}
+
+.component-stacks {
+    background-image: url('../images/stacks.png');
+    background-position: center rem(49px);
+    background-repeat: no-repeat;
+    background-size: rem(1180px) rem(380px);
+
+    @include media-breakpoint-down(lg) {
+        background-image: none;
+    }
 }
 
 .yellow-text {
     color: $yellow;
+}
+
+.certifications {
+    img {
+        box-shadow: 0 rem(3px) rem(7px) rgba(0, 0, 0, .2);
+        margin-top: rem(7px);
+        margin-bottom: rem(10px);
+        border: rem(1px) solid $yellow;
+        
+
+        &[data-bs-toggle="modal"] {
+            cursor: pointer;
+        }
+    }
+}
+
+.horizontal-stripe {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: rem(50px);
+        background-color: $yellow;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: rem(-25px);
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
 }
 
 @include media-breakpoint-down(xl) {
@@ -141,6 +201,32 @@ body {
             margin-top: rem(130px);
         }
     }
+
+    .component-bubbles {
+        background-size: rem(560px) rem(506px);
+    }
+
+    .bubbles-padding-increase {
+        padding-top: rem(100px);
+    }
+
+    .certifications {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            gap: rem(15px);
+            justify-content: center;
+        }
+
+        .swiper-slide {
+            width: auto !important;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .block-ribbon-mobile {
+        margin-top: rem(130px);
+    }
 }
 
 @include media-breakpoint-down(md) {
@@ -149,6 +235,10 @@ body {
 
         &.component-skew {
             margin-top: rem(90px);
+        }
+
+        &.block-ribbon-mobile {
+            margin-top: rem(130px);
         }
     }
 }

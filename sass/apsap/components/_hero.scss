@@ -32,6 +32,10 @@
             margin-bottom: rem(15px);
         }
     }
+
+    .swiper {
+        height: 100%;
+    }
 }
 
 @include media-breakpoint-down(xl) {
