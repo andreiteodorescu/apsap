@@ -1,0 +1,21 @@
+.visually-hidden-focusable:focus, .visually-hidden-focusable:focus-within {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: $blue-main;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+
+    @include media-breakpoint-down(lg) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.mt-6 {
+    margin-top: rem(72px) !important;
+}
+
+.mb-6 {
+    margin-bottom: rem(72px) !important;
+}

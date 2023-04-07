@@ -94,6 +94,10 @@ b, strong {
   color: $blue-main;
   max-width: rem(1080px);
 
+  &-fluid {
+    max-width: none;
+  }
+
   &-black {
     color: inherit;
   }
@@ -105,12 +109,26 @@ b, strong {
   &-bolder {
     font-family: $font-family-extrabold;
   }
+
+  &-small {
+    font-size: rem(30px);
+  }
+
+  .st-new-row-thin {
+    display: block;
+    font-family: $font-family-base;
+    line-height: 1;
+  }
 }
 
 .subtitle-text {
   color: $blue-main;
   margin-bottom: 0;
   max-width: rem(1080px);
+
+  &-fluid {
+    max-width: none;
+  }
 
   &-black {
     color: inherit;

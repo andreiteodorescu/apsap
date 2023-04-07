@@ -254,6 +254,10 @@
 
         .menu-btn {
             top: rem(1px);
+
+            &:focus-visible {
+                box-shadow: none;
+            }
         }
 
         .menu-btn-icon {
@@ -366,7 +370,7 @@
     }
 }
 
-@media (max-height: rem(768px)) {
+@media (max-height: rem(800px)) {
     .nav-active {
         .header {
             position: relative;
@@ -387,6 +391,17 @@
 
     .main-submenu .search-wrapper {
         padding-top: rem(100px);
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .menu-btn-close {
+        width: rem(30px);
+        height: rem(30px);
+
+        &::after, &::before {
+            will-change: transform;
+        }
     }
 }
 

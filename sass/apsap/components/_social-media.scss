@@ -31,6 +31,7 @@
             }
 
             &-icon {
+                width: rem(22px);
                 height: rem(22px);
                 fill: $blue-medium-2;
             }
@@ -39,6 +40,10 @@
 
     &-facebook a {
         background-color: $blue-fb;
+
+        .social-media-list-item-icon {
+            width: rem(12px);
+        }
 
         &:hover {
             background-color: #4e6fb9;

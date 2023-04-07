@@ -22,10 +22,6 @@
         bottom: rem(30px);
         width: 100%;
 
-        .search-back-btn {
-            display: none;
-        }
-
         .second-title {
             color: #fff;
             text-align: center;
@@ -49,9 +45,14 @@
         height: rem(180px);
     }
 
+    .hero-multiuse-search .search-trigger-mobile {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+
     .search-general-active {
-        overflow: hidden;
-        
         .hero-contain {
             position: static;
         }
@@ -59,23 +60,6 @@
         .hero-multiuse-search {
             position: static;
             bottom: auto;
-
-            .search-back-btn {
-                display: block;
-                width: rem(55px);
-                height: rem(55px);
-                border-radius: 50%;
-                background-color: $grey-extralight-2;
-
-                &-icon {
-                    width: rem(15px);
-                    height: rem(30px);
-                }
-            }
-        }
-
-        .search-trigger-mobile {
-            display: none;
         }
     }
 

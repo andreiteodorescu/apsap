@@ -10,482 +10,498 @@
 	  <link href="../css/style.css" rel="stylesheet">
 
   </head>
-<body>
+<body class="grey-header-gradient"> <!-- Comentariu in romana, sterge-l dupa ce citesti: Clasa asta de pe body nu trebuie sa apara pe paginile de cursuri (cazare, locatie, perioada si tematica) DAR aceasta clasa trebuie sa fie pe toate paginile de INTERIOR, NU pe homepage. Deci if page id is not cazare, locatie, perioada, tematica and is not homepage add class "grey-header-gradient". Pe homepage nu trebuie sa existe aceasta clasa!!! -->
 	<a class="visually-hidden-focusable" href="#content">Mergi direct la contentul principal</a>
-	<header class="header">
-		<div class="container-narrow">
-			<div class="menu navbar position-static">
-				<div class="menu-left">
-					<button id="menuOffer" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<span class="menu-btn-close"></span>
-						<span class="menu-btn-close-effect"></span>
-						<span class="menu-btn-group">
-							<svg class="menu-btn-icon">
-								<use href="../images/sprite.svg#icon-oferta"></use>
-							</svg>
-							<i class="menu-btn-text">Oferta</i>
-						</span>
-					</button>
-					<div class="main-submenu dropdown-menu" aria-labelledby="menuOffer">
-						<div class="container-narrow">
-							<nav class="main-submenu-group">
-								<ul class="main-submenu-list list-group list-group-flush">
-									<li class="list-group-item has-submenu">
-										<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
-										<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
-											<ul class="main-submenu-second-level list-group list-group-flush">
-												<li class="list-group-item">
-													<a class="main-submenu-list-link" href="#">Cursuri de 7 zile</a>
-												</li>
-												<li class="list-group-item">
-													<a class="main-submenu-list-link" href="#">Cursuri de 6 zile</a>
-												</li>
-												<li class="list-group-item">
-													<a class="main-submenu-list-link" href="#">Cursuri de weekend (4 zile)</a>
-												</li>
-											</ul>
+	<div class="grey-header-cut" style="height: 700px;"> <!-- Comentariu in romana, sterge-l dupa ce citesti: Doar pe paginile de cursuri (cazare, locatie, perioada si tematica) va trebuie sa infasori <header>-ul in acest div cu clasa asta. Este singura solutie care sa fie si dinamica si less prone to visual bugs. Pe homepage nu trebuie sa existe acest div cu aceasta clasa!!!-->
+		<header class="header">
+			<div class="container-narrow">
+				<div class="menu navbar position-static">
+					<div class="menu-left">
+						<button id="menuOffer" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="menu-btn-close"></span>
+							<span class="menu-btn-close-effect"></span>
+							<span class="menu-btn-group">
+								<svg class="menu-btn-icon">
+									<use href="../images/sprite.svg#icon-oferta"></use>
+								</svg>
+								<i class="menu-btn-text">Oferta</i>
+							</span>
+						</button>
+						<div class="main-submenu dropdown-menu" aria-labelledby="menuOffer">
+							<div class="container-narrow">
+								<nav class="main-submenu-group">
+									<ul class="main-submenu-list list-group list-group-flush">
+										<li class="list-group-item has-submenu">
+											<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
+											<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
+												<ul class="main-submenu-second-level list-group list-group-flush">
+													<li class="list-group-item">
+														<a class="main-submenu-list-link" href="#">Cursuri de 7 zile</a>
+													</li>
+													<li class="list-group-item">
+														<a class="main-submenu-list-link" href="#">Cursuri de 6 zile</a>
+													</li>
+													<li class="list-group-item">
+														<a class="main-submenu-list-link" href="#">Cursuri de weekend (4 zile)</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+										</li>
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+										</li>
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+										</li>
+									</ul>
+									<button class="search-toggler btn btn-link" type="button">
+										<svg class="search-toggler-icon">
+											<use href="../images/sprite.svg#icon-magnifier"></use>
+										</svg>
+										<span class="search-toggler-text">Cauta un curs</span>
+									</button>
+								</nav>
+							</div>
+							<div class="search-wrapper">
+								<div class="container-narrow">
+									<button type="button" class="btn search-back-btn">
+										<svg class="search-back-btn-icon">
+											<use href="../images/sprite.svg#icon-left-arrow"></use>
+										</svg>
+									</button>
+									<div class="search-console">
+										<div class="search-console-inner">
+											<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+											<div class="search-console-slice">
+												<button id="searchTriggerDrop-1" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1" value="Alege locatia">
+													<span class="search-console-slice-tag">Locatia</span>
+													<span class="search-console-selection">Alege locatia</button>
+												</button>
+												<div id="searchDrop-1" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1">
+													<ul>
+														<li tabindex="0">On-line</li>
+														<li tabindex="0">Baile felix</li>
+														<li tabindex="0">Poiana Brasov</li>
+														<li tabindex="0">Sinaia</li>
+														<li tabindex="0">Mamaia</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-console-slice">
+												<button id="searchTriggerDrop-2" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2" value="Alege tematica">
+													<span class="search-console-slice-tag">Tematica</span>
+													<span class="search-console-selection">Alege tematica</button>
+												</button>
+												<div id="searchDrop-2" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2">
+													<ul>
+														<li tabindex="0">Achizitii publice</li>
+														<li tabindex="0">Administratie publica</li>
+														<li tabindex="0">Comunicare si transparenta</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-console-slice">
+												<button id="searchTriggerDrop-3" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3" value="Alege datele">
+													<span class="search-console-slice-tag">Perioada</span>
+													<span class="search-console-selection">Alege datele</button>
+												</button>
+												<div id="searchDrop-3" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3">
+													<ul>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+														<li tabindex="0">
+															<div>27 feb. - 6 mart.</div>
+															<div>&raquo; 7 zile</div>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
+										<button class="btn search-console-bubbles">
+											<span>Cautã</span>
+										</button>
+									</div>
+								</div>
+	
+								<div id="card-full-image-slider" class="swiper cards-full-image-small-slider mt-5"> 
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 1 curs disponibil"> <!-- Keep and fill the "title" attribute, it's important for accessibilty -->
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">1 cursuri disponibile</p>
+														<p class="card-full-image-title">Bãile-Felix</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 2 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">2 cursuri disponibile</p>
+														<p class="card-full-image-title">Jupiter</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 3 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">3 cursuri disponibile</p>
+														<p class="card-full-image-title">Mamaia</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 4 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">4 cursuri disponibile</p>
+														<p class="card-full-image-title">Sinaia</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Predeal - 5 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">5 cursuri disponibile</p>
+														<p class="card-full-image-title">Predeal</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Eforie Nord - 6 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">6 cursuri disponibile</p>
+														<p class="card-full-image-title">Eforie Nord</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 7 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">7 cursuri disponibile</p>
+														<p class="card-full-image-title">Bãile-Felix</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 8 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">8 cursuri disponibile</p>
+														<p class="card-full-image-title">Jupiter</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 9 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">9 cursuri disponibile</p>
+														<p class="card-full-image-title">Mamaia</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 10 cursuri disponibile">
+												<figure class="card-full-image-inner">
+													<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+													<figcaption class="card-full-image-text">
+														<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+														<p class="card-full-image-title">Sinaia</p>
+													</figcaption>
+												</figure>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<div class="social-media social-media-absolute mt-5 mb-5">
+								<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
+								<ul class="social-media-list">
+									<li class="social-media-list-item social-media-facebook">
+										<a target="_blank" href="#" title="Facebook">
+											<svg class="social-media-list-item-icon">
+												<use href="../images/sprite.svg#icon-facebook"></use>
+											</svg>
+										</a>
 									</li>
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									<li class="social-media-list-item social-media-instagram">
+										<a target="_blank" href="#" title="Instagram">
+											<svg class="social-media-list-item-icon">
+												<use href="../images/sprite.svg#icon-instagram"></use>
+											</svg>
+										</a>
 									</li>
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
-									</li>
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									<li class="social-media-list-item social-media-youtube">
+										<a target="_blank" href="#" title="Youtube">
+											<svg class="social-media-list-item-icon">
+												<use href="../images/sprite.svg#icon-youtube"></use>
+											</svg>
+										</a>
 									</li>
 								</ul>
-								<button class="search-toggler btn btn-link" type="button">
-									<svg class="search-toggler-icon">
-										<use href="../images/sprite.svg#icon-magnifier"></use>
-									</svg>
-									<span class="search-toggler-text">Cauta un curs</span>
-								</button>
-							</nav>
-						</div>
-						<div class="search-wrapper">
-							<div class="container-narrow">
-								<button type="button" class="btn search-back-btn">
-									<svg class="search-back-btn-icon">
-										<use href="../images/sprite.svg#icon-left-arrow"></use>
-									</svg>
-								</button>
-								<div class="search-console">
-									<div class="search-console-inner">
-										<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-1" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1" value="Alege locatia">
-												<span class="search-console-slice-tag">Locatia</span>
-												<span class="search-console-selection">Alege locatia</button>
-											</button>
-											<div id="searchDrop-1" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1">
-												<ul>
-													<li tabindex="0">On-line</li>
-													<li tabindex="0">Baile felix</li>
-													<li tabindex="0">Poiana Brasov</li>
-													<li tabindex="0">Sinaia</li>
-													<li tabindex="0">Mamaia</li>
-												</ul>
-											</div>
-										</div>
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-2" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2" value="Alege tematica">
-												<span class="search-console-slice-tag">Tematica</span>
-												<span class="search-console-selection">Alege tematica</button>
-											</button>
-											<div id="searchDrop-2" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2">
-												<ul>
-													<li tabindex="0">Achizitii publice</li>
-													<li tabindex="0">Administratie publica</li>
-													<li tabindex="0">Comunicare si transparenta</li>
-												</ul>
-											</div>
-										</div>
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-3" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3" value="Alege datele">
-												<span class="search-console-slice-tag">Perioada</span>
-												<span class="search-console-selection">Alege datele</button>
-											</button>
-											<div id="searchDrop-3" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3">
-												<ul>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<button class="btn search-console-bubbles">
-										<span>Cautã</span>
-									</button>
-								</div>
 							</div>
-
-							<div id="card-full-image-slider" class="swiper cards-full-image-small-slider mt-5"> 
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 1 curs disponibil"> <!-- Keep and fill the "title" attribute, it's important for accessibilty -->
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">1 cursuri disponibile</p>
-													<p class="card-full-image-title">Bãile-Felix</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 2 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">2 cursuri disponibile</p>
-													<p class="card-full-image-title">Jupiter</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 3 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">3 cursuri disponibile</p>
-													<p class="card-full-image-title">Mamaia</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 4 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">4 cursuri disponibile</p>
-													<p class="card-full-image-title">Sinaia</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Predeal - 5 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">5 cursuri disponibile</p>
-													<p class="card-full-image-title">Predeal</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Eforie Nord - 6 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">6 cursuri disponibile</p>
-													<p class="card-full-image-title">Eforie Nord</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 7 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">7 cursuri disponibile</p>
-													<p class="card-full-image-title">Bãile-Felix</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 8 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">8 cursuri disponibile</p>
-													<p class="card-full-image-title">Jupiter</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 9 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">9 cursuri disponibile</p>
-													<p class="card-full-image-title">Mamaia</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 10 cursuri disponibile">
-											<figure class="card-full-image-inner">
-												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
-												<figcaption class="card-full-image-text">
-													<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-													<p class="card-full-image-title">Sinaia</p>
-												</figcaption>
-											</figure>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="social-media social-media-absolute mt-5 mb-5">
-							<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
-							<ul class="social-media-list">
-								<li class="social-media-list-item social-media-facebook">
-									<a target="_blank" href="#" title="Facebook">
-										<svg class="social-media-list-item-icon">
-											<use href="../images/sprite.svg#icon-facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social-media-list-item social-media-instagram">
-									<a target="_blank" href="#" title="Instagram">
-										<svg class="social-media-list-item-icon">
-											<use href="../images/sprite.svg#icon-instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="social-media-list-item social-media-youtube">
-									<a target="_blank" href="#" title="Youtube">
-										<svg class="social-media-list-item-icon">
-											<use href="../images/sprite.svg#icon-youtube"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
 						</div>
 					</div>
-				</div>
-				<a class="logo" href="#" title="APSAP">
-					<svg class="logo-icon">
-						<use href="../images/sprite.svg#icon-logo"></use>
-					</svg>
-				</a>
-				<div class="menu-right">
-					<button id="menuInfo" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<span class="menu-btn-close"></span>
-						<span class="menu-btn-close-effect"></span>
-						<span class="menu-btn-group">
-							<svg class="menu-btn-icon">
-								<use href="../images/sprite.svg#icon-info"></use>
-							</svg>
-							<i class="menu-btn-text">Info</i>
-						</span>
-					</button>
-					<div class="main-submenu dropdown-menu" aria-labelledby="menuInfo">
-						<div class="container-narrow">
-							<nav class="main-submenu-group">
-								<ul class="main-submenu-list list-group list-group-flush">
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
-									</li>
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
-									</li>
-									<li class="list-group-item">
-										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
-									</li>
-								</ul>
-							</nav>
+					<a class="logo" href="#" title="APSAP">
+						<svg class="logo-icon">
+							<use href="../images/sprite.svg#icon-logo"></use>
+						</svg>
+					</a>
+					<div class="menu-right">
+						<button id="menuInfo" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="menu-btn-close"></span>
+							<span class="menu-btn-close-effect"></span>
+							<span class="menu-btn-group">
+								<svg class="menu-btn-icon">
+									<use href="../images/sprite.svg#icon-info"></use>
+								</svg>
+								<i class="menu-btn-text">Info</i>
+							</span>
+						</button>
+						<div class="main-submenu dropdown-menu" aria-labelledby="menuInfo">
+							<div class="container-narrow">
+								<nav class="main-submenu-group">
+									<ul class="main-submenu-list list-group list-group-flush">
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+										</li>
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+										</li>
+										<li class="list-group-item">
+											<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<main id="content" class="main home">
-		<div class="hero-component">
-			<div class="container-xxxl">
-				<div class="hero-contain">
-					<div class="hero-multiuse">
-						<!-- Image only start -->
-						<img class="hero-multiuse-image" src="../images/temporary/header_01.jpg" alt=""/>
-						<!-- Image only end -->
+		</header>
 
-						<!-- Video only start -->
-						<!-- <video class="hero-multiuse-video" autoplay muted width="1600" src="../images/temporary/horses.mp4" type="video/mp4"></video> -->
-						<!-- Video only end -->
+		<div class="container-medium-large text-center">
+			<h1 class="second-title mt-6 mb-6">Cursuri cu cazare <span class="st-new-row-thin">sectorul public</span></h1>
 
-						<!-- Carousel start. You can put a video instead of an image. -->
-						<!-- <div id="hero-slider" class="swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img class="hero-multiuse-image" src="../images/temporary/header_01.jpg" alt=""/>
-								</div>
-								<div class="swiper-slide">
-									<img class="hero-multiuse-image" src="../images/temporary/header_02.png" alt=""/>
+			<div class="search-wrapper search-wrapper-general">
+				<div class="container-narrow">
+					<button type="button" class="btn search-back-btn">
+						<svg class="search-back-btn-icon">
+							<use href="../images/sprite.svg#icon-left-arrow"></use>
+						</svg>
+					</button>
+					<div class="search-console">
+						<div class="search-console-inner">
+							<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+							<div class="search-console-slice">
+								<button id="searchTriggerDrop-1a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1a" value="Alege locatia">
+									<span class="search-console-slice-tag">Locatia</span>
+									<span class="search-console-selection">Alege locatia</button>
+								</button>
+								<div id="searchDrop-1a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1a">
+									<ul>
+										<li tabindex="0">On-line</li>
+										<li tabindex="0">Baile felix</li>
+										<li tabindex="0">Poiana Brasov</li>
+										<li tabindex="0">Sinaia</li>
+										<li tabindex="0">Mamaia</li>
+									</ul>
 								</div>
 							</div>
-						</div> -->
-						<!-- Carousel end -->
-					</div>
-					<div class="hero-multiuse-search text-center">
-						<h4 class="second-title second-title-thin">Cauti un curs?</h4>
-						<div class="search-wrapper search-wrapper-general"> <!-- The search component html is pretty much the same as the one above with two exceptions: 1. The class "search-wrapper-general" has been added; 2.   -->
-							<div class="container-narrow">
-								<button type="button" class="btn search-back-btn">
-									<svg class="search-back-btn-icon">
-										<use href="../images/sprite.svg#icon-left-arrow"></use>
-									</svg>
+							<div class="search-console-slice">
+								<button id="searchTriggerDrop-2a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2a" value="Alege tematica">
+									<span class="search-console-slice-tag">Tematica</span>
+									<span class="search-console-selection">Alege tematica</button>
 								</button>
-								<div class="search-console">
-									<div class="search-console-inner">
-										<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-1a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1a" value="Alege locatia">
-												<span class="search-console-slice-tag">Locatia</span>
-												<span class="search-console-selection">Alege locatia</button>
-											</button>
-											<div id="searchDrop-1a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1a">
-												<ul>
-													<li tabindex="0">On-line</li>
-													<li tabindex="0">Baile felix</li>
-													<li tabindex="0">Poiana Brasov</li>
-													<li tabindex="0">Sinaia</li>
-													<li tabindex="0">Mamaia</li>
-												</ul>
-											</div>
-										</div>
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-2a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2a" value="Alege tematica">
-												<span class="search-console-slice-tag">Tematica</span>
-												<span class="search-console-selection">Alege tematica</button>
-											</button>
-											<div id="searchDrop-2a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2a">
-												<ul>
-													<li tabindex="0">Achizitii publice</li>
-													<li tabindex="0">Administratie publica</li>
-													<li tabindex="0">Comunicare si transparenta</li>
-												</ul>
-											</div>
-										</div>
-										<div class="search-console-slice">
-											<button id="searchTriggerDrop-3a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3a" value="Alege datele">
-												<span class="search-console-slice-tag">Perioada</span>
-												<span class="search-console-selection">Alege datele</button>
-											</button>
-											<div id="searchDrop-3a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3a">
-												<ul>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-													<li tabindex="0">
-														<div>27 feb. - 6 mart.</div>
-														<div>&raquo; 7 zile</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<button class="btn search-console-bubbles">
-										<span>Cautã</span>
-									</button>
+								<div id="searchDrop-2a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2a">
+									<ul>
+										<li tabindex="0">Achizitii publice</li>
+										<li tabindex="0">Administratie publica</li>
+										<li tabindex="0">Comunicare si transparenta</li>
+									</ul>
+								</div>
+							</div>
+							<div class="search-console-slice">
+								<button id="searchTriggerDrop-3a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3a" value="Alege datele">
+									<span class="search-console-slice-tag">Perioada</span>
+									<span class="search-console-selection">Alege datele</button>
+								</button>
+								<div id="searchDrop-3a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3a">
+									<ul>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+										<li tabindex="0">
+											<div>27 feb. - 6 mart.</div>
+											<div>&raquo; 7 zile</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn search-console-bubbles search-trigger-mobile">
+						<button class="btn search-console-bubbles">
 							<span>Cautã</span>
 						</button>
 					</div>
 				</div>
 			</div>
+			<button type="button" class="btn search-console-bubbles search-trigger-mobile">
+				<span>Cautã</span>
+			</button>
+
+
+			<h2 class="second-title second-title-small second-title-fluid mt-5 mb-1">Ce locatie preferi primvara asta?</h2>
+			<p class="subtitle-text subtitle-text-fluid mb-4">
+				Alege locatia pe care o preferi si iti vom arata ce cursuri avem disponibile. Nu uita ca poti folosi bara de cautare, de mai sus, pentru ca gasi direct cursul dorit, poti cauta dupa locatie, tematica sau alegand datele de desfasurare. Adaugam tot timpul cursuri interesante asa ca nu uita sa te reintorci si sa cauti cursul dorit!
+			</p>
 		</div>
-		<div class="card-banner-component">
-			<div class="container-xxxl text-center">
-				<div class="d-flex gap-2 gap-xl-3 flex-wrap justify-content-center flex-lg-nowrap">
-					<a class="card-banner" href="#">
-						<img class="card-banner-image" src="../images/temporary/APSAP_Banner_CONT_01.jpg" alt=""/>
+	</div>
+	<main id="content" class="main home">
+		<div class="component-block">
+			<div class="container-large-custom">
+				<div class="cards-grid">
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
 					</a>
-					<a class="card-banner" href="#">
-						<img class="card-banner-image" src="../images/temporary/APSAP_Banner_DPO_02.jpg" alt=""/>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
 					</a>
-					<a class="card-banner" href="#">
-						<img class="card-banner-image" src="../images/temporary/APSAP_Banner_EAF_01.jpg" alt=""/>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
 					</a>
-					<a class="card-banner" href="#">
-						<img class="card-banner-image" src="../images/temporary/APSAP_Banner_EAP_01.jpg" alt=""/>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">8 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
+					</a>
+					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
+						<figure class="card-full-image-inner">
+							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+							<figcaption class="card-full-image-text">
+								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+								<p class="card-full-image-title">Sinaia</p>
+							</figcaption>
+						</figure>
 					</a>
 				</div>
 			</div>
 		</div>
-		<div class="stats-component observe">
-			<div class="container-medium text-center">
-				<div class="row">
-					<div class="col">
-						<img class="stats-big-icon" src="../images/experience.svg" alt=""/>
-						<div class="stats-big-text stats-big-text-left">
-							<span>16</span>
-						</div>
-						<div class="stats-small-text">de experienta</div>
-					</div>
-					<div class="col">
-						<img class="stats-big-icon" src="../images/cursanti.svg" alt=""/>
-						<div class="stats-big-text stats-big-text-center">
-							<span>100.000</span>
-						</div>
-						<div class="stats-small-text">de cursanti</div>
-					</div>
-					<div class="col">
-						<img class="stats-big-icon" src="../images/satisfactie.svg" alt=""/>
-						<div class="stats-big-text stats-big-text-right">
-							<span>5/5</span>
-						</div>
-						<div class="stats-small-text">evaluarea gradului de satisfactie</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<div class="component-block">
 			<div class="container-medium-large text-center">
-				<h1 class="main-title">Cursuri</h1>
+				<h2 class="main-title">Cursuri</h2>
 				<h4 class="second-title">din perioada urmatoare</h4>
 				<p class="subtitle-text">calendarul cursurilor - alege un curs si vezi datele de desfasurare</p>
 				<div class="courses-slider-wrapper">
@@ -712,85 +728,6 @@
 					</article>
 				</div>
 				<a href="#" class="btn btn-pill btn-pill-long mt-4" type="button"><span>Vezi</span> mai multe</a>
-			</div>
-		</div>
-		
-		<div class="component-block">
-			<div class="container-large-custom">
-				<div class="cards-grid">
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">8 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-					<a class="card-full-image" href="#" title="Sinaia - 10 cursuri disponibile">
-						<figure class="card-full-image-inner">
-							<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
-							<figcaption class="card-full-image-text">
-								<p class="card-full-image-pretitle">10 cursuri disponibile</p>
-								<p class="card-full-image-title">Sinaia</p>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
 			</div>
 		</div>
 		<div class="component-block component-skew">

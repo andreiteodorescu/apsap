@@ -148,7 +148,7 @@
             text-transform: none;
             box-shadow: 0 rem(3px) rem(3px) rgba(0, 0, 0, .3);
 
-            &:active, &:hover, &:first-child:active {
+            &:active, &:hover, &:first-child:active, &:focus-visible {
                 background-color: #3158a1 !important;
             }
         }

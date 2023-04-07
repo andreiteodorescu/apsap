@@ -193,6 +193,20 @@ body {
     }
 }
 
+.grey-header-cut {
+    background-image: url(../images/diamonds-bg-white.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: $grey-medium-3;
+    background-size: cover;
+}
+
+/* .grey-header-gradient {
+    background-image: url(../images/diamonds-bg-white.svg), linear-gradient($grey-medium-3, $body-bg 30%);
+    background-position: center top;
+    background-repeat: no-repeat;
+} */
+
 @include media-breakpoint-down(xl) {
     .component-block {
         margin-top: rem(100px);
@@ -215,6 +229,7 @@ body {
             flex-wrap: wrap;
             gap: rem(15px);
             justify-content: center;
+            transform: translateX(0) !important;
         }
 
         .swiper-slide {

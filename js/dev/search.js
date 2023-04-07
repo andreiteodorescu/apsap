@@ -12,12 +12,14 @@ $('.search-back-btn').on("click", function() {
 });
 
 // Update text and value of the search console buttons by selecting options from their dropdown
-$('.js-search-select li').on("click", function() {
+$('.js-search-select li').on("click keydown", function(event) {
     const thisText = $(this).text();
-    $(this).addClass('selected').siblings().removeClass('selected');
-    $(this).parent().parent().siblings('.search-console-slice-btn').val(thisText);
-    $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').text(thisText);
-    $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').addClass('scs-active');
+    if (event.keyCode === 13 || event.type === 'click') {
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $(this).parent().parent().siblings('.search-console-slice-btn').val(thisText);
+        $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').text(thisText);
+        $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').addClass('scs-active');
+    }
 });
 
 // Modify the padding of the search's dropdown to accomodate the scrollbar when there are many options

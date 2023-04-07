@@ -77,12 +77,14 @@ $('.search-back-btn').on("click", function() {
 });
 
 // Update text and value of the search console buttons by selecting options from their dropdown
-$('.js-search-select li').on("click", function() {
+$('.js-search-select li').on("click keydown", function(event) {
     const thisText = $(this).text();
-    $(this).addClass('selected').siblings().removeClass('selected');
-    $(this).parent().parent().siblings('.search-console-slice-btn').val(thisText);
-    $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').text(thisText);
-    $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').addClass('scs-active');
+    if (event.keyCode === 13 || event.type === 'click') {
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $(this).parent().parent().siblings('.search-console-slice-btn').val(thisText);
+        $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').text(thisText);
+        $(this).parent().parent().siblings('.search-console-slice-btn').children('.search-console-selection').addClass('scs-active');
+    }
 });
 
 // Modify the padding of the search's dropdown to accomodate the scrollbar when there are many options
@@ -117,8 +119,7 @@ const cardFullImageSlider = new Swiper("#card-full-image-slider", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
+        pauseOnMouseEnter: true
       }
     }
   },
@@ -166,8 +167,7 @@ const carsOverflowSlider2 = new Swiper("#card-overflow-slider", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
+        pauseOnMouseEnter: true
       }
     },
   },
@@ -176,6 +176,10 @@ const carsOverflowSlider2 = new Swiper("#card-overflow-slider", {
 // Initialization for the lectori slider (no fisheye)
 const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
   loop: true,
+  a11y: {
+    containerMessage: 'Lectorii APSAP',
+    containerRoleDescriptionMessage: 'Lectorii experimentați de la APSAP sunt specialiști în domeniile pe care le predau',
+  },
   breakpoints: {
     320: {
       enabled: false
@@ -187,9 +191,12 @@ const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu lectorii APSAP',
+        containerRoleDescriptionMessage: 'Lectorii experimentați de la APSAP sunt specialiști în domeniile pe care le predau',
+      },
     },
     1374: {
       enabled: true,
@@ -198,9 +205,12 @@ const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu lectorii APSAP',
+        containerRoleDescriptionMessage: 'Lectorii experimentați de la APSAP sunt specialiști în domeniile pe care le predau',
+      },
     },
   },
 });
@@ -208,6 +218,10 @@ const simpleLectoriSlider = new Swiper(".js-swiper-medallion", {
 // Initialization for the team slider with fisheye
 const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
   slideActiveClass: 'medallion-zoom',
+  a11y: {
+    containerMessage: 'Echipa APSAP',
+    containerRoleDescriptionMessage: 'Echipa centrului de formare APSAP',
+  },
   breakpoints: {
     320: {
       enabled: false
@@ -223,9 +237,12 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
       autoplay: {
         enabled: true,
         delay: 4000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu echipa APSAP',
+        containerRoleDescriptionMessage: 'Echipa centrului de formare APSAP',
+      },
     },
     1374: {
       enabled: true,
@@ -238,9 +255,12 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
       autoplay: {
         enabled: true,
         delay: 4000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu echipa APSAP',
+        containerRoleDescriptionMessage: 'Echipa centrului de formare APSAP',
+      },
     },
   },
 });
@@ -256,6 +276,10 @@ setTimeout(function() {
 const certificationsSlider = new Swiper(".js-swiper-certification", {
   rewind: true,
   centerInsufficientSlides: true,
+  a11y: {
+    containerMessage: 'Autorizatii si certificate APSAP',
+    containerRoleDescriptionMessage: 'Centrul de Formare APSAP este furnizor acreditat de formare profesională înregistrat în Registrul Național al Furnizorilor de Formare Profesionala a Adulților a Municipiului București iar certificatele de absolvire sunt emise de Comisia de Autorizare a Furnizorilor de Formare Profesională a Adulţilor sub egida Ministerului Muncii și Protecției Sociale și a Ministerului Educației și Cercetării',
+  },
   breakpoints: {
     320: {
       enabled: false
@@ -267,9 +291,12 @@ const certificationsSlider = new Swiper(".js-swiper-certification", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu autorizatii si certificate APSAP',
+        containerRoleDescriptionMessage: 'Centrul de Formare APSAP este furnizor acreditat de formare profesională înregistrat în Registrul Național al Furnizorilor de Formare Profesionala a Adulților a Municipiului București iar certificatele de absolvire sunt emise de Comisia de Autorizare a Furnizorilor de Formare Profesională a Adulţilor sub egida Ministerului Muncii și Protecției Sociale și a Ministerului Educației și Cercetării',
+      },
     },
     1374: {
       enabled: true,
@@ -278,9 +305,12 @@ const certificationsSlider = new Swiper(".js-swiper-certification", {
       autoplay: {
         enabled: true,
         delay: 3000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false
-      }
+        pauseOnMouseEnter: true
+      },
+      a11y: {
+        containerMessage: 'Carusel cu autorizatii si certificate APSAP',
+        containerRoleDescriptionMessage: 'Centrul de Formare APSAP este furnizor acreditat de formare profesională înregistrat în Registrul Național al Furnizorilor de Formare Profesionala a Adulților a Municipiului București iar certificatele de absolvire sunt emise de Comisia de Autorizare a Furnizorilor de Formare Profesională a Adulţilor sub egida Ministerului Muncii și Protecției Sociale și a Ministerului Educației și Cercetării',
+      },
     },
   },
 });
