@@ -161,6 +161,10 @@ b, strong {
 
   .second-title {
       font-size: rem(28px);
+
+      &-small {
+        font-size: rem(22px);
+      }
   }
 
   .subtitle-text {

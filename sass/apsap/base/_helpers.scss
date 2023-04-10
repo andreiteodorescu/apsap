@@ -19,3 +19,13 @@
 .mb-6 {
     margin-bottom: rem(72px) !important;
 }
+
+@include media-breakpoint-up(lg) {
+    .mt-lg-6 {
+        margin-top: rem(72px) !important;
+    }
+
+    .mb-lg-6 {
+        margin-bottom: rem(72px) !important;
+    }
+}

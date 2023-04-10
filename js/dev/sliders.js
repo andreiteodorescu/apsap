@@ -163,9 +163,8 @@ const medallionFisheyeSlider = new Swiper(".js-medallion-fisheye", {
 // Add min height on the fisheye wrapper so that it doesn't move the page when it zooms
 setTimeout(function() {
   const jsMedallionFisheye = $('.js-medallion-fisheye').outerHeight();
-  $('.js-medallion-fisheye').css('min-height', jsMedallionFisheye)
+  $('.js-medallion-fisheye').css('min-height', jsMedallionFisheye);
 }, 1000);
-
 
 // Initialization for the documents/certifications slider
 const certificationsSlider = new Swiper(".js-swiper-certification", {

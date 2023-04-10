@@ -7,18 +7,30 @@
     font-size: rem(400px);
     font-family: $font-family-bebas-regular;
     color: rgba(171, 171, 171, .3);
-    //line-height: 290px;
     line-height: 0.8;
     margin: 0;
+
+    &-opacity {
+        color: rgba(171, 171, 171, .15);
+    }
+
+    &-small {
+        @media (min-width: rem(1281px)) {
+            font-size: rem(300px);
+        }
+        line-height: 0.7;
+    }
 }
 
 .huge-heading-overlap {
     position: absolute;
     top: 50%;
     width: 100%;
+    margin-top: -10px;
 
     &-offset {
         top: rem(80px);
+        margin-top: 0;
     }
 
     .ribbon {
@@ -35,6 +47,8 @@
 .h-heading-subtitle {
     margin: 0;
 }
+
+
 
 @media (max-width: rem(1280px)) {
     .huge-heading {
@@ -54,6 +68,11 @@
     .huge-heading-overlap-offset {
         top: rem(-85px);
     }
+
+    .huge-heading-overlap-lg {
+        position: static;
+        padding-bottom: rem(30px);
+    }
 }
 
 @media (max-width: rem(640px)) {
@@ -63,5 +82,11 @@
 
     .huge-heading-overlap-offset {
         top: rem(-100px);
+    }
+}
+
+@media (max-width: rem(640px)) {
+    .huge-heading-small {
+        font-size: rem(100px);
     }
 }

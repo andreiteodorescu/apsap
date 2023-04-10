@@ -1,0 +1,40 @@
+.months {
+    display: flex;
+    margin: 0;
+    gap: rem(3px);
+    position: relative;
+    flex-wrap: wrap;
+
+    &-item {
+        width: rem(119px);
+
+        &-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: $blue-fb;
+            color: #193242;
+            text-transform: uppercase;
+            padding: rem(8px) rem(5px) rem(5px) rem(5px);
+            height: rem(50px);
+            transition: background-color .3s ease-in-out;
+            border-radius: rem(7px);
+            font-family: $font-family-extrabold;
+            line-height: 1;
+            font-size: rem(15px);
+            text-decoration: none;
+            box-shadow: 0 rem(4px) rem(4px) rgba(0, 0, 0, .2);
+
+            &:active, &:hover, &:focus-visible {
+                background-color: #5f86da;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .months {
+        justify-content: center;
+    }
+}
