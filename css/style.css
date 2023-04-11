@@ -9976,11 +9976,11 @@ body {
   background-size: cover;
   padding-bottom: 6.25rem; }
 
-/* .grey-header-gradient {
-    background-image: url(../images/diamonds-bg-white.svg), linear-gradient($grey-medium-3, $body-bg 30%);
-    background-position: center top;
-    background-repeat: no-repeat;
-} */
+.grey-header-gradient {
+  background-image: url(../images/diamonds-bg-white.svg), linear-gradient(#d2d2d2, #fafbfb 30%);
+  background-position: center top;
+  background-repeat: no-repeat; }
+
 @media (max-width: 1199.98px) {
   .component-block {
     margin-top: 6.25rem; }
@@ -11919,6 +11919,108 @@ button.swiper-pagination-bullet {
     .card-info-slider .swiper-slide {
       margin-right: 0 !important; } }
 
+.info-console-grid {
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 5px;
+  row-gap: 7px; }
+
+.info-console-center {
+  grid-column: col-start 2 / col-end 2;
+  grid-row: 1 / -1; }
+
+.info-console-right {
+  grid-column: col-start 3 / col-end 3;
+  grid-row: 1 / -1; }
+
+.info-drop-wrapper {
+  display: flex;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+
+.info-drop-slice {
+  width: 100%;
+  height: 130px;
+  position: relative; }
+  .info-drop-slice-btn {
+    width: 100%;
+    height: 100%;
+    font-family: "RubrikEdgeNew-Medium";
+    text-align: left;
+    padding: 20px 10px 0 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column; }
+    .info-drop-slice-btn span {
+      display: block; }
+    .info-drop-slice-btn:focus-visible {
+      background-color: #e9e8e8 !important; }
+    .info-drop-slice-btn-tag {
+      margin-bottom: 8px; }
+    .info-drop-slice-btn-selection {
+      font-size: 1.875rem;
+      font-family: "RubrikEdgeNew-Bold";
+      line-height: 1; }
+  .info-drop-slice-split-long {
+    width: 60%; }
+    .info-drop-slice-split-long .info-drop-slice-btn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+  .info-drop-slice-split-short {
+    width: 40%; }
+    .info-drop-slice-split-short .info-drop-slice-btn {
+      background-color: #EFEEEE;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.2); }
+  .info-drop-slice-dropdown {
+    background-color: #f9fafa;
+    border-radius: 7px;
+    padding: 11px 0 10px;
+    width: 100%;
+    border: none; }
+    .info-drop-slice-dropdown ul {
+      margin: 0; }
+    .info-drop-slice-dropdown li {
+      position: relative;
+      font-size: 1.125rem;
+      font-family: "RubrikEdgeNew-Medium";
+      padding: 11px 20px 9px;
+      cursor: pointer;
+      margin-top: -1px;
+      transition: background-color .2s ease; }
+      .info-drop-slice-dropdown li::after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: #d5d5d4;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0; }
+      .info-drop-slice-dropdown li:last-child::after {
+        display: none; }
+      .info-drop-slice-dropdown li:hover, .info-drop-slice-dropdown li:focus-visible {
+        background-color: #e9e8e8; }
+      .info-drop-slice-dropdown li.selected {
+        background-color: #d5d5d4; }
+
+.info-dropped-overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+  .info-dropped-overlay.dropped {
+    display: block; }
+
 .huge-heading-wrapper {
   position: relative;
   text-align: center; }
@@ -12142,7 +12244,8 @@ button.swiper-pagination-bullet {
   margin: 0;
   gap: 0.1875rem;
   position: relative;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   .months-item {
     width: 7.4375rem; }
     .months-item-pill {
@@ -12164,10 +12267,11 @@ button.swiper-pagination-bullet {
       box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2); }
       .months-item-pill:active, .months-item-pill:hover, .months-item-pill:focus-visible {
         background-color: #5f86da; }
-
-@media (max-width: 991.98px) {
-  .months {
-    justify-content: center; } }
+    .months-item.selected .months-item-pill {
+      background-color: #121324;
+      color: #fff; }
+      .months-item.selected .months-item-pill:active, .months-item.selected .months-item-pill:hover, .months-item.selected .months-item-pill:focus-visible {
+        background-color: #333558; }
 
 .reviews-grid {
   height: 0;

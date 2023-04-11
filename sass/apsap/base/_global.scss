@@ -210,11 +210,11 @@ body {
     padding-bottom: rem(100px);
 }
 
-/* .grey-header-gradient {
+.grey-header-gradient {
     background-image: url(../images/diamonds-bg-white.svg), linear-gradient($grey-medium-3, $body-bg 30%);
     background-position: center top;
     background-repeat: no-repeat;
-} */
+}
 
 @include media-breakpoint-down(xl) {
     .component-block {

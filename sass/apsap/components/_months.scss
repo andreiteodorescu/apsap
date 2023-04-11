@@ -4,6 +4,7 @@
     gap: rem(3px);
     position: relative;
     flex-wrap: wrap;
+    justify-content: center;
 
     &-item {
         width: rem(119px);
@@ -30,11 +31,14 @@
                 background-color: #5f86da;
             }
         }
-    }
-}
 
-@include media-breakpoint-down(lg) {
-    .months {
-        justify-content: center;
+        &.selected .months-item-pill {
+            background-color: $blue-medium;
+            color: #fff;
+
+            &:active, &:hover, &:focus-visible {
+                background-color: #333558;
+            }
+        }
     }
 }
