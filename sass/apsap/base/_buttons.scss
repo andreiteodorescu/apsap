@@ -74,6 +74,23 @@
         }
     }
 
+    &-big-red {
+        width: 100%;
+        font-size: rem(25px);
+        font-family: $font-family-extrabold;
+        background-color: $red;
+        height: rem(55px);
+
+        &:active, &:hover, &:first-child:active, &:focus-visible {
+            background-color: $red-hover !important;
+        }
+
+        @media (max-width: rem(1300px)) {
+            font-size: rem(20px);
+            height: rem(50px);
+        }
+    }
+
     @include media-breakpoint-down(md) {
         span {
             font-family: $font-family-base;

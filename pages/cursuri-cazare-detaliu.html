@@ -339,7 +339,12 @@
 							<div class="info-drop-slice info-drop-slice-split-long">
 								<button id="infoTriggerDrop-1" class="btn info-drop-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="infoDrop-1" data-bs-offset="0,5" value="10 - 16 iulie 23">
 									<span class="info-drop-slice-btn-tag">Alege alta sesiune</span>
-									<span class="info-drop-slice-btn-selection">10 - 16 iulie 23</button>
+									<span class="info-drop-slice-btn-selection text-truncate">10 - 16 iulie 23</span>
+									<span class="info-drop-slice-btn-arrow info-drop-slice-btn-arrow-yellow">
+										<svg class="info-drop-slice-btn-icon">
+											<use href="../images/sprite.svg#icon-down-arrow"></use>
+										</svg>
+									</span>
 								</button>
 								<div id="infoDrop-1" class="info-drop-slice-dropdown shadow-sm dropdown-menu js-info-select" aria-labelledby="infoTriggerDrop-1">
 									<ul class="list-unstyled">
@@ -354,7 +359,12 @@
 							<div class="info-drop-slice info-drop-slice-split-short">
 								<button id="infoTriggerDrop-2" class="btn info-drop-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="infoDrop-2" data-bs-offset="0,5" value="6 zile">
 									<span class="info-drop-slice-btn-tag">Schimba nr de zile</span>
-									<span class="info-drop-slice-btn-selection">6 zile</button>
+									<span class="info-drop-slice-btn-selection">6 zile</span>
+									<span class="info-drop-slice-btn-arrow">
+										<svg class="info-drop-slice-btn-icon">
+											<use href="../images/sprite.svg#icon-down-arrow"></use>
+										</svg>
+									</span>
 								</button>
 								<div id="infoDrop-2" class="info-drop-slice-dropdown shadow-sm dropdown-menu js-info-select" aria-labelledby="infoTriggerDrop-2">
 									<ul class="list-unstyled">
@@ -367,9 +377,98 @@
 							</div>
 						</div>
 					</div>
-					<div class="info-console-center">CENTER</div>
-					<div class="info-console-right">RIGHT<br>RIGHT<br>RIGHT<br>RIGHT<br>RIGHT<br>RIGHT<br>RIGHT<br></div>
-					<div class="info-console-left-bottom">LEFT BOTTOM<br>LEFT BOTTOM<br>LEFT BOTTOM<br>LEFT BOTTOM<br></div>
+					<div class="info-console-center">
+						<div class="info-drop-wrapper">
+							<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+							<div class="info-drop-slice info-drop-slice-single">
+								<button id="infoTriggerDropHotel" class="btn info-drop-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="infoDropHotel" data-bs-offset="0,5" value="Hotel Alpin - Poiana Brasov">
+									<span class="info-drop-slice-btn-tag">Alege alt hotel</span>
+									<span class="info-drop-slice-btn-selection text-truncate">Hotel Alpin</span>
+									<span class="info-drop-slice-btn-location">Poiana Brasov</span>
+								</button>
+								<div id="infoDropHotel" class="info-drop-slice-dropdown shadow-sm dropdown-menu js-info-select-hotel" aria-labelledby="infoTriggerDropHotel">
+									<ul class="list-unstyled">
+										<li tabindex="0">
+											<div class="location-name-area">
+												<p class="lna-name">Ana Hotels Sport</p>
+												<p class="lna-location">/ <span>Bradul</span></p>
+											</div>
+											<p class="price-discount">1.423 <sup>RON</sup> <span>- 50%</span></p>
+										</li>
+										<li tabindex="0">
+											<div class="location-name-area">
+												<p class="lna-name">Complex Silver Mountain Resort & Spa</p>
+											</div>
+											<p class="price-discount">3.223 <sup>RON</sup> <span>- 32%</span></p>
+										</li>
+										<li class="selected" tabindex="0">
+											<div class="location-name-area">
+												<p class="lna-name">Hotel Alpin</p>
+												<p class="lna-location">/ <span>Poiana Brasov</span></p>
+											</div>
+											<p class="price-discount">4.890 <sup>RON</sup> <span>- 41%</span></p>
+										</li>
+										<li class="no-accomodation" tabindex="0">
+											Fãrã cazare
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<figure class="presentation-image">
+							<div class="presentation-image-inner">
+								<img class="img-fluid" src="../images/temporary/185088476_1.jpg" alt="">
+							</div>
+							<div class="presentation-ribbon presentation-ribbon-center-bottom text-uppercase">
+								<span>41%</span> Discount
+							</div>
+						</figure>
+					</div>
+					<div class="info-console-right">
+						<div class="follow-widget">
+							<div class="info-console-bill">
+								<div class="info-console-bill-header">
+									<p class="info-console-bill-header-title">Tariful total <span>(curs + cazare selectată)</span></p>
+									<p class="info-console-bill-header-price-main">6.080 <sup>RON</sup></p>
+								</div>
+								<ul class="list-unstyled info-console-bill-details">
+									<li>
+										<p class="icb-details-title">Tarif curs:</p>
+										<p class="icb-details-content">1.190 Lei</p>
+									</li>
+									<li>
+										<p class="icb-details-title">Tarif cazare:</p>
+										<p class="icb-details-content">4.890 Lei</p>
+									</li>
+									<li>
+										<p class="icb-details-title">Curs:</p>
+										<p class="icb-details-content">Etică, integritate și transparență decizională în administrația publică</p>
+									</li>
+									<li>
+										<p class="icb-details-title">Cazare:</p>
+										<p class="icb-details-content">Hotel ALPIN - Poiana Brașov</p>
+									</li>
+									<li>
+										<p class="icb-details-title">Perioada:</p>
+										<p class="icb-details-content"><strong>10 - 16 iulie 2023</strong></p>
+									</li>
+								</ul>
+								<button class="btn btn-pill btn-pill-big-red" type="button">Rezervã</button>
+							</div>
+						</div>
+					</div>
+					<div class="info-console-left-bottom">
+						<div class="checks text-uppercase">
+							<h4 class="checks-title">Servicii si facilitãti</h4>
+							<ul class="list-unstyled checks-list">
+								<li>Gratuitate insotitor</li>
+								<li>1200 de lei fisa cont de masa inclusa</li>
+								<li>Loc de joaca pentru copii</li>
+								<li>2 sezlonguri gratuite</li>
+								<li>Acces spa</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1064,6 +1163,15 @@
 	</footer>
 
 <script src="../js/prod/main.js"></script>
+<script src="../js/standalone/sticky.js"></script>
+
+<script type="text/javascript">
+  var sidebar = new StickySidebar('.follow-widget', {
+    topSpacing: 50,
+    //containerSelector: '.info-console-wrapper',
+	containerSelector: '.main'
+  });
+</script>
 
 <div class="info-dropped-overlay"></div>
 </body>
