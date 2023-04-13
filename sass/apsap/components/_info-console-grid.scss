@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, [col-start] minmax(0,1fr) [col-end]);
     grid-template-rows: auto 1fr;
-    column-gap: 5px;
-    row-gap: 7px;
+    column-gap: rem(5px);
+    row-gap: rem(7px);
 }
 
 .info-console-center {
@@ -18,14 +18,14 @@
 
 .info-drop-wrapper {
     display: flex;
-    border-radius: 14px;
+    border-radius: rem(14px);
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(#000, 0.15);
+    box-shadow: 0 rem(4px) rem(8px) rgba(#000, 0.15);
 }
 
 .info-drop-slice {
     width: 100%;
-    height: 130px;
+    height: rem(130px);
     position: relative;
 
     &-btn {
@@ -33,13 +33,19 @@
         height: 100%;
         font-family: $font-family-medium;
         text-align: left;
-        padding: 20px 20px 0;
+        padding: rem(20px) rem(20px) 0;
         border: none;
-        border-radius: 14px;
+        border-radius: rem(14px);
         font-size: rem(18px);
         display: flex;
         flex-direction: column;
         position: relative;
+
+        &:hover {
+            .info-drop-slice-btn-icon {
+                transform: translateY(3px);
+            }
+        }
 
         span {
             display: block;
@@ -51,7 +57,7 @@
         }
 
         &-tag {
-            margin-bottom: 8px;
+            margin-bottom: rem(8px);
         }
 
         &-selection {
@@ -62,23 +68,24 @@
         }
 
         &-icon {
-            width: 30px;
-            height: 16px;
+            width: rem(30px);
+            height: rem(16px);
             fill: #fff;
+            transition: transform .3s ease;
         }
 
         &-arrow {
-            width: 50px;
-            height: 50px;
+            width: rem(50px);
+            height: rem(50px);
             border-radius: 50%;
             display: flex !important;
             justify-content: center;
             align-items: center;
             position: absolute;
-            left: 20px;
-            bottom: -8px;
+            left: rem(20px);
+            bottom: rem(-8px);
             background-color: $grey-light-2;
-            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 rem(3px) rem(4px) rgba(0, 0, 0, 0.2);
 
             &-yellow {
                 background-color: $yellow;
@@ -106,7 +113,7 @@
             background-color: $grey-extralight-6;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-            box-shadow: inset 7px 0 9px -7px rgba(0,0,0, .2);
+            box-shadow: inset rem(7px) 0 rem(9px) rem(-7px) rgba(0,0,0, .2);
 
             &:active {
                 background-color: $grey-extralight-6;
@@ -116,12 +123,13 @@
 
     &-single {
         .info-drop-slice-btn {
-            background-color: $blue-medium-3;
+            background-color: $blue-violet;
             color: $grey-extralight-6;
             align-items: center;
+            transition: background-color .3s ease;
 
             &:active {
-                background-color: $blue-medium-3;
+                background-color: $blue-violet;
                 color: $grey-extralight-6;
             }
 
@@ -131,12 +139,12 @@
             }
 
             &-selection {
-                font-size: 26px;
+                font-size: rem(26px);
                 text-align: center;
             }
 
             &-location {
-                margin-top: 7px;
+                margin-top: rem(7px);
             }
 
             &::before {
@@ -148,9 +156,18 @@
                 position: absolute;
                 left: 50%;
                 margin-left: rem(-100px);
-                bottom: -20px;
-                border-top: rem(20px) solid $blue-medium-3;
+                bottom: rem(-20px);
+                border-top: rem(20px) solid $blue-violet;
                 z-index: 1;
+                transition: border-top-color .3s ease;
+            }
+
+            &:hover {
+                background-color: #284a8a;
+
+                &::before {
+                    border-top-color: #284a8a;
+                }
             }
 
             &.show {
@@ -160,8 +177,8 @@
 
         .info-drop-slice-dropdown li {
             font-family: $font-family-bold;
-            padding-top: 16px;
-            padding-bottom: 14px;
+            padding-top: rem(16px);
+            padding-bottom: rem(14px);
 
             p {
                 margin: 0;
@@ -171,8 +188,8 @@
 
     &-dropdown {
         background-color: $grey-white;
-        border-radius: 7px;
-        padding: 11px 0 10px;
+        border-radius: rem(7px);
+        padding: rem(11px) 0 rem(10px);
         width: 100%;
         border: none;
 
@@ -184,7 +201,7 @@
             position: relative;
             font-size: rem(18px);
             font-family: $font-family-medium;
-            padding: 11px 20px 9px;
+            padding: rem(11px) rem(20px) rem(9px);
             cursor: pointer;
             margin-top: -1px;
             transition: background-color .2s ease;
@@ -193,7 +210,7 @@
                 content: "";
                 position: absolute;
                 width: calc(100% - 40px);
-                height: 1px;
+                height: rem(1px);
                 background-color: $grey-extralight;
                 left: 0;
                 right: 0;
@@ -215,13 +232,13 @@
         }
 
         .price-discount {
-            font-size: 21px;
-            margin-top: 2px !important;
+            font-size: rem(21px);
+            margin-top: rem(2px) !important;
             font-family: $font-family-extrabold;
 
             sup {
                 font-family: $font-family-base;
-                font-size: 13px;
+                font-size: rem(13px);
             }
 
             span {
@@ -238,7 +255,7 @@
 }
 
 .lna-name {
-    margin-right: 5px !important;
+    margin-right: rem(5px) !important;
 }
 
 .no-accomodation {
@@ -263,15 +280,15 @@
 
 .presentation-image {
     position: relative;
-    margin-top: 7px;
+    margin-top: rem(7px);
     margin-bottom: 0;
     
     &-inner {
-        border-radius: 14px;
+        border-radius: rem(14px);
         width: 100%;
-        height: 315px;
+        height: rem(315px);
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(#000, 0.15);
+        box-shadow: 0 rem(4px) rem(8px) rgba(#000, 0.15);
 
         img {
             width: 100%;
@@ -284,16 +301,16 @@
 }
 
 .presentation-ribbon {
-    min-width: 220px;
-    height: 50px;
+    min-width: rem(220px);
+    height: rem(50px);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 7px;
+    border-radius: rem(7px);
     background-color: $green-discount;
     color: #fff;
-    font-size: 24px;
-    padding: 2px 10px;
+    font-size: rem(24px);
+    padding: rem(2px) rem(10px);
     font-family: $font-family-light;
     line-height: 1;
     text-align: center;
@@ -303,12 +320,12 @@
     &-center-bottom {
         left: 50%;
         transform: translateX(-50%);
-        bottom: -25px;
+        bottom: rem(-25px);
     }
 
     span {
         font-family: $font-family-bold;
-        margin-right: 5px;
+        margin-right: rem(5px);
         display: contents;
     }
 }
@@ -342,9 +359,9 @@
 
 .info-console-bill {
     background-color: #fff;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(#000, 0.15);
+    border-radius: rem(14px);
+    padding: rem(25px);
+    box-shadow: 0 rem(4px) rem(8px) rgba(#000, 0.15);
     display: flex;
     flex-direction: column;
 
@@ -356,7 +373,7 @@
         }
 
         &-title {
-            font-size: 18px;
+            font-size: rem(18px);
             font-family: $font-family-bold;
 
             span {
@@ -365,24 +382,24 @@
         }
 
         &-price-main {
-            font-size: 35px;
+            font-size: rem(35px);
             font-family: $font-family-extrabold;
             color: $blue-main;
 
             sup {
                 font-family: $font-family-base;
-                font-size: 21px;
+                font-size: rem(21px);
             }
         }
     }
 
     &-details {
-        margin: 25px 0 30px;
+        margin: rem(25px) 0 rem(30px);
 
         li {
             display: flex;
-            font-size: 16px;
-            padding-top: 7px;
+            font-size: rem(16px);
+            padding-top: rem(7px);
 
             p {
                 margin: 0;
@@ -397,13 +414,13 @@
 
     .icb-details-title {
         font-family: $font-family-bold;
-        width: 110px;
-        padding-right: 5px;
+        width: rem(110px);
+        padding-right: rem(5px);
     }
 
     .icb-details-content {
-        border-bottom: 1px solid $grey-extralight;
-        padding-bottom: 5px;
+        border-bottom: rem(1px) solid $grey-extralight;
+        padding-bottom: rem(5px);
         flex: 1;
     }
 
@@ -413,10 +430,10 @@
 }
 
 .checks {
-    padding: 40px 20px 0;
+    padding: rem(40px) rem(20px) 0;
 
     &-title {
-        font-size: 24px;
+        font-size: rem(24px);
         font-family: $font-family-extrabold;
         margin: 0;
     }
@@ -426,10 +443,10 @@
 
         li {
             position: relative;
-            padding-left: 30px;
-            font-size: 18px;
+            padding-left: rem(30px);
+            font-size: rem(18px);
             font-family: $font-family-bold;
-            margin-top: 15px;
+            margin-top: rem(15px);
 
             &::before {
                 content: '\2713';
@@ -443,172 +460,176 @@
 
 @media (max-width: rem(1624px)) {
     .info-drop-slice {
-        height: 110px;
+        height: rem(110px);
     }
 
     .info-drop-slice-btn {
-        font-size: 16px;
-        padding: 15px 15px 0;
+        font-size: rem(16px);
+        padding: rem(15px) rem(15px) 0;
+
+        &:hover .info-drop-slice-btn-icon {
+            transform: translateY(2px);
+        }
     }
 
     .info-drop-slice-btn-tag {
-        margin-bottom: 5px;
+        margin-bottom: rem(5px);
     }
 
     .info-drop-slice-btn-selection {
-        font-size: 24px;
+        font-size: rem(24px);
     }
 
     .info-drop-slice-btn-arrow {
-        width: 40px;
-        height: 40px;
+        width: rem(40px);
+        height: rem(40px);
     }
 
     .info-drop-slice-btn-icon {
-        width: 26px;
-        height: 12px;
+        width: rem(26px);
+        height: rem(12px);
     }
 
     .info-drop-slice-dropdown li {
-        font-size: 16px;
+        font-size: rem(16px);
     }
 
     .info-drop-slice-single .info-drop-slice-btn-selection {
-        font-size: 24px;
+        font-size: rem(24px);
     }
 
     .info-drop-slice-single .info-drop-slice-btn-location {
-        margin-top: 5px;
+        margin-top: rem(5px);
     }
 
     .info-drop-slice-dropdown .price-discount {
-        font-size: 19px;
+        font-size: rem(19px);
     }
 
     .presentation-image-inner {
-        height: 308px;
+        height: rem(308px);
     }
 
     .presentation-ribbon {
-        min-width: 210px;
-        font-size: 20px;
+        min-width: rem(210px);
+        font-size: rem(20px);
     }
 
     .info-console-bill {
-        padding: 20px;
+        padding: rem(20px);
     }
 
     .info-console-bill-header-price-main {
-        font-size: 33px;
+        font-size: rem(33px);
     }
 
     .info-console-bill-details {
-        margin: 20px 0 25px;
+        margin: rem(20px) 0 rem(25px);
     }
 
     .checks {
-        padding: 30px 15px 0;
+        padding: rem(30px) rem(15px) 0;
     }
 
     .checks-title {
-        font-size: 22px;
+        font-size: rem(22px);
     }
 
     .checks-list li {
-        padding-left: 25px;
-        font-size: 16px;
-        margin-top: 12px;
+        padding-left: rem(25px);
+        font-size: rem(16px);
+        margin-top: rem(12px);
     }
 }
 
 @media (max-width: rem(1300px)) {
     .info-drop-slice {
-        height: 100px;
+        height: rem(100px);
     }
 
     .info-drop-slice-btn {
-        font-size: 14px;
+        font-size: rem(14px);
     }
 
     .info-drop-slice-btn-tag {
-        margin-bottom: 5px;
+        margin-bottom: rem(5px);
     }
 
     .info-drop-slice-btn-selection {
-        font-size: 22px;
+        font-size: rem(22px);
     }
 
     .info-drop-slice-btn-arrow {
-        width: 36px;
-        height: 36px;
+        width: rem(36px);
+        height: rem(36px);
     }
 
     .info-drop-slice-btn-icon {
-        width: 24px;
-        height: 10px;
+        width: rem(24px);
+        height: rem(10px);
     }
 
     .info-drop-slice-dropdown li {
-        font-size: 14px;
+        font-size: rem(14px);
     }
 
     .info-drop-slice-single .info-drop-slice-dropdown li {
-        padding-top: 12px;
-        padding-bottom: 10px;
+        padding-top: rem(12px);
+        padding-bottom: rem(10px);
     }
 
     .info-drop-slice-single .info-drop-slice-btn-selection {
-        font-size: 22px;
+        font-size: rem(22px);
     }
 
     .info-drop-slice-single .info-drop-slice-btn-location {
-        margin-top: 5px;
+        margin-top: rem(5px);
     }
 
     .info-drop-slice-dropdown .price-discount {
-        font-size: 18px;
+        font-size: rem(18px);
     }
 
     .presentation-ribbon {
-        min-width: 190px;
-        font-size: 18px;
+        min-width: rem(190px);
+        font-size: rem(18px);
     }
 
     .presentation-image-inner {
-        height: 280px;
+        height: rem(280px);
     }
 
     .info-console-bill-header-title {
-        font-size: 16px;
+        font-size: rem(16px);
     }
 
     .info-console-bill-header-price-main {
-        font-size: 31px;
+        font-size: rem(31px);
     }
 
     .info-console-bill-details {
-        margin: 15px 0 25px;
+        margin: rem(15px) 0 rem(25px);
     }
 
     .info-console-bill-details li {
-        font-size: 14px;
+        font-size: rem(14px);
     }
 
     .checks-title {
-        font-size: 20px;
+        font-size: rem(20px);
     }
 
     .checks-list li {
-        padding-left: 20px;
-        font-size: 14px;
+        padding-left: rem(20px);
+        font-size: rem(14px);
     }
 }
 
 @include media-breakpoint-down(xl) {
     .info-console-grid {
         grid-template-columns: repeat(2, [col-start] minmax(0,1fr) [col-end]);
-        grid-template-rows: auto 1fr 1fr;
-        row-gap: 15px;
+        grid-template-rows: auto auto 1fr;
+        row-gap: rem(15px);
     }
 
     .info-console-center {
@@ -627,20 +648,67 @@
     }
 
     .presentation-image {
-        margin-top: 15px;
+        margin-top: rem(15px);
 
         &-inner {
-            height: 315px;
+            height: rem(315px);
         }
     }
 
     .checks {
-        padding-top: 15px;
+        padding-top: rem(15px);
     }
 }
 
 @include media-breakpoint-down(lg) {
     .info-console-grid {
         display: block;
+
+        > * {
+            margin-top: rem(15px);
+        }
+    }
+
+    .presentation-image {
+        max-width: rem(580px);
+        margin: rem(15px) auto 0;
+    }
+
+    .presentation-ribbon {
+        height: rem(45px);
+
+        &-center-bottom {
+            bottom: rem(15px);
+        }
+    }
+}
+
+@media (max-width: rem(480px)) {
+    .info-console-left-top .info-drop-wrapper {
+        display: block;
+        box-shadow: none;
+        background-color: transparent;
+        border-radius: 0;
+
+        .info-drop-slice {
+            width: 100%;
+
+            .info-drop-slice-btn {
+                border-radius: rem(14px);
+                background-color: #fff;
+                box-shadow: 0 rem(4px) rem(8px) rgba(0, 0, 0, 0.15);
+                margin-top: rem(15px);
+            }
+        }
+    }
+
+    .info-drop-slice-single .info-drop-slice-btn::before {
+        border-left: rem(80px) solid transparent;
+        border-right: rem(80px) solid transparent;
+        margin-left: rem(-80px);
+    }
+
+    .presentation-image-inner {
+        height: rem(270px);
     }
 }

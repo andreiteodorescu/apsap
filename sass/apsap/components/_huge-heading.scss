@@ -18,6 +18,7 @@
         @media (min-width: rem(1281px)) {
             font-size: rem(300px);
         }
+        
         line-height: 0.7;
     }
 }
@@ -60,6 +61,12 @@
     }
 }
 
+@include media-breakpoint-down(xl) {
+    .huge-heading-opacity {
+        color: rgba(171, 171, 171, .25);
+    }
+}
+
 @include media-breakpoint-down(lg) {
     .huge-heading {
         font-size: rem(150px);
@@ -80,13 +87,11 @@
         font-size: rem(120px);
     }
 
-    .huge-heading-overlap-offset {
-        top: rem(-100px);
-    }
-}
-
-@media (max-width: rem(640px)) {
     .huge-heading-small {
         font-size: rem(100px);
+    }
+
+    .huge-heading-overlap-offset {
+        top: rem(-100px);
     }
 }

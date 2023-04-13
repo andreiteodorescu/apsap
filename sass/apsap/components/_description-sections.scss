@@ -1,0 +1,134 @@
+.description-section {
+    margin-top: rem(60px);
+
+    @include media-breakpoint-up(xl) {
+        &-limited {
+            max-width: 65%;
+        }
+    }
+
+    .ribbon {
+        margin-left: rem(50px);
+        margin-bottom: rem(25px);
+    }
+
+    &-title {
+        font-size: rem(30px);
+        margin: 0;
+        padding-left: rem(20px);
+
+        @media (max-width: rem(1624px)) {
+            padding-left: rem(15px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(26px);
+        }
+
+        &-bold {
+            font-family: $font-family-extrabold;
+        }
+
+        &-blue {
+            color: $blue-violet;
+        }
+
+        &-grey {
+            color: $grey-dark-4;
+        }
+
+        &-orange {
+            color: $orange;
+        }
+    }
+
+    &-subtitle {
+        font-size: rem(30px);
+        padding-left: rem(20px);
+        margin-bottom: 0;
+        line-height: 1.2;
+        margin-top: rem(2px);
+
+        @media (max-width: rem(1624px)) {
+            padding-left: rem(15px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(26px);
+        }
+
+        &-blue {
+            color: $blue-violet;
+        }
+
+        &-grey {
+            color: $grey-dark-4;
+        }
+
+        &-orange {
+            color: $orange;
+        }
+    }
+
+    &-body {
+        margin-top: rem(15px);
+        font-size: rem(16px);
+        padding-left: rem(20px);
+
+        @media (max-width: rem(1624px)) {
+            padding-left: rem(15px);
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+
+            li {
+                margin-bottom: rem(7px);
+                padding-left: rem(15px);
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: rem(5px);
+                    height: rem(5px);
+                    background-color: $grey-dark-2;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    margin-top: rem(-2px);
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.description-see-more {
+    font-family: $font-family-bold;
+    text-decoration: none;
+    position: relative;
+    padding-left: rem(15px);
+    display: inline-block;
+    color: $grey-dark-2;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::before {
+        content: "";
+        width: rem(5px);
+        height: rem(5px);
+        background-color: $grey-dark-2;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: rem(-2px);
+    }
+}

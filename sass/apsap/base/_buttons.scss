@@ -51,11 +51,11 @@
     }
 
     &-blue {
-        background-color: $blue-main;
+        background-color: $blue-violet;
         color: #fff;
 
         &:active, &:hover, &:first-child:active, &:focus-visible {
-            background-color: #f7c750 !important;
+            background-color: $blue-bonus !important;
             color: #fff !important;
         }
     }

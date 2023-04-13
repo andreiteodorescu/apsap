@@ -1,6 +1,6 @@
 .ribbon {
     position: relative;
-    background-color: $blue-main;
+    background-color: $blue-violet;
     width: rem(100px);
     height: rem(100px);
     border-radius: 50%;
@@ -10,6 +10,18 @@
 
     &-yellow {
         background-color: $yellow;
+    }
+
+    &-grey {
+        background-color: $grey-extralight-2;
+    }
+
+    &-grey-dark {
+        background-color: $grey-dark-4;
+    }
+
+    &-orange {
+        background-color: $orange;
     }
 
     &-icon {
@@ -31,6 +43,27 @@
         &-reviews {
             width: rem(44px);
             height: rem(50px);
+        }
+
+        &-location {
+            width: rem(45px);
+            height: rem(45px);
+        }
+
+        &-theme {
+            width: rem(48px);
+            height: rem(45px);
+            margin-top: 4px;
+        }
+
+        &-benefits {
+            width: rem(42px);
+            height: rem(45px);
+        }
+
+        &-achievements {
+            width: rem(44px);
+            height: rem(45px);
         }
     }
 

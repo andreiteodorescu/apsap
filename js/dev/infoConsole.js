@@ -8,8 +8,6 @@ $('.js-info-select li').on("click keydown", function(event) {
     }
 });
 
-
-
 $('.js-info-select-hotel li').on("click keydown", function(event) {
     const thisText = $(this).text().trim();
     const thisNameText = $(this).find('.lna-name').text().trim();
@@ -28,8 +26,6 @@ $('.js-info-select-hotel li').on("click keydown", function(event) {
         }
     }
 });
-
-
 
 document.querySelectorAll('.info-drop-slice-btn').forEach((item) => {
     item.addEventListener('show.bs.dropdown', event => {
