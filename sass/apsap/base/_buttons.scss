@@ -45,7 +45,7 @@
         color: $grey-dark-2;
 
         &:active, &:hover, &:first-child:active, &:focus-visible {
-            background-color: #f7c750 !important;
+            background-color: $yellow-hover !important;
             color: $grey-dark-2 !important;
         }
     }

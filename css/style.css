@@ -12034,23 +12034,23 @@ button.swiper-pagination-bullet {
       box-shadow: inset 0.4375rem 0 0.5625rem -0.4375rem rgba(0, 0, 0, 0.2); }
       .info-drop-slice-split-short .info-drop-slice-btn:active {
         background-color: #EFEEEE; }
-  .info-drop-slice-single .info-drop-slice-btn {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn {
     background-color: #203d74;
     color: #EFEEEE;
     align-items: center;
     transition: background-color .3s ease; }
-    .info-drop-slice-single .info-drop-slice-btn:active {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn:active {
       background-color: #203d74;
       color: #EFEEEE; }
-    .info-drop-slice-single .info-drop-slice-btn:focus-visible {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn:focus-visible {
       background-color: #1d66af !important;
       color: #EFEEEE; }
-    .info-drop-slice-single .info-drop-slice-btn-selection {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-selection {
       font-size: 1.625rem;
       text-align: center; }
-    .info-drop-slice-single .info-drop-slice-btn-location {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-location {
       margin-top: 0.4375rem; }
-    .info-drop-slice-single .info-drop-slice-btn::before {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn::before {
       content: "";
       width: 0;
       height: 0;
@@ -12063,18 +12063,43 @@ button.swiper-pagination-bullet {
       border-top: 1.25rem solid #203d74;
       z-index: 1;
       transition: border-top-color .3s ease; }
-    .info-drop-slice-single .info-drop-slice-btn:hover {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn:hover {
       background-color: #284a8a; }
-      .info-drop-slice-single .info-drop-slice-btn:hover::before {
+      .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn:hover::before {
         border-top-color: #284a8a; }
-    .info-drop-slice-single .info-drop-slice-btn.show {
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn.show {
       z-index: 1001; }
-  .info-drop-slice-single .info-drop-slice-dropdown li {
-    font-family: "RubrikEdgeNew-Bold", Tahoma, Arial, Helvetica, sans-serif;
-    padding-top: 1rem;
-    padding-bottom: 0.875rem; }
-    .info-drop-slice-single .info-drop-slice-dropdown li p {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-dropdown li {
+    font-family: "RubrikEdgeNew-Bold", Tahoma, Arial, Helvetica, sans-serif; }
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-dropdown li a {
+      padding-top: 1rem;
+      padding-bottom: 0.875rem; }
+    .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-dropdown li p {
       margin: 0; }
+  .info-drop-slice-single-sessions .info-drop-slice-btn {
+    background-color: #f8b613;
+    color: #333232;
+    transition: background-color .3s ease; }
+    .info-drop-slice-single-sessions .info-drop-slice-btn:active {
+      background-color: #f8b613;
+      color: #333232; }
+    .info-drop-slice-single-sessions .info-drop-slice-btn:focus-visible {
+      background-color: #f7c750 !important;
+      color: #333232; }
+    .info-drop-slice-single-sessions .info-drop-slice-btn:hover {
+      background-color: #f7c750; }
+    .info-drop-slice-single-sessions .info-drop-slice-btn .info-drop-slice-btn-arrow {
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); }
+  .info-drop-slice-single-sessions .info-drop-slice-dropdown li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .info-drop-slice-single-sessions .info-drop-slice-dropdown li a p {
+      margin: 0; }
+    .info-drop-slice-single-sessions .info-drop-slice-dropdown li a span {
+      font-family: "RubrikEdgeNew-Extrabold", Tahoma, Arial, Helvetica, sans-serif;
+      font-size: 1.3125rem;
+      color: #203d74; }
   .info-drop-slice-dropdown {
     background-color: #f9fafa;
     border-radius: 0.4375rem;
@@ -12087,10 +12112,17 @@ button.swiper-pagination-bullet {
       position: relative;
       font-size: 1.125rem;
       font-family: "RubrikEdgeNew-Medium", Tahoma, Arial, Helvetica, sans-serif;
-      padding: 0.6875rem 1.25rem 0.5625rem;
-      cursor: pointer;
-      margin-top: -1px;
-      transition: background-color .2s ease; }
+      margin-top: -1px; }
+      .info-drop-slice-dropdown li a {
+        text-decoration: none;
+        padding: 0.6875rem 1.25rem 0.5625rem;
+        display: block;
+        transition: background-color .2s ease;
+        position: relative;
+        z-index: 1;
+        color: #333232; }
+        .info-drop-slice-dropdown li a:hover, .info-drop-slice-dropdown li a:focus-visible {
+          background-color: #e9e8e8; }
       .info-drop-slice-dropdown li::after {
         content: "";
         position: absolute;
@@ -12103,9 +12135,7 @@ button.swiper-pagination-bullet {
         bottom: 0; }
       .info-drop-slice-dropdown li:last-child::after {
         display: none; }
-      .info-drop-slice-dropdown li:hover, .info-drop-slice-dropdown li:focus-visible {
-        background-color: #e9e8e8; }
-      .info-drop-slice-dropdown li.selected {
+      .info-drop-slice-dropdown li.selected a {
         background-color: #d5d5d4; }
     .info-drop-slice-dropdown .price-discount {
       font-size: 1.3125rem;
@@ -12128,6 +12158,8 @@ button.swiper-pagination-bullet {
 .no-accomodation {
   text-transform: uppercase;
   color: #888; }
+  .no-accomodation a {
+    color: #888 !important; }
 
 .info-dropped-overlay {
   display: none;
@@ -12157,6 +12189,35 @@ button.swiper-pagination-bullet {
       display: block;
       object-fit: none;
       object-position: center center; }
+  .presentation-image-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) 50%, transparent);
+    width: 100%;
+    padding: 1.25rem;
+    height: 40%;
+    text-align: center;
+    border-bottom-left-radius: 0.875rem;
+    border-bottom-right-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    font-family: "RubrikEdgeNew-Medium", Tahoma, Arial, Helvetica, sans-serif; }
+    .presentation-image-caption-type {
+      font-size: 0.875rem; }
+    .presentation-image-caption-code {
+      font-size: 1.75rem; }
+      .presentation-image-caption-code span {
+        font-family: "RubrikEdgeNew-Extrabold", Tahoma, Arial, Helvetica, sans-serif; }
+    .presentation-image-caption p {
+      margin: 0; }
+  .presentation-image-free {
+    margin: 0; }
+    .presentation-image-free .presentation-image-inner {
+      height: auto; }
 
 .presentation-ribbon {
   min-width: 13.75rem;
@@ -12178,6 +12239,10 @@ button.swiper-pagination-bullet {
     left: 50%;
     transform: translateX(-50%);
     bottom: -1.5625rem; }
+  .presentation-ribbon-center-top {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.5625rem; }
   .presentation-ribbon span {
     font-family: "RubrikEdgeNew-Bold", Tahoma, Arial, Helvetica, sans-serif;
     margin-right: 0.3125rem;
@@ -12267,6 +12332,37 @@ button.swiper-pagination-bullet {
         left: 0;
         top: 0; }
 
+.course-summary-about {
+  padding: 1.25rem; }
+  .course-summary-about p {
+    margin: 0; }
+  .course-summary-about strong {
+    font-family: "RubrikEdgeNew-Extrabold", Tahoma, Arial, Helvetica, sans-serif; }
+  .course-summary-about-schedule {
+    font-size: 1.3125rem;
+    margin-bottom: 2.5rem; }
+  .course-summary-about-group {
+    display: flex;
+    color: #203d74;
+    font-size: 1.125rem;
+    justify-content: space-between;
+    gap: 1.875rem; }
+  .course-summary-about-type {
+    text-align: center;
+    text-transform: uppercase; }
+  .course-summary-about .csat-title {
+    font-size: 1.125rem; }
+    .course-summary-about .csat-title strong {
+      display: block; }
+  .course-summary-about .csat-group {
+    display: flex;
+    justify-content: center;
+    max-width: 7.8125rem; }
+    .course-summary-about .csat-group-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; }
+
 @media (max-width: 101.5rem) {
   .info-drop-slice {
     height: 6.875rem; }
@@ -12287,9 +12383,9 @@ button.swiper-pagination-bullet {
     height: 0.75rem; }
   .info-drop-slice-dropdown li {
     font-size: 1rem; }
-  .info-drop-slice-single .info-drop-slice-btn-selection {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-selection {
     font-size: 1.5rem; }
-  .info-drop-slice-single .info-drop-slice-btn-location {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-location {
     margin-top: 0.3125rem; }
   .info-drop-slice-dropdown .price-discount {
     font-size: 1.1875rem; }
@@ -12330,12 +12426,12 @@ button.swiper-pagination-bullet {
     height: 0.625rem; }
   .info-drop-slice-dropdown li {
     font-size: 0.875rem; }
-  .info-drop-slice-single .info-drop-slice-dropdown li {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-dropdown li a {
     padding-top: 0.75rem;
     padding-bottom: 0.625rem; }
-  .info-drop-slice-single .info-drop-slice-btn-selection {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-selection {
     font-size: 1.375rem; }
-  .info-drop-slice-single .info-drop-slice-btn-location {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn-location {
     margin-top: 0.3125rem; }
   .info-drop-slice-dropdown .price-discount {
     font-size: 1.125rem; }
@@ -12405,7 +12501,7 @@ button.swiper-pagination-bullet {
         background-color: #fff;
         box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
         margin-top: 0.9375rem; }
-  .info-drop-slice-single .info-drop-slice-btn::before {
+  .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn::before {
     border-left: 5rem solid transparent;
     border-right: 5rem solid transparent;
     margin-left: -5rem; }

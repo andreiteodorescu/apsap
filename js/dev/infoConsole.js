@@ -27,6 +27,15 @@ $('.js-info-select-hotel li').on("click keydown", function(event) {
     }
 });
 
+$('.js-info-select-sessions li').on("click keydown", function(event) {
+    const thisNameText = $(this).find('.info-sessions-period').text().trim();
+    if (event.key === 'Enter' || event.type === 'click') {
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $(this).parent().parent().siblings('.info-drop-slice-btn').val(thisNameText);
+        $(this).parent().parent().siblings('.info-drop-slice-btn').children('.info-drop-slice-btn-selection').text(thisNameText);
+    }
+});
+
 document.querySelectorAll('.info-drop-slice-btn').forEach((item) => {
     item.addEventListener('show.bs.dropdown', event => {
         $('.info-dropped-overlay').addClass('dropped');
