@@ -1,0 +1,19 @@
+.certification {
+    max-width: rem(450px);
+    position: relative;
+    margin-top: rem(30px);
+
+    figcaption {
+        background-color: $blue-main;
+        border-radius: rem(10px) 0 rem(10px) 0;
+        font-size: rem(24px);
+        font-family: $font-family-extrabold;
+        color: #fff;
+        padding: rem(7px) rem(30px) rem(5px);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: rem(-9px);
+        transform: rotate(-6deg) skew(-5deg);
+    }
+}

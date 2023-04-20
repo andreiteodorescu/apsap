@@ -242,6 +242,13 @@ body {
     }
 }
 
+.course-cert-authors {
+    display: flex;
+    gap: rem(85px);
+    margin-top: rem(80px);
+    max-width: 66%;
+}
+
 @include media-breakpoint-down(xl) {
     .component-block {
         margin-top: rem(100px);

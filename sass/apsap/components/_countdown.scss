@@ -1,0 +1,245 @@
+.countdown-wrapper {
+    max-width: rem(410px);
+    margin: rem(30px) auto 0;
+}
+
+.countdown-title {
+    font-size: rem(12px);
+    font-family: $font-family-bold;
+    margin-bottom: rem(5px);
+    text-align: center;
+}
+
+.countdown-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .ribbon {
+        width: rem(50px);
+        height: rem(50px);
+        background-color: $red;
+
+        &:first-child {
+            margin-left: rem(30px);
+
+            &::before {
+                left: rem(-28px);
+            }
+
+            &::after {
+                right: rem(-24px);
+            }
+
+            &.observe::after {
+                right: 0;
+            }
+    
+            &.observe::before {
+                left: 0;
+            }
+    
+            &.observe.in-view::after {
+                right: rem(-24px);
+            }
+    
+            &.observe.in-view::before {
+                left: rem(-28px);
+            }
+        }
+
+        &:last-child {
+            margin-right: rem(30px);
+
+            &::before {
+                right: rem(-28px);
+                left: auto;
+            }
+    
+            &::after {
+                right: auto;
+                left: rem(-24px);
+            }
+
+            &.observe::after {
+                left: 0;
+            }
+    
+            &.observe::before {
+                right: 0;
+            }
+    
+            &.observe.in-view::after {
+                left: rem(-24px);
+            }
+    
+            &.observe.in-view::before {
+                right: rem(-28px);
+            }
+        }
+
+        &::after, &::before {
+            background-color: $red;
+        }
+
+        &::before {
+            width: rem(22px);
+            height: rem(22px);
+            margin-top: rem(-11px);
+        }
+
+        &::after {
+            width: rem(30px);
+            height: rem(30px);
+            margin-top: rem(-15px);
+        }
+    }
+}
+
+.countdown {
+    display: flex;
+    font-size: rem(36px);
+    font-family: $font-family-extrabold;
+
+    > * {
+        position: relative;
+        margin-left: rem(6px);
+        width: rem(60px);
+
+        &::before {
+            content: ":";
+            position: absolute;
+            left: rem(-8px);
+            top: rem(-10px);
+        }
+
+        &:first-child {
+            margin-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .word {
+        font-size: rem(12px);
+        font-family: $font-family-base;
+    }
+}
+
+@media (min-width: rem(1200px)) and (max-width: rem(1280px)) {
+    .countdown-inner {
+        justify-content: center;
+
+        .ribbon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: rem(480px)) {
+    .countdown-inner .ribbon {
+        width: rem(40px);
+        height: rem(40px);
+        background-color: $red;
+
+        &:first-child {
+            margin-left: rem(20px);
+
+            &::before {
+                left: rem(-19px);
+            }
+
+            &::after {
+                right: rem(-18px);
+            }
+
+            &.observe::after {
+                right: 0;
+            }
+    
+            &.observe::before {
+                left: 0;
+            }
+    
+            &.observe.in-view::after {
+                right: rem(-18px);
+            }
+    
+            &.observe.in-view::before {
+                left: rem(-19px);
+            }
+        }
+
+        &:last-child {
+            margin-right: rem(20px);
+
+            &::before {
+                right: rem(-19px);
+            }
+    
+            &::after {
+                left: rem(-18px);
+            }
+
+            &.observe::after {
+                left: 0;
+            }
+    
+            &.observe::before {
+                right: 0;
+            }
+    
+            &.observe.in-view::after {
+                left: rem(-18px);
+            }
+    
+            &.observe.in-view::before {
+                right: rem(-19px);
+            }
+        }
+
+        &::before {
+            width: rem(14px);
+            height: rem(14px);
+            margin-top: rem(-7px);
+        }
+
+        &::after {
+            width: rem(24px);
+            height: rem(24px);
+            margin-top: rem(-12px);
+        }
+    }
+}
+
+@media (max-width: rem(385px)) {
+    .countdown {
+        font-size: rem(30px);
+
+        > * {
+            width: rem(50px);
+
+            &::before {
+                left: rem(-7px);
+                top: rem(-9px);
+            }
+        }
+    }
+}
+
+@media (max-width: rem(355px)) {
+    .countdown-inner {
+        justify-content: center;
+
+        .ribbon {
+            display: none;
+        }
+    }
+}

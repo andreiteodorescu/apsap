@@ -64,6 +64,53 @@
     
 }
 
+.course-authors {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    .medallion {
+        max-width: rem(250px);
+    
+        &-image {
+            width: rem(160px);
+            height: rem(160px);
+        }
+    
+        .medallion-title {
+            max-width: none;
+        }
+    
+        .medallion-title {
+            margin-top: rem(25px);
+            font-size: rem(20px);
+            font-family: $font-family-extrabold;
+            color: $blue-violet;
+            padding-bottom: rem(15px);
+    
+            &::after {
+                width: 40%;
+                height: rem(1px);
+            }
+    
+            span {
+                padding-bottom: 0;
+                font-size: rem(18px);
+    
+                &::after, &::before {
+                    display: none;
+                }
+            }
+        }
+    
+        .medallion-caption {
+            font-size: rem(18px);
+            max-width: rem(240px);
+            line-height: 1.4;
+        }
+    }
+}
+
 @include media-breakpoint-up(xl) {
     .medallion-fisheye .medallion {
         width: rem(200px);

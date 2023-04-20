@@ -239,6 +239,7 @@
         padding: rem(11px) 0 rem(10px);
         width: 100%;
         border: none;
+        z-index: 1001;
 
         ul {
             margin: 0;
@@ -329,7 +330,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 
     &.dropped {
         display: block;
@@ -444,16 +445,20 @@
 .info-console-right .follow-widget {
     height: 100%;
 
-    .inner-wrapper-sticky {
-        height: 100%;
-    }
-
-    .info-console-bill {
+    .inner-wrapper-sticky, .info-console-bill {
         height: 100%;
     }
 
     &.is-affixed .inner-wrapper-sticky {
         height: auto;
+    }
+
+    &-auto {
+        height: auto;
+
+        .inner-wrapper-sticky, .info-console-bill {
+            height: auto;
+        }
     }
 }
 
@@ -498,6 +503,37 @@
                 font-size: rem(21px);
             }
         }
+
+        &-price-old {
+            font-size: rem(25px);
+            font-family: $font-family-light;
+            text-decoration: line-through;
+            align-self: flex-end;
+            margin-bottom: rem(5px) !important;
+        }
+
+        &-old-new {
+            display: flex;
+            gap: rem(10px);
+            justify-content: flex-end;
+            padding: 0 0 rem(10px);
+
+            .info-console-bill-header-price-main {
+                color: $red;
+            }
+        }
+
+        &-discount {
+            display: flex;
+            justify-content: space-between;
+            font-family: $font-family-extrabold;
+            color: $red;
+            gap: rem(10px);
+
+            &-left {
+                text-align: left;
+            }
+        }
     }
 
     &-details {
@@ -533,6 +569,11 @@
 
     .btn-pill-big-red {
         margin-top: auto;
+    }
+
+    &-body {
+        margin-top: rem(30px);
+        margin-bottom: rem(30px);
     }
 }
 
@@ -589,9 +630,14 @@
         gap: rem(30px);
     }
 
+    &-desc {
+        flex: 1;
+    }
+
     &-type {
         text-align: center;
         text-transform: uppercase;
+        width: rem(125px);
     }
 
     .csat-title {
@@ -605,12 +651,34 @@
     .csat-group {
         display: flex;
         justify-content: center;
-        max-width: rem(125px);
+        gap: rem(25px);
 
         &-logo {
-            width: 50px;
-            height: 50px;
+            width: rem(50px);
+            height: rem(50px);
             border-radius: 50%;
+            background-color: $blue-violet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-yellow {
+                background-color: $yellow;
+            }
+        }
+
+        &-icon {
+            fill: #fff;
+
+            &-live {
+                width: rem(24px);
+                height: rem(24px);
+            }
+
+            &-accredited {
+                width: rem(23px);
+                height: rem(27px);
+            }
         }
     }
 }
@@ -780,6 +848,18 @@
         padding-left: rem(20px);
         font-size: rem(14px);
     }
+
+    .course-summary-about-schedule {
+        margin-bottom: rem(25px);
+    }
+
+    .course-summary-about-group {
+        flex-direction: column;
+    }
+
+    .course-summary-about-type {
+        order: -1;
+    }
 }
 
 @include media-breakpoint-down(xl) {
@@ -838,6 +918,14 @@
             bottom: rem(15px);
         }
     }
+
+    .course-summary-about {
+        text-align: center;
+
+        &-group {
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width: rem(480px)) {
@@ -867,5 +955,20 @@
 
     .presentation-image-inner {
         height: rem(270px);
+    }
+
+    .presentation-image-caption-code {
+        font-size: rem(22px);
+    }
+
+    .info-console-bill-header-discount {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem(5px);
+    }
+
+    .info-console-bill-body {
+        margin-top: rem(20px);
+        margin-bottom: rem(20px);
     }
 }

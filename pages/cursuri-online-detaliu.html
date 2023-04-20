@@ -391,35 +391,38 @@
 					</figure>
 				</div>
 				<div class="info-console-right">
-					<div class="follow-widget">
+					<div class="follow-widget follow-widget-auto">
 						<div class="info-console-bill">
 							<div class="info-console-bill-header">
-								<p class="info-console-bill-header-title">Tariful total <span>(curs + cazare selectată)</span></p>
-								<p class="info-console-bill-header-price-main">6.080 <sup>RON</sup></p>
+								<p class="info-console-bill-header-title">Tarif participare ACREDITATĂ:</p>
+								<div class="info-console-bill-header-old-new">
+									<p class="info-console-bill-header-price-old">1.850</p>
+									<p class="info-console-bill-header-price-main">1.090 <sup>RON</sup></p>
+								</div>
+								<div class="info-console-bill-header-discount">
+									<p class="info-console-bill-header-discount-left text-uppercase">41% Reducere</p>
+									<p class="info-console-bill-header-discount-right">Economisești <span>760 RON</span></p>
+								</div>
 							</div>
-							<ul class="list-unstyled info-console-bill-details">
-								<li>
-									<p class="icb-details-title">Tarif curs:</p>
-									<p class="icb-details-content">1.190 Lei</p>
-								</li>
-								<li>
-									<p class="icb-details-title">Tarif cazare:</p>
-									<p class="icb-details-content">4.890 Lei</p>
-								</li>
-								<li>
-									<p class="icb-details-title">Curs:</p>
-									<p class="icb-details-content">Etică, integritate și transparență decizională în administrația publică</p>
-								</li>
-								<li>
-									<p class="icb-details-title">Cazare:</p>
-									<p class="icb-details-content">Hotel ALPIN - Poiana Brașov</p>
-								</li>
-								<li>
-									<p class="icb-details-title">Perioada:</p>
-									<p class="icb-details-content"><strong>10 - 16 iulie 2023</strong></p>
-								</li>
-							</ul>
+							<div class="info-console-bill-body">
+								<p>
+									Veți primi nu doar o certificare, ci și o asigurare a reușitei personale și profesionale! <strong>Rezervați acum un loc pentru că tariful va crește în curând!</strong>
+								</p>
+							</div>
 							<button class="btn btn-pill btn-pill-big-red" type="button">Rezervã</button>
+						</div>
+					</div>
+
+					<div class="countdown-wrapper">
+						<h4 class="countdown-title">Timp ramas pana la urmatorul curs</h4>
+						<div class="countdown-inner">
+							<div class="ribbon observe"></div>
+							<div class="countdown" data-date="12-5-2023" data-time="09:00">
+								<div class="day"><span class="num"></span><span class="word"></span></div>
+								<div class="hour"><span class="num"></span><span class="word"></span></div>
+								<div class="min"><span class="num"></span><span class="word"></span></div>
+							</div>
+							<div class="ribbon observe"></div>
 						</div>
 					</div>
 				</div>
@@ -446,7 +449,7 @@
 										</svg>
 									</div>
 
-									<div class="csat-group-logo">
+									<div class="csat-group-logo csat-group-logo-yellow">
 										<svg class="csat-group-icon csat-group-icon-accredited">
 											<use href="../images/sprite.svg#icon-acreditat"></use>
 										</svg>
@@ -457,6 +460,34 @@
 					</div>
 				</div>
 			</div>
+
+			<section class="course-cert-authors">
+				<figure class="certification">
+					<img class="img-fluid" src="../images/certification.png" alt="Certificat de absolvire curs">
+					<figcaption class="text-uppercase">Online</figcaption>
+				</figure>
+
+				<div class="course-authors">
+					<figure class="medallion">
+						<img class="medallion-image" src="../images/temporary/Razvan-Dobrea-1.jpg" alt="" />
+						<h3 class="medallion-title">
+							<span>Prof. Univ. Dr.</span> Rãzvan Cãtãlin DOBREA
+						</h3>
+						<figcaption class="medallion-caption">
+							Expert independent si evaluator de Proiecte Europene cu peste 20 de ani experiență în domeniu, Academia de Studii Economice din București
+						</figcaption>
+					</figure>
+					<figure class="medallion">
+						<img class="medallion-image" src="../images/temporary/Marinas_Elena_Laura.jpg" alt="" />
+						<h3 class="medallion-title">
+							<span>Prof. Univ. Dr.</span> Laura Marinas
+						</h3>
+						<figcaption class="medallion-caption">
+							Expert independent si evaluator Evaluator și Consultant în Scrierea și Implementarea Proiectelor cu Finanțare Europeană cu peste 20 de ani experiență în domeniu
+						</figcaption>
+					</figure>
+				</div>
+			</section>
 
 			<section class="description-section description-section-limited">
 				<div class="ribbon ribbon-yellow observe">
@@ -1284,10 +1315,17 @@
 <script src="../js/standalone/sticky.js"></script>
 
 <script type="text/javascript">
-  var sidebar = new StickySidebar('.follow-widget', {
+  const stickyWidget = new StickySidebar('.follow-widget', {
     topSpacing: 50,
 	containerSelector: '.main',
 	minWidth: 1200
+  });
+
+  const efcc_countdown = new countdown({
+	target: '.countdown',
+	dayWord: 'zile',
+	hourWord: 'ore',
+	minWord: 'minute'
   });
 </script>
 
