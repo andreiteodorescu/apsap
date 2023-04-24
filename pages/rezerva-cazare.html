@@ -335,100 +335,97 @@
 				<div class="info-console-grid info-console-grid-reservation">
 					<div class="info-console-left-long">
 						<h4 class="second-title text-center mb-1">Rezervã un loc</h4>
-						<p class="subtitle-text text-center mb-5">Completează formularul de mai jos pentru a rezerva un loc și vei fi contactat telefonic de un reprezentant al Centrului de Formare APSAP.</p>
-						<div class="container">
-							<form class="row g-3 needs-validation" novalidate>
-								<div class="col-md-6 form-floating">
-									<input type="text" class="form-control form-control-lg" id="resFirstName" placeholder="Prenume" required>
-									<label for="resFirstName" class="form-label">Prenume</label>
-									<div class="invalid-feedback">
-									  Va rugam introduceti prenumele
-									</div>
+						<p class="subtitle-text text-center mb-4 mb-lg-5">Completează formularul de mai jos pentru a rezerva un loc și vei fi contactat telefonic de un reprezentant al Centrului de Formare APSAP.</p>
+						<form class="row g-3 needs-validation" novalidate>
+							<div class="col-xl-6 form-floating">
+								<input type="text" class="form-control form-control-lg" id="resFirstName" placeholder="Prenume" required>
+								<label for="resFirstName" class="form-label">Prenume</label>
+								<div class="invalid-feedback">
+									Va rugam introduceti prenumele
 								</div>
-								<div class="col-md-6 form-floating">
-									<input type="text" class="form-control form-control-lg" id="resLastName" placeholder="Nume" required>
-									<label for="resLastName" class="form-label">Nume</label>
-									<div class="invalid-feedback">
-									  Va rugam introduceti numele de familie
-									</div>
+							</div>
+							<div class="col-xl-6 form-floating">
+								<input type="text" class="form-control form-control-lg" id="resLastName" placeholder="Nume" required>
+								<label for="resLastName" class="form-label">Nume</label>
+								<div class="invalid-feedback">
+									Va rugam introduceti numele de familie
 								</div>
-								<div class="col-md-6 form-floating">
-								  <input type="email" class="form-control form-control-lg" id="resEmail" placeholder="Email" required>
-								  <label for="resEmail" class="form-label">Email</label>
-								  <div class="invalid-feedback">
-									 Va rugam introduceti o adresa de email valida
-								  </div>
+							</div>
+							<div class="col-xl-6 form-floating">
+								<input type="email" class="form-control form-control-lg" id="resEmail" placeholder="Email" required>
+								<label for="resEmail" class="form-label">Email</label>
+								<div class="invalid-feedback">
+									Va rugam introduceti o adresa de email valida
 								</div>
-								<div class="col-md-6 form-floating">
-									<input type="tel" class="form-control form-control-lg" id="resPhone" placeholder="Telefon" required>
-									<label for="resPhone" class="form-label">Telefon</label>
+							</div>
+							<div class="col-xl-6 form-floating">
+								<input type="tel" class="form-control form-control-lg" id="resPhone" placeholder="Telefon" required>
+								<label for="resPhone" class="form-label">Telefon</label>
+							</div>
+							<div class="col-xl-6 form-floating">
+								<input type="text" class="form-control form-control-lg" id="resVerify" placeholder="Prenume" value="2+1=" required>
+								<label for="resVerify" class="form-label">Nu sunt robot</label>
+								<div class="invalid-feedback">
+									Va rugam introduceti prenumele
 								</div>
-								<div class="col-md-6 form-floating">
-									<input type="text" class="form-control form-control-lg" id="resVerify" placeholder="Prenume" value="2+1=" required>
-									<label for="resVerify" class="form-label">Nu sunt robot</label>
-									<div class="invalid-feedback">
-									  Va rugam introduceti prenumele
-									</div>
-								</div>
-								<div class="col-md-6 form-floating">
-									<div class="info-drop-wrapper info-drop-wrapper-form-group">
-										<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
-										<div class="info-drop-slice info-drop-slice-single">
-											<button id="infoTriggerDropHotel" class="btn info-drop-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="infoDropHotel" data-bs-offset="0,5" value="Hotel Alpin - Poiana Brasov">
-												<span class="info-drop-slice-btn-tag">Hotelul</span>
-												<span class="info-drop-slice-btn-selection text-truncate">
-													<span class="ids-sel-1">Hotel Alpin</span> - <span class="ids-sel-2">Poiana Brasov</span>
-												</span>
-												<span class="info-drop-slice-btn-arrow">
-													<svg class="info-drop-slice-btn-icon">
-														<use href="../images/sprite.svg#icon-down-arrow"></use>
-													</svg>
-												</span>
-											</button>
-											<div id="infoDropHotel" class="info-drop-slice-dropdown shadow-sm dropdown-menu js-info-select-hotel-form" aria-labelledby="infoTriggerDropHotel">
-												<ul class="list-unstyled">
-													<li>
-														<div class="location-name-area">
-															<p class="lna-name">Ana Hotels Sport</p>
-															<p class="lna-location">/ <span>Bradul</span></p>
-														</div>
-														<p class="price-discount">1.423 <sup>RON</sup> <span>- 50%</span></p>
-													</li>
-													<li>
-														<div class="location-name-area">
-															<p class="lna-name">Complex Silver Mountain Resort & Spa</p>
-														</div>
-														<p class="price-discount">3.223 <sup>RON</sup> <span>- 32%</span></p>
-													</li>
-													<li class="selected">
-														<div class="location-name-area">
-															<p class="lna-name">Hotel Alpin</p>
-															<p class="lna-location">/ <span>Poiana Brasov</span></p>
-														</div>
-														<p class="price-discount">4.890 <sup>RON</sup> <span>- 41%</span></p>
-													</li>
-													<li class="no-accomodation">
-														Fãrã cazare
-													</li>
-												</ul>
-											</div>
+							</div>
+							<div class="col-xl-6 form-floating">
+								<div class="info-drop-wrapper info-drop-wrapper-form-group">
+									<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+									<div class="info-drop-slice info-drop-slice-single">
+										<button id="infoTriggerDropHotel" class="btn info-drop-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="infoDropHotel" data-bs-offset="0,5" value="Hotel Alpin - Poiana Brasov">
+											<span class="info-drop-slice-btn-tag">Hotelul</span>
+											<span class="info-drop-slice-btn-selection text-truncate">
+												<span class="ids-sel-1">Hotel Alpin</span> - <span class="ids-sel-2">Poiana Brasov</span>
+											</span>
+											<span class="info-drop-slice-btn-arrow">
+												<svg class="info-drop-slice-btn-icon">
+													<use href="../images/sprite.svg#icon-down-arrow"></use>
+												</svg>
+											</span>
+										</button>
+										<div id="infoDropHotel" class="info-drop-slice-dropdown shadow-sm dropdown-menu js-info-select-hotel-form" aria-labelledby="infoTriggerDropHotel">
+											<ul class="list-unstyled">
+												<li>
+													<div class="location-name-area">
+														<p class="lna-name">Ana Hotels Sport</p>
+														<p class="lna-location">/ <span>Bradul</span></p>
+													</div>
+													<p class="price-discount">1.423 <sup>RON</sup> <span>- 50%</span></p>
+												</li>
+												<li>
+													<div class="location-name-area">
+														<p class="lna-name">Complex Silver Mountain Resort & Spa</p>
+													</div>
+													<p class="price-discount">3.223 <sup>RON</sup> <span>- 32%</span></p>
+												</li>
+												<li class="selected">
+													<div class="location-name-area">
+														<p class="lna-name">Hotel Alpin</p>
+														<p class="lna-location">/ <span>Poiana Brasov</span></p>
+													</div>
+													<p class="price-discount">4.890 <sup>RON</sup> <span>- 41%</span></p>
+												</li>
+												<li class="no-accomodation">
+													Fãrã cazare
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>
-								<div class="col-12">
-									<button type="submit" class="btn btn-pill btn-pill-big-red btn-pill-big-red-shadow">Rezervã un loc</button>
-								</div>
-								<div class="col-12">
-									<div class="form-check form-check-big form-check-big-policy d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" name="policyConfirm" id="policyConfirm">
-										<label class="form-check-label" for="policyConfirm">
-											Am citit politica cu privire la prelucrarea datelor cu caracter personal și sunt de acord ca datele furnizate prin acest formular să fie prelucrate în scopul înscrierii la curs. Am citit termenii și condițiile, politica de achiziție, livrare/anulare și sunt de acord cu toate prevederile. 
-										</label>
-									  </div>
-								</div>
-								
-							</form>
-						</div>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-pill btn-pill-big-red btn-pill-big-red-shadow">Rezervã un loc</button>
+							</div>
+							<div class="col-12">
+								<div class="form-check form-check-big form-check-big-policy d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" name="policyConfirm" id="policyConfirm">
+									<label class="form-check-label" for="policyConfirm">
+										Am citit politica cu privire la prelucrarea datelor cu caracter personal și sunt de acord ca datele furnizate prin acest formular să fie prelucrate în scopul înscrierii la curs. Am citit termenii și condițiile, politica de achiziție, livrare/anulare și sunt de acord cu toate prevederile. 
+									</label>
+									</div>
+							</div>
+						</form>
 					</div>
 					<div class="info-console-right">
 						<div class="follow-widget">
@@ -463,72 +460,16 @@
 							</div>
 						</div>
 
-						<figure class="presentation-image">
+						<figure class="presentation-image mt-3">
 							<div class="presentation-image-inner">
 								<img src="../images/temporary/185088476_1.jpg" alt=""> <!-- Important: the width of this image should not be smaller than 580px. Recommended size: 580x370 -->
 							</div>
-							<div class="presentation-ribbon presentation-ribbon-center-bottom text-uppercase">
+							<div class="presentation-ribbon presentation-ribbon-center-top text-uppercase">
 								<span>41%</span> Discount
 							</div>
 						</figure>
 					</div>
 				</div>
-
-				<section class="description-section description-section-limited">
-					<div class="ribbon ribbon-yellow observe">
-						<svg class="ribbon-icon ribbon-icon-location">
-							<use href="../images/sprite.svg#icon-location"></use>
-						</svg>
-					</div>
-		
-					<h3 class="description-section-title">Despre <strong>Hotel Alpin</strong></h3>
-					<div class="description-section-body">
-						Deși hotelul nu are nevoie de o prezentare vă putem spune că este situat în centrul stațiunii Poiana Brașov, la 10 minute de mers pe jos de pârtiile de schi și oferă unități de cazare cu acces gratuit la o piscină semi-olimpică. Complexul pune la dispoziție un centru SPA luxos și relaxant, 4 restaurante cu specific culinar diferit, 2 terase și grădini de vară spațioase, precum și 2 locuri de joacă pentru copii, în interior și în aer liber, o piscină pentru copii și activități monitorizate pentru cei mici. Veți găsi, de asemenea, 6 escape rooms în complex și o sală de jocuri video (Play-Station).
-					</div>
-				</section>
-	
-				<section class="description-section">
-					<div class="ribbon ribbon-grey observe">
-						<svg class="ribbon-icon ribbon-icon-location">
-							<use href="../images/sprite.svg#icon-location"></use>
-						</svg>
-					</div>
-		
-					<h3 class="description-section-title">Alte <strong>locatii</strong></h3>
-					<div class="description-section-body">
-						unde te poti inscrie pentru cursul <strong>“Etică, integritate și transparență decizională în administrația publică”</strong>:
-					</div>
-	
-					<div class="cards-grid">
-						<a class="card-full-image" href="#" title="Sinaia - Cursuri de 3, 6 si 10 zile">
-							<figure class="card-full-image-inner">
-								<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt="">
-								<figcaption class="card-full-image-text">
-									<p class="card-full-image-pretitle">Cursuri de 3, 6 si 10 zile</p>
-									<p class="card-full-image-title">Sinaia</p>
-								</figcaption>
-							</figure>
-						</a>
-						<a class="card-full-image" href="#" title="Predeal - Cursuri de 3, 6 si 10 zile">
-							<figure class="card-full-image-inner">
-								<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt="">
-								<figcaption class="card-full-image-text">
-									<p class="card-full-image-pretitle">Cursuri de 3, 6 si 10 zile</p>
-									<p class="card-full-image-title">Predeal</p>
-								</figcaption>
-							</figure>
-						</a>
-						<a class="card-full-image" href="#" title="Baile-Felix - Cursuri de 3, 6 si 10 zile">
-							<figure class="card-full-image-inner">
-								<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt="">
-								<figcaption class="card-full-image-text">
-									<p class="card-full-image-pretitle">Cursuri de 3, 6 si 10 zile</p>
-									<p class="card-full-image-title">Baile-Felix</p>
-								</figcaption>
-							</figure>
-						</a>
-					</div>
-				</section>
 	
 				<section class="description-section description-section-limited">
 					<div class="ribbon observe">
