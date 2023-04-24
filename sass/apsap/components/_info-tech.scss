@@ -1,0 +1,63 @@
+.info-tech {
+    display: flex;
+    gap: rem(50px);
+
+    @include media-breakpoint-up(xl) {
+        &-limited {
+            max-width: 65%;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        gap: rem(40px);
+    }
+
+    &-column {
+        flex: 1;
+
+        ul {
+            padding-left: rem(15px);
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-blue {
+            color: $blue-violet;
+
+            a {
+                color: $blue-violet;
+            }
+        }
+
+        &-grey {
+            color: $grey-dark-4;
+
+            a {
+                color: $grey-dark-4;
+            }
+        }
+
+        .ribbon {
+            margin-left: rem(50px);
+        }
+
+        &-content {
+            margin-top: rem(35px);
+            padding-left: rem(15px);
+        }
+
+        &-title {
+            font-size: rem(21px);
+            font-family: $font-family-extrabold;
+            text-transform: uppercase;
+            margin-bottom: rem(15px);
+        }
+    }
+}

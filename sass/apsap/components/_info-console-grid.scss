@@ -16,11 +16,118 @@
     grid-row: 1 / -1;
 }
 
+.info-console-left-long {
+    grid-column: col-start 1 / col-end 2;
+    grid-row: 1 / -1;
+}
+
 .info-drop-wrapper {
     display: flex;
     border-radius: rem(14px);
     background-color: #fff;
     box-shadow: 0 rem(4px) rem(8px) rgba(#000, 0.15);
+
+    &-form-group {
+        border-radius: 5px;
+        background-color: var(--bs-form-control-bg);
+        box-shadow: 0 rem(3px) rem(2px) rgba(0, 0, 0, .2);
+
+        .info-drop-slice {
+            height: auto;
+
+            &-dropdown {
+                li {
+                    padding: rem(11px) rem(20px) rem(9px);
+                    transition: background-color .2s ease;
+                    position: relative;
+                    z-index: 1;
+                    color: $grey-dark-2;
+                    cursor: pointer;
+    
+                    &:hover, &:focus-visible {
+                        background-color: $grey-extralight-3;
+                    }
+
+                    &.selected {
+                        background-color: $grey-extralight;
+                    }
+
+                    &.no-accomodation {
+                        color: #888;
+                    }
+                }
+            }
+        }
+
+        .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn {
+            background-color: transparent;
+            color: $grey-dark-2;
+            align-items: flex-start;
+            padding: rem(11px) rem(55px) rem(3px) rem(20px);
+            border-radius: rem(5px);
+            min-height: rem(61px);
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:active {
+                background-color: transparent;
+                color: $grey-dark-2;
+            }
+
+            &:focus-visible {
+                background-color: $grey-extralight !important;
+                color: $grey-dark-2;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            .info-drop-slice-btn-tag {
+                font-size: rem(16px);
+                text-transform: uppercase;
+                opacity: 0.65;
+                transform: scale(0.85) translateX(-41px);
+                margin-bottom: rem(1px);
+                font-family: $font-family-medium;
+                width: 100%;
+                line-height: 1;
+            }
+
+            .info-drop-slice-btn-selection {
+                font-size: rem(20px);
+                text-align: left;
+                font-family: $font-family-medium;
+
+                span {
+                    display: inline;
+                }
+
+                .ids-sel-1 {
+                    font-family: $font-family-bold;
+                    text-transform: uppercase;
+                }
+            }
+
+            .info-drop-slice-btn-arrow {
+                width: rem(35px);
+                height: rem(35px);
+                left: auto;
+                right: rem(10px);
+                box-shadow: none;
+                bottom: auto;
+                top: 50%;
+                margin-top: rem(-17px);
+
+                .info-drop-slice-btn-icon {
+                    width: rem(35px);
+                    height: rem(11px);
+                }
+            }
+        }
+    }
 }
 
 .info-drop-slice {
@@ -172,7 +279,7 @@
                 }
     
                 &.show {
-                    z-index: 1001;
+                    z-index: 1002;
                 }
             }
     
@@ -459,6 +566,24 @@
         .inner-wrapper-sticky, .info-console-bill {
             height: auto;
         }
+    }
+}
+
+.info-console-grid-reservation {
+    .info-console-right .follow-widget {
+        height: auto;
+    
+        .inner-wrapper-sticky, .info-console-bill {
+            height: auto;
+        }
+
+        &.is-affixed .info-console-bill .btn-pill-big-red {
+            display: block;
+        }
+    }
+
+    .info-console-bill .btn-pill-big-red {
+        display: none;
     }
 }
 
@@ -880,7 +1005,7 @@
     }
 
     .info-console-left-bottom {
-        grid-column: col-start 1 / col-end 1;
+        grid-column: col-start 1 / col-end 3;
         grid-row: 3 / -1;
     }
 

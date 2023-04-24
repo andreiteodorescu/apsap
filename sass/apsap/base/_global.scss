@@ -152,6 +152,84 @@ body {
     }
 }
 
+.component-skew-grey {
+    background-image: linear-gradient($grey-medium-3, $body-bg);
+    transform: skewY(-3deg);
+    z-index: 1;
+    position: relative;
+
+    > * {
+        transform: skewY(3deg);
+    }
+
+    &-inner {
+        background-image: url('../images/diamonds-bg.svg');
+        background-position: center top;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(xl) {
+            background-size: rem(1920px) rem(1040px);
+        }
+
+        &-content {
+            position: relative;
+            padding-top: rem(160px);
+            padding-bottom: rem(160px);
+
+            @include media-breakpoint-down(md) {
+                padding-top: rem(80px);
+                padding-bottom: rem(80px);
+            }
+        }
+    }
+
+    &.has-offset-photo {
+
+        @include media-breakpoint-down(xl) {
+            .component-skew-grey-inner-content {
+                padding-top: rem(265px);
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .component-skew-grey-inner-content {
+                padding-top: 42%;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: rem(250px);
+
+            .component-skew-grey-inner-content {
+                padding-top: rem(235px);
+            }
+        }
+    }
+}
+
+.skew-image-offset {
+    max-width: 65%;
+    position: absolute;
+    left: 0;
+    top: rem(-158px);
+
+    @media (max-width: rem(1400px)) {
+        top: rem(-135px);
+    }
+
+    @include media-breakpoint-down(xl) {
+        top: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+        max-width: 75%;
+    }
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+}
+
 .component-bubbles {
     background-image: url('../images/bubbles.png');
     background-position: center top;
@@ -247,6 +325,79 @@ body {
     gap: rem(85px);
     margin-top: rem(80px);
     max-width: 66%;
+
+    @media (max-width: rem(1624px)) {
+        gap: rem(25px);
+
+        .certification {
+            max-width: rem(350px);
+            margin-top: 0;
+
+            figcaption {
+                top: rem(-20px);
+            }
+        }
+    }
+
+    @media (max-width: rem(1480px)) {
+        .certification {
+            max-width: rem(290px);
+
+            figcaption {
+                top: rem(-25px);
+            }
+        }
+    }
+
+    @media (max-width: rem(1280px)) {
+        flex-direction: column;
+        align-items: center;
+
+        .course-authors {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        flex-direction: row;
+        max-width: none;
+        margin-top: rem(30px);
+    }
+
+    @media (max-width: rem(880px)) {
+        flex-direction: column;
+    }
+
+    @include media-breakpoint-down(md) {
+        .certification {
+            max-width: rem(350px);
+
+            figcaption {
+                top: rem(-20px);
+            }
+        }
+    }
+
+    @media (max-width: rem(550px)) {
+        .course-authors {
+            flex-direction: column;
+            align-items: center;
+            gap: rem(40px);
+
+            .ribbon {
+                position: relative;
+                top: auto;
+            }
+
+            .medallion {
+                max-width: 80%;
+
+                .medallion-caption {
+                    max-width: none;
+                }
+            }
+        }
+    }
 }
 
 @include media-breakpoint-down(xl) {

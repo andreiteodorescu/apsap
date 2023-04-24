@@ -24,6 +24,10 @@
         background-color: $orange;
     }
 
+    &-blue-light {
+        background-color: $blue-light;
+    }
+
     &-icon {
         fill: #fff;
         z-index: 1;
@@ -64,6 +68,21 @@
         &-achievements {
             width: rem(44px);
             height: rem(45px);
+        }
+
+        &-video {
+            width: rem(49px);
+            height: rem(47px);
+        }
+
+        &-info {
+            width: rem(47px);
+            height: rem(47px);
+        }
+
+        &-tech {
+            width: rem(44px);
+            height: rem(47px);
         }
     }
 

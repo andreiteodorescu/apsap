@@ -81,6 +81,10 @@
         background-color: $red;
         height: rem(55px);
 
+        &-shadow {
+            box-shadow: 0 rem(3px) rem(2px) rgba(0, 0, 0, .2);
+        }
+
         &:active, &:hover, &:first-child:active, &:focus-visible {
             background-color: $red-hover !important;
         }

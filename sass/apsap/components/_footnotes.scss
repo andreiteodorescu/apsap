@@ -1,0 +1,40 @@
+.footnotes {
+    @include media-breakpoint-up(xl) {
+        &-limited {
+            max-width: 65%;
+        }
+    }
+
+    &-title {
+        font-size: rem(36px);
+        font-family: $font-family-bold;
+        color: $yellow;
+        margin-bottom: rem(15px);
+    }
+
+    &-eu {
+        margin-top: rem(50px);
+
+        &-title {
+            font-size: rem(21px);
+            font-family: $font-family-extrabold;
+            margin-bottom: rem(20px);
+        }
+
+        &-inner {
+            display: flex;
+
+            &-image {
+                border-radius: 50%;
+                width: rem(85px);
+                height: rem(85px);
+                margin-right: rem(15px);
+            }
+
+            &-text {
+                flex: 1;
+                font-size: rem(14px);
+            }
+        }
+    }
+}

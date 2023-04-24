@@ -1,0 +1,112 @@
+.grid-list-text {
+    margin: 0;
+    display: flex;
+    gap: 8%;
+    flex-wrap: wrap;
+
+    &-limited {
+        max-width: 65%;
+    }
+
+    &-item {
+        width: 28%;
+        margin-bottom: rem(30px);
+    }
+
+    &-title {
+        font-size: rem(18px);
+        font-family: $font-family-medium;
+        color: $blue-main;
+        position: relative;
+        padding-left: rem(40px);
+        margin-bottom: rem(10px);
+
+        &::before {
+            content: "?";
+            font-family: $font-family-bold;
+            color: #fff;
+            border-radius: 50%;
+            background-color: $yellow;
+            width: rem(30px);
+            height: rem(30px);
+            position: absolute;
+            left: 0;
+            top: rem(2px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        span {
+            display: block;
+            font-family: $font-family-extrabold;
+            font-size: rem(36px);
+            line-height: 1;
+        }
+    }
+
+    &-paragraph {
+        font-size: rem(14px);
+        margin: 0;
+    }
+
+    &-count {
+        columns: 2;
+        display: block;
+        gap: rem(40px);
+
+        .grid-list-text-item {
+            width: auto;
+            position: relative;
+            padding-left: rem(65px);
+            min-height: rem(50px);
+
+            &::before {
+                content: counter(list-item);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: rem(50px);
+                height: rem(50px);
+                border-radius: 50%;
+                background-color: $yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-family-bebas-regular;
+                font-size: rem(36px);
+                color: $blue-violet;
+
+            }
+        }
+    }
+}
+
+@media (max-width: rem(1400px)) {
+    .grid-list-text-item {
+        width: 46%;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .grid-list-text-limited {
+        max-width: none;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .grid-list-text-count {
+        columns: 1;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .grid-list-text {
+        display: block;
+
+        &-item {
+            width: 100%;
+        }
+    }
+}

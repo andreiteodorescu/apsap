@@ -146,6 +146,36 @@ b, strong {
   }
 }
 
+.random-big-title {
+  font-family: $font-family-bold;
+  font-size: rem(36px);
+  margin-bottom: rem(50px);
+  line-height: 1;
+
+  &-zoom {
+      font-family: $font-family-bebas-regular;
+      font-size: rem(150px);
+  }
+
+  &-yellow {
+      color: $yellow;
+  }
+
+  @include media-breakpoint-down(md) {
+      &-zoom {
+          font-size: rem(100px);
+      }
+  }
+
+  @media (max-width: rem(480px)) {
+      font-size: rem(30px);
+
+      &-zoom {
+          font-size: rem(80px);
+      }
+  }
+}
+
 @include media-breakpoint-down(md) {
   .main-title {
     font-family: $font-family-bebas-regular;

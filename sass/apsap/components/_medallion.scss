@@ -68,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+    position: relative;
 
     .medallion {
         max-width: rem(250px);
@@ -107,6 +108,55 @@
             font-size: rem(18px);
             max-width: rem(240px);
             line-height: 1.4;
+        }
+    }
+
+    .ribbon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: rem(75px);
+        height: rem(75px);
+        top: rem(43px);
+
+        .ribbon-icon-book {
+            width: rem(40px);
+            height: rem(30px);
+        }
+
+        &:after {
+            width: rem(44px);
+            height: rem(44px);
+            margin-top: rem(-22px);
+            right: rem(-32px);
+        }
+
+        &::before {
+            width: rem(30px);
+            height: rem(30px);
+            margin-top: rem(-15px);
+            left: rem(-35px);
+        }
+
+        &.observe {
+            &::after {
+                right: 0;
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &.in-view {
+                &::after {
+                    right: rem(-32px);
+                }
+
+                &::before {
+                    left: rem(-35px);
+                } 
+            }
         }
     }
 }

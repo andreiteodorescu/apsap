@@ -107,6 +107,25 @@ const countdown = function(_config) {
 
 const addZero = (x) => (x < 10 && x >= 0) ? "0"+x : x;
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
 // If "grey-header-cut" exists add a class on "main" to adjust the diamonds background image
 if (document.querySelector('.grey-header-cut') !== null) {
     document.querySelector('.main').classList.add("main-bg-short");
@@ -147,6 +166,23 @@ $('.js-info-select-hotel li').on("click keydown", function(event) {
             $(this).parent().parent().siblings('.info-drop-slice-btn').val(thisText);
             $(this).parent().parent().siblings('.info-drop-slice-btn').children('.info-drop-slice-btn-selection').text(thisText);
             $(this).parent().parent().siblings('.info-drop-slice-btn').children('.info-drop-slice-btn-location').text('');
+        }
+    }
+});
+
+$('.js-info-select-hotel-form li').on("click keydown", function(event) {
+    const thisText = $(this).text().trim();
+    const thisNameText = $(this).find('.lna-name').text().trim();
+    const thisLocationText = $(this).find('.lna-location span').text().trim();
+    if (event.key === 'Enter' || event.type === 'click') {
+        $(this).addClass('selected').siblings().removeClass('selected');
+
+        if (!$(this).hasClass('no-accomodation')) {
+            $(this).parent().parent().siblings('.info-drop-slice-btn').val(`${thisNameText}${thisLocationText !== '' ? ' - ' : ''}${thisLocationText}`);
+            $(this).parent().parent().siblings('.info-drop-slice-btn').find('.info-drop-slice-btn-selection').html(`<span class='ids-sel-1'>${thisNameText}</span>${thisLocationText !== '' ? ' - ' : ''}<span class='ids-sel-2'>${thisLocationText}</span>`);
+        } else {
+            $(this).parent().parent().siblings('.info-drop-slice-btn').val(thisText);
+            $(this).parent().parent().siblings('.info-drop-slice-btn').children('.info-drop-slice-btn-selection').text(thisText);
         }
     }
 });
