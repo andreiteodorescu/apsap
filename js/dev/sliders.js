@@ -209,6 +209,21 @@ const certificationsSlider = new Swiper(".js-swiper-certification", {
   },
 });
 
+// Hotels thumbnail sliders
+const hotelThumbs = new Swiper(".js-thumbs-small", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const hotelThumbsBig = new Swiper(".js-thumbs-big", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: hotelThumbs,
+  },
+});
+
 
 
 

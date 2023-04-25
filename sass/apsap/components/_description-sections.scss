@@ -5,6 +5,10 @@
         &-limited {
             max-width: 65%;
         }
+
+        &-negative-margin {
+            margin-top: rem(-180px);
+        }
     }
 
     .ribbon {

@@ -23,6 +23,12 @@
 .info-console-left-long {
     grid-column: col-start 1 / col-end 2;
     grid-row: 1 / -1;
+
+    @include media-breakpoint-up(xl) {
+        &-padding {
+            padding-bottom: rem(240px);
+        }
+    }
 }
 
 .info-drop-wrapper {
@@ -203,7 +209,7 @@
         }
 
         &.show .info-drop-slice-btn-arrow {
-            z-index: 1001;
+            z-index: 1002;
         }
     }
 

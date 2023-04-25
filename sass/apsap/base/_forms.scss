@@ -15,37 +15,92 @@
     font-family: $font-family-medium;
 }
 
-.form-check-big {
-    padding-left: rem(40px);
-    min-height: rem(40px);
+.form-check {
+    &-big {
+        padding-left: rem(40px);
+        min-height: rem(40px);
+    
+        &-policy {
+            .form-check-label {
+                font-size:rem(13px);
+            }
+        }
+    
+        &.d-flex {
+            gap: rem(10px);
+    
+            .form-check-label {
+                flex: 1;
+            }
+    
+            .form-check-input {
+                align-self: flex-start;
+            }
+        }
+    
+        .form-check-input {
+            width: rem(30px);
+            height: rem(30px);
+            border: rem(2px) solid $grey-dark-4;
+            background-color: transparent;
+            margin-left: rem(-40px);
+    
+            &:checked {
+                background-color: $grey-dark-4;
+            }
+        }
 
-    &-policy {
-        .form-check-label {
-            font-size:rem(13px);
+        &-blue {
+            .form-check-input {
+                border-color: $blue-main;
+        
+                &:checked {
+                    background-color: $blue-main;
+                }
+            }
         }
     }
 
-    &.d-flex {
-        gap: rem(10px);
+    &-complex-wrapper {
+        box-shadow: 0 rem(2px) rem(2px) rgba(0, 0, 0, .2);
+        padding: rem(12px) rem(20px) rem(9px);
+        border-radius: rem(5px);
+        border: rem(1px) solid $grey-medium-2;
+        background-color: #dfdfdf;
+        display: flex;
+        height: 100%;
+    }
+
+    &-complex {
+        gap: rem(15px);
+        align-items: center;
+        display: flex;
+        margin-bottom: 0;
+        min-height: auto;
+
+        .form-check-input {
+            transform: translateY(-2px);
+        }
 
         .form-check-label {
             flex: 1;
         }
 
-        .form-check-input {
-            align-self: flex-start;
+        &-blue {
+            color: $blue-main;
         }
     }
+}
 
-    .form-check-input {
-        width: rem(30px);
-        height: rem(30px);
-        border: rem(2px) solid $grey-dark-4;
-        background-color: transparent;
-        margin-left: rem(-40px);
+.complex-label-title {
+    font-size: rem(21px);
+    font-family: $font-family-extrabold;
+    display: block;
+    line-height: 1;
+    margin-bottom: rem(5px);
+}
 
-        &:checked {
-            background-color: $grey-dark-4;
-        }
-    }
+.complex-label-subtitle {
+    font-size: rem(14px);
+    display: block;
 }

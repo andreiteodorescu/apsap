@@ -2015,14 +2015,20 @@
 						<div class="footer-form">
 							<h4 class="footer-form-title"><strong>Rămâi conectat</strong> la educație!</h4>
 							<p class="footer-form-subtitle">Fii la curent cu noile noastre cursuri online acreditate, evenimente și webinarii.</p>
-							<form>
+							<form class="needs-validation" novalidate>
 								<div class="mb-2">
 								  <label for="footerInputEmail" class="form-label visually-hidden">Email-ul tau</label>
-								  <input type="email" class="form-control" id="footerInputEmail" placeholder="Email-ul tau">
+								  <input type="email" class="form-control" id="footerInputEmail" placeholder="Email-ul tau" required>
+								  <div class="invalid-feedback">
+									Va rugam introduceti o adresa de email valida
+								</div>
 								</div>
 								<div class="mb-3">
 									<label for="footerInputName" class="form-label visually-hidden">Prenume</label>
-									<input type="text" class="form-control" id="footerInputName" placeholder="Prenume">
+									<input type="text" class="form-control" id="footerInputName" placeholder="Prenume" required>
+									<div class="invalid-feedback">
+										Va rugam introduceti prenumele
+									</div>
 								</div>
 
 								<p class="footer-form-innertitle">În ce sector lucrați în acest moment:</p>
@@ -2039,7 +2045,7 @@
 								</div>
 
 								<div class="form-check footer-form-check-policy mb-2">
-									<input type="checkbox" class="form-check-input" id="policyCheck">
+									<input type="checkbox" class="form-check-input" id="policyCheck" required>
 									<label class="form-check-label" for="policyCheck">Sunt de acord cu Politica de confidențialitate.</label>
 								</div>
 

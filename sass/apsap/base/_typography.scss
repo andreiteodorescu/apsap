@@ -137,6 +137,10 @@ b, strong {
   span {
     font-family: $font-family-bold;
   }
+
+  &-medium {
+    font-size: rem(21px);
+  }
 }
 
 .text-center {

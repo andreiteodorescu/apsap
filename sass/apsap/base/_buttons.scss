@@ -28,6 +28,10 @@
         color: #fff !important;
     }
 
+    &-shadow {
+        box-shadow: 0 rem(3px) rem(2px) rgba(0, 0, 0, .2);
+    }
+
     &-long {
         width: 32%;
 
