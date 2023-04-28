@@ -415,104 +415,336 @@
 		<a href="#" class="btn btn-pill btn-pill-shadow btn-pill-yellow mt-4" type="button"><span>Descarca</span> brosura hotelurilor</a>
 	</div>
 	<main id="content" class="main">
-		<section class="component-block">
-			<div class="container-xxxl">
+		<section class="mt-5">
+			<div class="container-medium-large-2">
 				<div class="hotels-grid">
-					<article>
+					<article class="hotels-grid-item">
+						<header class="hotels-grid-item-header">
+							<div class="hotels-grid-item-header-left">
+								<div class="hotels-grid-item-header-rating" aria-label="Acest hotel are 4 stele">
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+								</div>
+								<h3 class="hotels-grid-item-header-title">Hotel Elexus <span>Predeal</span></h3>
+								<address class="hotels-grid-item-header-address">Strada Muncii 6, 505300 Predeal, Romania</address>
+								<a class="hotels-grid-item-header-link" href="https://www.elexus.ro" title="" target="_blank">www.elexus.ro</a>
+							</div>
+							<div class="hotels-grid-item-header-right">
+								<ul class="list-unstyled hotels-grid-item-header-details">
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-details">
+												<use href="../images/sprite.svg#icon-details-hotel"></use>
+											</svg>
+											<span>Amãnunte</span> hotel
+										</a>
+									</li>
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-location">
+												<use href="../images/sprite.svg#icon-pin"></use>
+											</svg>
+											<span>Vezi</span> pe harta
+										</a>
+									</li>
+								</ul>
+							</div>
+						</header>
+						<div class="hotels-grid-slider-wrapper">
+							<div class="swiper thumbs-slider thumbs-slider-small js-thumbs-small">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" aria-controls="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
+							</div>
 
-
-						<div class="swiper thumbs-slider thumbs-slider-big js-thumbs-big">
-							<div class="swiper-wrapper">
-							  <div class="swiper-slide">
-								<img src="../images/temporary/hotel-1.jpg" alt="" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="../images/temporary/hotel-2.jpg" alt="" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="../images/temporary/hotel-3.jpg" alt="" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="../images/temporary/hotel-4.jpg" alt="" />
-							  </div>
-							  <!-- <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-							  </div> -->
+							<!-- Recommended image size: 629 x 432 -->
+							<div class="swiper thumbs-slider thumbs-slider-big js-thumbs-big">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" id="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
 							</div>
 						</div>
-						<div class="swiper thumbs-slider thumbs-slider-small js-thumbs-small">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="../images/temporary/hotel-1.jpg" alt="" />
+						<div class="hotels-grid-item-body">
+							<p><strong>Situat în Predeal, la 1,7 km de pârtia de schi Poliștoaca, Elexus Predeal oferă cazare cu un restaurant, bar, grădină și parcare privată gratuită. Acest hotel de 4 stele pune la dispoziție o recepție cu program nonstop și room-service.
+							</strong></p>
+							<p>Respectând tradiția emblematicului Hotel Predeal, din stațiunea cu același nume, Hotelul Elexus se mândrește cu noul design, modern, pretențios, luxos. Camerele își primesc oaspeții într-un confort sporit, cu terase generoase și într-o liniște îmbietoare. Ideal pentru activități corporate, hotelul dispune și de sală de conferințe dotată după cele mai înalte standard. Prilejul unei vacanțe relaxante, conferințe sau activități de echipă, Hotelul Elexus depășește așteptările oaspeților săi și îi bucură cu atmosfera îmbietoare, serviciile personalizate și deliciile culinare tradiționale.</p>
+						</div>
+					</article>
+					<article class="hotels-grid-item">
+						<header class="hotels-grid-item-header">
+							<div class="hotels-grid-item-header-left">
+								<div class="hotels-grid-item-header-rating" aria-label="Acest hotel are 4 stele">
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
 								</div>
-								<div class="swiper-slide">
-									<img src="../images/temporary/hotel-2.jpg" alt="" />
+								<h3 class="hotels-grid-item-header-title">Hotel Elexus <span>Predeal</span></h3>
+								<address class="hotels-grid-item-header-address">Strada Muncii 6, 505300 Predeal, Romania</address>
+								<a class="hotels-grid-item-header-link" href="https://www.elexus.ro" title="" target="_blank">www.elexus.ro</a>
+							</div>
+							<div class="hotels-grid-item-header-right">
+								<ul class="list-unstyled hotels-grid-item-header-details">
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-details">
+												<use href="../images/sprite.svg#icon-details-hotel"></use>
+											</svg>
+											<span>Amãnunte</span> hotel
+										</a>
+									</li>
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-location">
+												<use href="../images/sprite.svg#icon-pin"></use>
+											</svg>
+											<span>Vezi</span> pe harta
+										</a>
+									</li>
+								</ul>
+							</div>
+						</header>
+						<div class="hotels-grid-slider-wrapper">
+							<div class="swiper thumbs-slider thumbs-slider-small js-thumbs-small">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" aria-controls="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
 								</div>
-								<div class="swiper-slide">
-									<img src="../images/temporary/hotel-3.jpg" alt="" />
+							</div>
+
+							<!-- Recommended image size: 629 x 432 -->
+							<div class="swiper thumbs-slider thumbs-slider-big js-thumbs-big">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" id="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
 								</div>
-								<div class="swiper-slide">
-									<img src="../images/temporary/hotel-4.jpg" alt="" />
-								</div>
-								
-							 <!--  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-							  </div>
-							  <div class="swiper-slide">
-								<img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-							  </div> -->
 							</div>
 						</div>
+						<div class="hotels-grid-item-body">
+							<p><strong>Situat în Predeal, la 1,7 km de pârtia de schi Poliștoaca, Elexus Predeal oferă cazare cu un restaurant, bar, grădină și parcare privată gratuită. Acest hotel de 4 stele pune la dispoziție o recepție cu program nonstop și room-service.
+							</strong></p>
+							<p>Respectând tradiția emblematicului Hotel Predeal, din stațiunea cu același nume, Hotelul Elexus se mândrește cu noul design, modern, pretențios, luxos. Camerele își primesc oaspeții într-un confort sporit, cu terase generoase și într-o liniște îmbietoare. Ideal pentru activități corporate, hotelul dispune și de sală de conferințe dotată după cele mai înalte standard. Prilejul unei vacanțe relaxante, conferințe sau activități de echipă, Hotelul Elexus depășește așteptările oaspeților săi și îi bucură cu atmosfera îmbietoare, serviciile personalizate și deliciile culinare tradiționale.</p>
+						</div>
+					</article>
+					<article class="hotels-grid-item">
+						<header class="hotels-grid-item-header">
+							<div class="hotels-grid-item-header-left">
+								<div class="hotels-grid-item-header-rating" aria-label="Acest hotel are 4 stele">
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+								</div>
+								<h3 class="hotels-grid-item-header-title">Hotel Elexus <span>Predeal</span></h3>
+								<address class="hotels-grid-item-header-address">Strada Muncii 6, 505300 Predeal, Romania</address>
+								<a class="hotels-grid-item-header-link" href="https://www.elexus.ro" title="" target="_blank">www.elexus.ro</a>
+							</div>
+							<div class="hotels-grid-item-header-right">
+								<ul class="list-unstyled hotels-grid-item-header-details">
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-details">
+												<use href="../images/sprite.svg#icon-details-hotel"></use>
+											</svg>
+											<span>Amãnunte</span> hotel
+										</a>
+									</li>
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-location">
+												<use href="../images/sprite.svg#icon-pin"></use>
+											</svg>
+											<span>Vezi</span> pe harta
+										</a>
+									</li>
+								</ul>
+							</div>
+						</header>
+						<div class="hotels-grid-slider-wrapper">
+							<div class="swiper thumbs-slider thumbs-slider-small js-thumbs-small">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" aria-controls="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
+							</div>
 
+							<!-- Recommended image size: 629 x 432 -->
+							<div class="swiper thumbs-slider thumbs-slider-big js-thumbs-big">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" id="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
+							</div>
+						</div>
+						<div class="hotels-grid-item-body">
+							<p><strong>Situat în Predeal, la 1,7 km de pârtia de schi Poliștoaca, Elexus Predeal oferă cazare cu un restaurant, bar, grădină și parcare privată gratuită. Acest hotel de 4 stele pune la dispoziție o recepție cu program nonstop și room-service.
+							</strong></p>
+							<p>Respectând tradiția emblematicului Hotel Predeal, din stațiunea cu același nume, Hotelul Elexus se mândrește cu noul design, modern, pretențios, luxos. Camerele își primesc oaspeții într-un confort sporit, cu terase generoase și într-o liniște îmbietoare. Ideal pentru activități corporate, hotelul dispune și de sală de conferințe dotată după cele mai înalte standard. Prilejul unei vacanțe relaxante, conferințe sau activități de echipă, Hotelul Elexus depășește așteptările oaspeților săi și îi bucură cu atmosfera îmbietoare, serviciile personalizate și deliciile culinare tradiționale.</p>
+						</div>
+					</article>
+					<article class="hotels-grid-item">
+						<header class="hotels-grid-item-header">
+							<div class="hotels-grid-item-header-left">
+								<div class="hotels-grid-item-header-rating" aria-label="Acest hotel are 4 stele">
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+									<span class="star">&#9733;</span>
+								</div>
+								<h3 class="hotels-grid-item-header-title">Hotel Elexus <span>Predeal</span></h3>
+								<address class="hotels-grid-item-header-address">Strada Muncii 6, 505300 Predeal, Romania</address>
+								<a class="hotels-grid-item-header-link" href="https://www.elexus.ro" title="" target="_blank">www.elexus.ro</a>
+							</div>
+							<div class="hotels-grid-item-header-right">
+								<ul class="list-unstyled hotels-grid-item-header-details">
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-details">
+												<use href="../images/sprite.svg#icon-details-hotel"></use>
+											</svg>
+											<span>Amãnunte</span> hotel
+										</a>
+									</li>
+									<li>
+										<a href="#" title="">
+											<svg class="hgi-icon hgi-icon-location">
+												<use href="../images/sprite.svg#icon-pin"></use>
+											</svg>
+											<span>Vezi</span> pe harta
+										</a>
+									</li>
+								</ul>
+							</div>
+						</header>
+						<div class="hotels-grid-slider-wrapper">
+							<div class="swiper thumbs-slider thumbs-slider-small js-thumbs-small">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" aria-controls="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" aria-controls="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
+							</div>
 
-
-
-
+							<!-- Recommended image size: 629 x 432 -->
+							<div class="swiper thumbs-slider thumbs-slider-big js-thumbs-big">
+								<div class="swiper-wrapper">
+									<figure class="swiper-slide" id="thumb-slide-1">
+										<img src="../images/temporary/hotel-1.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-2">
+										<img src="../images/temporary/hotel-2.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-3">
+										<img src="../images/temporary/hotel-3.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-4">
+										<img src="../images/temporary/hotel-4.jpg" alt="" />
+									</figure>
+									<figure class="swiper-slide" id="thumb-slide-5">
+										<img src="../images/temporary/hotel-5.jpg" alt="" />
+									</figure>
+								</div>
+							</div>
+						</div>
+						<div class="hotels-grid-item-body">
+							<p><strong>Situat în Predeal, la 1,7 km de pârtia de schi Poliștoaca, Elexus Predeal oferă cazare cu un restaurant, bar, grădină și parcare privată gratuită. Acest hotel de 4 stele pune la dispoziție o recepție cu program nonstop și room-service.
+							</strong></p>
+							<p>Respectând tradiția emblematicului Hotel Predeal, din stațiunea cu același nume, Hotelul Elexus se mândrește cu noul design, modern, pretențios, luxos. Camerele își primesc oaspeții într-un confort sporit, cu terase generoase și într-o liniște îmbietoare. Ideal pentru activități corporate, hotelul dispune și de sală de conferințe dotată după cele mai înalte standard. Prilejul unei vacanțe relaxante, conferințe sau activități de echipă, Hotelul Elexus depășește așteptările oaspeților săi și îi bucură cu atmosfera îmbietoare, serviciile personalizate și deliciile culinare tradiționale.</p>
+						</div>
 					</article>
 				</div>
 			</div>
@@ -1711,522 +1943,6 @@
 				</div>
 			</div>
 		</div>
-
-		<section class="component-block component-bubbles block-ribbon-mobile pt-5">
-			<div class="container-medium-large text-center">
-				<div class="ribbon ribbon-yellow observe mb-4">
-					<svg class="ribbon-icon ribbon-icon-reviews">
-						<use href="../images/sprite.svg#icon-reviews"></use>
-					</svg>
-				</div>
-				<h4 class="second-title second-title-black mb-1">Recenzii</h4>
-				<p class="subtitle-text subtitle-text-black mb-4 mb-lg-5">
-					Iată câteva recenzii primite de Centrul de Formare APSAP din partea cursantilor care au participat la cursuril noastre. Testimonialele sunt preluate prin Google Reviews.
-				</p>
-
-				<div class="reviews-grid">
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-06-03">
-										<span>3</span>
-										<strong>iunie</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-11-22">
-										<span>22</span>
-										<strong>noiembrie</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-facebook">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 4 din 5"><span class="rating-grade-big">4</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-4" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-01-10">
-										<span>10</span>
-										<strong>ianuarie</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2022-02-28">
-										<span>28</span>
-										<strong>februarie</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-06-03">
-										<span>3</span>
-										<strong>iunie</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-05-07">
-										<span>7</span>
-										<strong>mai</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-05-07">
-										<span>7</span>
-										<strong>mai</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-05-07">
-										<span>7</span>
-										<strong>mai</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-12-15">
-										<span>15</span>
-										<strong>decembrie</strong> 2021
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-google">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-google"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-09-19">
-										<span>19</span>
-										<strong>septembrie</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-facebook">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 5 din 5"><span class="rating-grade-big">5</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-5" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2022-08-20">
-										<span>20</span>
-										<strong>august</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="review-card">
-						<div class="review-source review-source-facebook">
-							<svg class="review-source-icon">
-								<use href="../images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</div>
-						<div class="review-card-innerwrap">
-							<div class="review-card-inner">
-								<p class="review-card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-								<h5 class="review-card-title">Nume Prenume User</h5>
-								<div class="review-card-footer">
-									<div class="rating">
-										<div class="rating-grade" aria-label="Nota 4 din 5"><span class="rating-grade-big">4</span>/5</div> <!-- Aici in aria-label prima cifra trebuie sa fie dinamica daca se poate, aceeasi ca cea din "rating-grade-big" -->
-										<ul class="list-unstyled rating-dots rating-dots-4" role="presentation">
-											<li>1</li>
-											<li>2</li>
-											<li>3</li>
-											<li>4</li>
-											<li>5</li>
-										</ul>
-									</div>
-	
-									<time class="rating-date" datetime="2021-01-10">
-										<span>10</span>
-										<strong>ianuarie</strong> 2022
-									</time>
-								</div>
-							</div>
-						</div>
-					</article>
-				</div>
-				<button type="button" class="btn btn-pill btn-pill-small btn-pill-long btn-pill-yellow mt-2">Vezi mai multe recenzii</button>
-			</div>
-		</section>
-
-		<section class="component-block component-bubbles block-ribbon-mobile">
-			<div class="container-medium-2 text-center">
-				<div class="huge-heading-wrapper">
-					<h4 class="huge-heading huge-heading-large">Lectori</h4>
-					<div class="huge-heading-overlap huge-heading-overlap-offset">
-						<div class="ribbon observe">
-							<svg class="ribbon-icon ribbon-icon-book">
-								<use href="../images/sprite.svg#icon-book"></use>
-							</svg>
-						</div>
-						<h3 class="h-heading-title-small">Lectori experimentați</h3>
-						<p class="h-heading-subtitle">specialiști în domeniile pe care le predau</p>
-					</div>
-				</div>
-
-				<!-- The class "bottom-overflow-limit-wrap-xl" (change "xl" with "lg" or "md" if you need the functionality only on a lower res) is used together with "bottom-overflow-limit" at the bottom to hide stuff on mobile -->
-				<div class="swiper js-swiper-medallion medallion-wrapper mt-2 mt-xl-0 bottom-overflow-limit-wrap-xl">
-					<div class="swiper-wrapper">
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/ionela-costache.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>Ionela Floricel (Costache)</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Augustin-Fuerea.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>Augustin FUEREA</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>Roxana Elena Niculescu</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-5-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>Dr Mihaela Simion</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/teodora.jpeg" alt="" />
-							<h3 class="medallion-title">
-								<span>Teodora Metiu</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/radu_popescu_apsap.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>Prof. Univ. Dr. Radu Rãzvan Popescu</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>7 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>8 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>9 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>10 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>11 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-						<figure class="swiper-slide medallion">
-							<img class="medallion-image" src="../images/temporary/Asset-4-100.jpg" alt="" />
-							<h3 class="medallion-title">
-								<span>12 Ionela Floricel Costache</span>
-							</h3>
-							<figcaption class="medallion-caption">
-								Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician
-							</figcaption>
-						</figure>
-					</div>
-
-					<!-- This always has to be on the first level, as a direct child of "bottom-overflow-limit-wrap-(xl, lg, md)" -->
-					<div class="bottom-overflow-limit">
-						<button type="button" class="btn btn-pill btn-pill-blue js-cancel-overflow">Mai incarcã lectori</button>
-					</div>
-				</div>
-
-				<button type="button" class="btn btn-pill btn-pill-small btn-pill-blue mt-5">Vezi pagina lectorii</button>
-			</div>
-		</section>
 
 		<section class="component-block component-stacks">
 			<div class="container-medium-2 text-center">

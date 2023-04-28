@@ -210,19 +210,34 @@ const certificationsSlider = new Swiper(".js-swiper-certification", {
 });
 
 // Hotels thumbnail sliders
-const hotelThumbs = new Swiper(".js-thumbs-small", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
+const thumbsBigSlider = document.querySelectorAll('.js-thumbs-big');
+const thumbsSmallSlider = document.querySelectorAll('.js-thumbs-small');
 
-const hotelThumbsBig = new Swiper(".js-thumbs-big", {
-  spaceBetween: 10,
-  thumbs: {
-    swiper: hotelThumbs,
-  },
-});
+for (let i = 0; i < thumbsBigSlider.length; i++) {
+  thumbsBigSlider[i].classList.add('js-thumbs-big-' + i);
+  thumbsSmallSlider[i].classList.add('js-thumbs-small-' + i);
+
+  const hotelThumbs = new Swiper('.js-thumbs-small-' + i , {
+    direction: "vertical",
+    spaceBetween: 5,
+    slidesPerView: 4,
+    freeMode: true,
+    keyboard: {
+      enabled: true
+    },
+    watchSlidesProgress: true,
+  });
+
+  const hotelThumbsBig = new Swiper('.js-thumbs-big-' + i, {
+    spaceBetween: 10,
+    keyboard: {
+      enabled: true
+    },
+    thumbs: {
+      swiper: hotelThumbs,
+    },
+  });
+}
 
 
 
