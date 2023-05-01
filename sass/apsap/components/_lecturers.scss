@@ -1,0 +1,132 @@
+.lecturers-grid {
+    display: flex;
+    gap: rem(60px);
+    row-gap: rem(80px);
+    flex-wrap: wrap;
+
+    &-item {
+        max-width: rem(740px);
+
+        figure {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            font-size: rem(24px);
+            font-family: $font-family-extrabold;
+            color: $blue-violet;
+            margin-bottom: rem(35px);
+
+            span {
+                display: block;
+                font-size: rem(16px);
+                font-family: $font-family-medium;
+                margin-top: rem(5px);
+            }
+        }
+
+        &-content {
+            display: flex;
+            gap: rem(70px);
+        }
+
+        &-image-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: rem(30px);
+            align-items: center;
+        }
+
+        &-image {
+            border-radius: 50%;
+            width: rem(300px);
+            height: rem(300px);
+        }
+
+        &-btn {
+            font-size: rem(16px);
+            text-transform: none;
+            padding-bottom: rem(12px);
+
+            &-icon {
+                width: rem(21px);
+                height: rem(20px);
+                fill: #fff;
+                margin-right: rem(13px);
+            }
+
+            span {
+                position: relative;
+                top: rem(1px);
+            }
+        }
+
+        figcaption {
+            font-size: rem(14px);
+            font-family: $font-family-medium;
+        }
+    }
+}
+
+@media (max-width: rem(1563px)) {
+    .lecturers-grid {
+        gap: 4%;
+        row-gap: rem(60px);
+    
+        &-item {
+            max-width: 48%;
+        }
+    }
+
+    .lecturers-grid-item-content {
+        gap: rem(50px);
+    }
+}
+
+@media (max-width: rem(1480px)) {
+    .lecturers-grid-item-content {
+        gap: rem(30px);
+    }
+
+    .lecturers-grid-item-image {
+        width: rem(220px);
+        height: rem(220px);
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .lecturers-grid {
+        flex-direction: column;
+
+        &-item {
+            max-width: none;
+
+            &-title {
+                margin-bottom: rem(25px);
+            }
+        }
+
+        figcaption {
+            padding-top: rem(15px);
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .lecturers-grid-item-title {
+        text-align: center;
+    }
+
+    .lecturers-grid-item-content {
+        flex-direction: column;
+    }
+
+    .lecturers-grid-item-image {
+        width: rem(260px);
+        height: rem(260px);
+    }
+
+    .lecturers-grid figcaption {
+        padding-top: 0;
+    }
+}

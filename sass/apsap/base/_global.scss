@@ -55,6 +55,14 @@ body {
     }
 }
 
+.container-medium-large-3 {
+    @include make-container();
+
+    @media (min-width: rem(1510px)) {
+        max-width: rem(1509px); 
+    }
+}
+
 .container-large-custom {
     @include make-container();
 

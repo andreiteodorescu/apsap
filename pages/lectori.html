@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Centrul de formare APSAP</title>
+
+	  <link href="../css/style.css" rel="stylesheet">
+
+  </head>
+  <body class="grey-header-gradient"> <!-- Comentariu in romana, sterge-l dupa ce citesti: Clasa asta de pe body NU trebuie sa apara pe paginile de cursuri (cazare, locatie, perioada si tematica) si pe homepage DAR aceasta clasa trebuie sa fie pe toate paginile de INTERIOR. Deci if page id is not cazare, locatie, perioada, tematica and is not homepage add class "grey-header-gradient". Pe homepage nu trebuie sa existe aceasta clasa!!! -->
+	<a class="visually-hidden-focusable" href="#content">Mergi direct la contentul principal</a>
+
+	<header class="header">
+		<div class="container-narrow">
+			<div class="menu navbar position-static">
+				<div class="menu-left">
+					<button id="menuOffer" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-close-effect"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-oferta"></use>
+							</svg>
+							<i class="menu-btn-text">Oferta</i>
+						</span>
+					</button>
+					<div class="main-submenu dropdown-menu" aria-labelledby="menuOffer">
+						<div class="container-narrow">
+							<nav class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item has-submenu">
+										<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
+										<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
+											<ul class="main-submenu-second-level list-group list-group-flush">
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 7 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 6 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de weekend (4 zile)</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+								<button class="search-toggler btn btn-link" type="button">
+									<svg class="search-toggler-icon">
+										<use href="../images/sprite.svg#icon-magnifier"></use>
+									</svg>
+									<span class="search-toggler-text">Cauta un curs</span>
+								</button>
+							</nav>
+						</div>
+						<div class="search-wrapper">
+							<div class="container-narrow">
+								<button type="button" class="btn search-back-btn">
+									<svg class="search-back-btn-icon">
+										<use href="../images/sprite.svg#icon-left-arrow"></use>
+									</svg>
+								</button>
+								<div class="search-console">
+									<div class="search-console-inner">
+										<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-1" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1" value="Alege locatia">
+												<span class="search-console-slice-tag">Locatia</span>
+												<span class="search-console-selection">Alege locatia</button>
+											</button>
+											<div id="searchDrop-1" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1">
+												<ul>
+													<li tabindex="0">On-line</li>
+													<li tabindex="0">Baile felix</li>
+													<li tabindex="0">Poiana Brasov</li>
+													<li tabindex="0">Sinaia</li>
+													<li tabindex="0">Mamaia</li>
+												</ul>
+											</div>
+										</div>
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-2" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2" value="Alege tematica">
+												<span class="search-console-slice-tag">Tematica</span>
+												<span class="search-console-selection">Alege tematica</button>
+											</button>
+											<div id="searchDrop-2" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2">
+												<ul>
+													<li tabindex="0">Achizitii publice</li>
+													<li tabindex="0">Administratie publica</li>
+													<li tabindex="0">Comunicare si transparenta</li>
+												</ul>
+											</div>
+										</div>
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-3" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3" value="Alege datele">
+												<span class="search-console-slice-tag">Perioada</span>
+												<span class="search-console-selection">Alege datele</button>
+											</button>
+											<div id="searchDrop-3" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3">
+												<ul>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<button class="btn search-console-bubbles">
+										<span>Cautã</span>
+									</button>
+								</div>
+							</div>
+
+							<div id="card-full-image-slider" class="swiper cards-full-image-small-slider mt-5"> 
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 1 curs disponibil"> <!-- Keep and fill the "title" attribute, it's important for accessibilty -->
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">1 cursuri disponibile</p>
+													<p class="card-full-image-title">Bãile-Felix</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 2 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">2 cursuri disponibile</p>
+													<p class="card-full-image-title">Jupiter</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 3 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">3 cursuri disponibile</p>
+													<p class="card-full-image-title">Mamaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 4 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">4 cursuri disponibile</p>
+													<p class="card-full-image-title">Sinaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Predeal - 5 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">5 cursuri disponibile</p>
+													<p class="card-full-image-title">Predeal</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Eforie Nord - 6 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">6 cursuri disponibile</p>
+													<p class="card-full-image-title">Eforie Nord</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 7 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">7 cursuri disponibile</p>
+													<p class="card-full-image-title">Bãile-Felix</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 8 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">8 cursuri disponibile</p>
+													<p class="card-full-image-title">Jupiter</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 9 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">9 cursuri disponibile</p>
+													<p class="card-full-image-title">Mamaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 10 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+													<p class="card-full-image-title">Sinaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="social-media social-media-absolute mt-5 mb-5">
+							<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
+							<ul class="social-media-list">
+								<li class="social-media-list-item social-media-facebook">
+									<a target="_blank" href="#" title="Facebook">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social-media-list-item social-media-instagram">
+									<a target="_blank" href="#" title="Instagram">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social-media-list-item social-media-youtube">
+									<a target="_blank" href="#" title="Youtube">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-youtube"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a class="logo" href="#" title="APSAP">
+					<svg class="logo-icon">
+						<use href="../images/sprite.svg#icon-logo"></use>
+					</svg>
+				</a>
+				<div class="menu-right">
+					<button id="menuInfo" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-close-effect"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-info"></use>
+							</svg>
+							<i class="menu-btn-text">Info</i>
+						</span>
+					</button>
+					<div class="main-submenu dropdown-menu" aria-labelledby="menuInfo">
+						<div class="container-narrow">
+							<nav class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-medium-large text-center">
+		<h2 class="main-title main-title-medium mt-5">Lectori</h2>
+		<p class="subtitle-text subtitle-text-medium mb-4">Lectorii sunt consultanți experimentați, buni cunoscători ai legislației achizițiilor publice</p>
+
+		<div class="search-wrapper search-wrapper-general">
+			<div class="container-narrow">
+				<button type="button" class="btn search-back-btn">
+					<svg class="search-back-btn-icon">
+						<use href="../images/sprite.svg#icon-left-arrow"></use>
+					</svg>
+				</button>
+				<div class="search-console">
+					<div class="search-console-inner">
+						<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-1a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1a" value="Alege locatia">
+								<span class="search-console-slice-tag">Locatia</span>
+								<span class="search-console-selection">Alege locatia</button>
+							</button>
+							<div id="searchDrop-1a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1a">
+								<ul>
+									<li tabindex="0">On-line</li>
+									<li tabindex="0">Baile felix</li>
+									<li tabindex="0">Poiana Brasov</li>
+									<li tabindex="0">Sinaia</li>
+									<li tabindex="0">Mamaia</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-2a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2a" value="Alege tematica">
+								<span class="search-console-slice-tag">Tematica</span>
+								<span class="search-console-selection">Alege tematica</button>
+							</button>
+							<div id="searchDrop-2a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2a">
+								<ul>
+									<li tabindex="0">Achizitii publice</li>
+									<li tabindex="0">Administratie publica</li>
+									<li tabindex="0">Comunicare si transparenta</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-3a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3a" value="Alege datele">
+								<span class="search-console-slice-tag">Perioada</span>
+								<span class="search-console-selection">Alege datele</button>
+							</button>
+							<div id="searchDrop-3a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3a">
+								<ul>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="btn search-console-bubbles">
+						<span>Cautã</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn search-console-bubbles search-trigger-mobile">
+			<span>Cautã</span>
+		</button>
+	</div>
+	<main id="content" class="main">
+		<section class="component-block">
+			<div class="container-medium-large-2">
+				<div class="lecturers-grid">
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="lecturers-grid-item">
+						<h2 class="lecturers-grid-item-title">Ionela COSTACHE <span>Senior Consultant Achiziții Publice, peste 15 ani experiență în domeniu - practician</span></h2>
+						<figure class="lecturers-grid-item-content">
+							<div class="lecturers-grid-item-image-wrap">
+								<img class="lecturers-grid-item-image" src="../images/temporary/ionela-costache.jpg" alt="" />
+								<button class="btn btn-pill btn-pill-radius btn-pill-blue lecturers-grid-item-btn" type="button">
+									<svg class="lecturers-grid-item-btn-icon">
+										<use href="../images/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Vezi <strong>Calendar</strong></span>
+								</button>
+							</div>
+							<figcaption>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. consequatur? </p>
+							</figcaption>
+						</figure>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="component-block component-stacks">
+			<div class="container-medium-2 text-center">
+				<div class="ribbon ribbon-yellow observe mb-4">
+					<svg class="ribbon-icon ribbon-icon-medal">
+						<use href="../images/sprite.svg#icon-medal"></use>
+					</svg>
+				</div>
+				<h4 class="second-title second-title-black second-title-bolder text-uppercase mb-2">Autorizare si certificare</h4>
+				<p class="subtitle-text subtitle-text-black">
+					Centrul de Formare APSAP este furnizor acreditat de formare profesională înregistrat în Registrul Național al Furnizorilor de Formare Profesionala a Adulților a Municipiului București iar certificatele de absolvire sunt emise de Comisia de Autorizare a Furnizorilor de Formare Profesională a Adulţilor sub egida Ministerului Muncii și Protecției Sociale și a Ministerului Educației și Cercetării.
+				</p>
+			</div>
+
+			<div class="horizontal-stripe">
+				<div class="container-medium-2 text-center">
+					<!-- The class "bottom-overflow-limit-wrap-xl" (change "xl" with "lg" or "md" if you need the functionality only on a lower res) is used together with "bottom-overflow-limit" at the bottom to hide stuff on mobile -->
+					<div class="swiper js-swiper-certification certifications mt-4 mt-xl-5 bottom-overflow-limit-wrap-lg">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-1" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" data-bs-toggle="modal" data-bs-target="#docModal-2" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_3.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-3" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_4.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-4" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_5.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_6.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" />
+							</div>
+						</div>
+						<!-- This always has to be on the first level, as a direct child of "bottom-overflow-limit-wrap-(xl, lg, md)" -->
+						<div class="bottom-overflow-limit">
+							<button type="button" class="btn btn-pill btn-pill-blue js-cancel-overflow">Mai incarcã documente</button>
+						</div>
+					</div>
+
+					<!-- Group modals START. The trigger is on the images above. In these modals you will put the large versions of the documents/certifications. I have added modals on just 4 items as an example, it will probably have to be on all of them. -->
+						<!-- Modal 1 START -->
+						<div class="modal" id="docModal-1" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 1 END -->
+
+						<!-- Modal 2 START -->
+						<div class="modal" id="docModal-2" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 2 END -->
+
+						<!-- Modal 3 START -->
+						<div class="modal" id="docModal-3" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_3.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 3 END -->
+
+						<!-- Modal 4 START -->
+						<div class="modal" id="docModal-4" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_4.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 4 END -->
+					<!-- Group modals END -->
+				</div>
+			</div>
+		</section>
+
+		<div class="component-block component-skew">
+			<div class="component-skew-inner">
+				<div class="container-medium-large text-center">
+					<section class="component-block">
+						<h4 class="main-title mb-3 mb-xl-5">Hotel</h4>
+						<h2 class="second-title mb-3"><span class="yellow-text">Cursuri cu cazare</span> pentru sectorul public</h2>
+						<p class="subtitle-text mb-4">
+							Cursuri cu cazare pentru sectorul public  Avem cursuri de 7, 6 sau 3 zile, nu uita ca poti beneficia de un discount consistent daca platesti cu cardul. Daca inca nu esti hotarat sau cauti alte date alege doar destinatia sau cursul dorit si iti poti modifica datele sau chiar schimba hotelul!
+						</p>
+						<div class="btns-align pb-2 pb-md-4">
+							<a href="#" class="btn btn-pill btn-pill-small btn-pill-yellow" type="button"><span>Descarca</span> oferta cursuri</a>
+							<a href="#" class="btn btn-pill btn-pill-small" type="button"><span>Descarca</span> formularul</a>
+						</div>
+						<div class="cards-grid">
+							<article class="card-info card-info-image card-info-bonus">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image card-info-promo">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">PROMO</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image card-info-discount">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">10% <span>DISCOUNT</span></div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#" title="">Sinaia</a></h2>
+									<p class="card-info-subtitle">27 februarie - 6 martie</p>
+									<p class="card-info-description">Comunicarea în administrația publică. Abordări practice și metode moderne de lucru în sectorul public</p>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<span class="card-info-bottom-acc-details">7, 6 sau 3 nopți</span>
+										<span class="card-info-bottom-acc-title">Hotel Carpathia</span>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<a href="#" class="btn btn-pill btn-pill-long btn-pill-yellow mt-4" type="button"><span>Vezi toate</span> cursurile</a>
+					</section>
+
+					<section class="component-block">
+						<div class="huge-heading-wrapper">
+							<h4 class="huge-heading huge-heading-opacity huge-heading-small">Perioada</h4>
+							<div class="huge-heading-overlap huge-heading-overlap-lg">
+								<h3 class="second-title mb-1">Perioade cand ați dori să participați la curs</h3>
+								<p class="h-heading-subtitle">Alege o luna si-ti vom arata cursurile in functie de perioada in care puteti participa!</p>
+							</div>
+						</div>
+						<ul class="list-unstyled months">
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Ianuarie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Februarie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Martie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Aprilie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Mai</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Iunie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Iulie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">August</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Septembrie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Octombrie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Noiembrie</a>
+							</li>
+							<li class="months-item">
+								<a class="months-item-pill" href="#" title="">Decembrie</a>
+							</li>
+						</ul>
+					</section>
+	
+					<section class="component-block">
+						<h4 class="main-title mb-3 mb-xl-5">ON<span class="yellow-text">LINE</span></h4>
+						<h2 class="second-title mb-3"><span class="yellow-text">Cursuri online</span> pentru sectorul public</h2>
+						<p class="subtitle-text mb-4">
+							Formatori excepționali din Administrația Centrală. Eficient și accesibil prin platforma Zoom. Sesiune de întrebări și răspunsuri. Certificat de participare recunoscut
+						</p>
+						<div class="btns-align pb-2 pb-md-4">
+							<a href="#" class="btn btn-pill btn-pill-small btn-pill-yellow" type="button"><span>Descarca</span> oferta cursuri</a>
+							<a href="#" class="btn btn-pill btn-pill-small" type="button"><span>Descarca</span> formularul</a>
+						</div>
+					</section>
+				</div>
+				<!-- This is out of "container-medium-large" -->
+				<!-- The class "cards-overflow-limit-wrap-xl" (change "xl" with "lg" or "md" if you need the functionality only on a lower res) is used together with "bottom-overflow-limit" at the bottom to hide stuff on mobile -->
+				<div id="card-overflow-slider" class="swiper card-info-slider mt-4 cards-overflow-limit-wrap-xl"> 
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="swiper-slide">
+							<article class="card-info card-info-image">
+								<img class="img-fluid" src="../images/temporary/261570612.jpg" alt=""/>
+								<header class="card-info-header">
+									<h2 class="card-info-title"><a href="#">21 mar. - 25 mar.</a></h2>
+									<p class="card-info-description">Performanță în sectorul public.</p>
+									<h4 class="card-info-additional">Mamaia</h4>
+								</header>
+								<div class="card-info-bottom">
+									<div class="card-info-bottom-half card-info-bottom-half-left">
+										<div class="card-bottom-top">
+											<span class="card-info-bottom-half-title">On-line</span>
+											<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+										</div>
+										<div class="card-bottom-down">
+											<svg class="card-info-icon card-info-icon-live">
+												<use href="../images/sprite.svg#icon-live"></use>
+											</svg>
+			
+											<svg class="card-info-icon card-info-icon-accredited">
+												<use href="../images/sprite.svg#icon-acreditat"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-info-bottom-half card-info-bottom-half-right">
+										<div class="card-info-bottom-half-tag">REZERVÃ</div>
+										<div class="card-info-bottom-right-price">
+											<span class="card-info-bottom-right-info">cazare de la</span>
+											<p class="card-info-bottom-amount">2.490</p>
+											<span class="card-info-bottom-right-info">RON TVA inclus</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- This always has to be on the first level, as a direct child of "cards-overflow-limit-wrap-(xl, lg, md)" -->
+					<div class="bottom-overflow-limit">
+						<button type="button" class="btn btn-pill btn-pill-yellow js-cancel-overflow">Mai incarcã cursuri online</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="component-block">
+			<div class="container-medium-large text-center">
+				<h2 class="main-title">Cursuri</h2>
+				<h4 class="second-title">din perioada urmatoare</h4>
+				<p class="subtitle-text">calendarul cursurilor - alege un curs si vezi datele de desfasurare</p>
+				<div class="courses-slider-wrapper">
+					<div id="courses-slider" class="swiper courses-slider-inner">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide current-active">
+								<button class="btn btn-pill" type="button">Ianuarie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Februarie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Martie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Aprilie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Mai</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Iunie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Iulie</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">August</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="btn btn-pill" type="button">Septembrie</button>
+							</div>
+						</div>
+					</div>
+					<div class="courses-slider-nav">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<div class="cards-grid">
+					<article class="card-info card-info-bonus">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">Performanță în sectorul public. Aspecte și soluții privind modernizarea sectorului public</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">On-line</span>
+									<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-live">
+										<use href="../images/sprite.svg#icon-live"></use>
+									</svg>
+
+									<svg class="card-info-icon card-info-icon-accredited">
+										<use href="../images/sprite.svg#icon-acreditat"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag"><span>BONUS</span> 150 Lei</div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="card-info card-info-discount">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">Performanță în sectorul public. Aspecte și soluții privind modernizarea sectorului public</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">Cazare</span>
+									<span class="card-info-bottom-half-subtitle">7, 6 sau 3 nopti</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-accommodation">
+										<use href="../images/sprite.svg#icon-keys"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag">10% <span>DISCOUNT</span></div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="card-info card-info-promo">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">Performanță în sectorul public. Aspecte și soluții privind modernizarea sectorului public</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">On-line</span>
+									<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-live">
+										<use href="../images/sprite.svg#icon-live"></use>
+									</svg>
+
+									<svg class="card-info-icon card-info-icon-accredited">
+										<use href="../images/sprite.svg#icon-acreditat"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag">PROMO</div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="card-info card-info-promo">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">Performanță în sectorul public. Aspecte și soluții privind modernizarea sectorului public</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">On-line</span>
+									<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-live">
+										<use href="../images/sprite.svg#icon-live"></use>
+									</svg>
+
+									<svg class="card-info-icon card-info-icon-accredited">
+										<use href="../images/sprite.svg#icon-acreditat"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag">PROMO</div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="card-info card-info-promo">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">EXPERT ACHIZITII PUBLICE</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">On-line</span>
+									<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-live">
+										<use href="../images/sprite.svg#icon-live"></use>
+									</svg>
+
+									<svg class="card-info-icon card-info-icon-accredited">
+										<use href="../images/sprite.svg#icon-acreditat"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag">PROMO</div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="card-info">
+						<header class="card-info-header">
+							<h3 class="card-info-title"><a href="#" title="">21 mar. - 25 mar.</a></h3>
+							<p class="card-info-description">Financiar, Buget și Contabilitate Publică (Include: Forexebug, A.L.O.P., C.F.P. și riscul financiar-bugetar)</p>
+							<h4 class="card-info-additional">Băile Felix</h4>
+						</header>
+						<div class="card-info-bottom">
+							<div class="card-info-bottom-half card-info-bottom-half-left">
+								<div class="card-bottom-top">
+									<span class="card-info-bottom-half-title">On-line</span>
+									<span class="card-info-bottom-half-subtitle">ACREDITAT</span>
+								</div>
+								<div class="card-bottom-down">
+									<svg class="card-info-icon card-info-icon-accommodation">
+										<use href="../images/sprite.svg#icon-keys"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="card-info-bottom-half card-info-bottom-half-right">
+								<div class="card-info-bottom-half-tag">REZERVÃ</div>
+								<div class="card-info-bottom-right-price">
+									<span class="card-info-bottom-right-info">cazare de la</span>
+									<p class="card-info-bottom-amount">2.490</p>
+									<span class="card-info-bottom-right-info">RON TVA inclus</span>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<a href="#" class="btn btn-pill btn-pill-long mt-4" type="button"><span>Vezi</span> mai multe</a>
+			</div>
+		</section>
+
+		<section class="component-block component-bubbles bubbles-padding-increase">
+			<div class="container-medium-2 text-center">
+				<h4 class="second-title second-title-black second-title-bolder text-uppercase">Echipa</h4>
+				<p class="subtitle-text subtitle-text-black">Centrului de formare <strong>APSAP</strong></p>
+
+				<!-- The class "bottom-overflow-limit-wrap-xl" (change "xl" with "lg" or "md" if you need the functionality only on a lower res) is used together with "bottom-overflow-limit" at the bottom to hide stuff on mobile -->
+				<div class="swiper medallion-wrapper medallion-fisheye js-medallion-fisheye mt-4 mt-xl-5 bottom-overflow-limit-wrap-xl">
+					<div class="swiper-wrapper">
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Echipa-Costel-CRISTEA-1.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>1 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Bianca_Zichil_03_web.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>2 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Bogdan_Farsirotu_01.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>Bogdan-Costin Fârsirotu</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Echipa-Diana-Antonia-PAVEL-1.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>4 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Echipa-Luiza-ALMAN.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>5 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Marinas_Elena_Laura.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>6 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/Razvan-Dobrea-1.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>7 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+						<figure class="swiper-slide medallion">
+							<img class="medallion-image" src="../images/temporary/radu_popescu_apsap.jpg" alt="" />
+							<h3 class="medallion-title">
+								<span>8 Ionela Floricel Costache</span>
+							</h3>
+							<figcaption class="medallion-caption">
+								Cu peste 16 ani de activitate în sectorul public și în relația cu administrația publică sunt absolvent al Facultății de Administrație Publică din cadrul Școlii Naționale de Studii Politice și Administrative (S.N.S.P.A.) din București... <a href="#" title="">vezi mai multe</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<!-- This always has to be on the first level, as a direct child of "bottom-overflow-limit-wrap-(xl, lg, md)" -->
+					<div class="bottom-overflow-limit">
+						<button type="button" class="btn btn-pill btn-pill-blue js-cancel-overflow">Mai incarcã membrii</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="social-media social-media-footer">
+			<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
+			<ul class="social-media-list">
+				<li class="social-media-list-item social-media-facebook">
+					<a target="_blank" href="#" title="Facebook">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-facebook"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="social-media-list-item social-media-instagram">
+					<a target="_blank" href="#" title="Instagram">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-instagram"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="social-media-list-item social-media-youtube">
+					<a target="_blank" href="#" title="Youtube">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-youtube"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="footer-inner">
+			<div class="container-1000">
+				<div class="footer-content">
+					<div class="footer-content-col-small">
+						<h4 class="footer-title-dashed">Link-uri utile</h4>
+						<ul class="list-unstyled footer-list">
+							<li><a href="#" title="">Termeni și condiții</a></li>
+							<li><a href="#" title="">Politica de cookie</a></li>
+							<li><a href="#" title="">Ofertă cursuri</a></li>
+							<li><a href="#" title="">Contactează-ne</a></li>
+							<li><a href="#" title="">Notă de Informare GDPR</a></li>
+							<li><a href="#" title="">Politica de achiziție, livrare, retur a serviciilor achiziționate cu plata prin card bancar</a></li>
+							<li><a href="#" title="">Locuri de muncă</a></li>
+						</ul>
+					</div>
+					<div class="footer-content-col-large">
+						<div class="footer-form">
+							<h4 class="footer-form-title"><strong>Rămâi conectat</strong> la educație!</h4>
+							<p class="footer-form-subtitle">Fii la curent cu noile noastre cursuri online acreditate, evenimente și webinarii.</p>
+							<form>
+								<div class="mb-2">
+								  <label for="footerInputEmail" class="form-label visually-hidden">Email-ul tau</label>
+								  <input type="email" class="form-control" id="footerInputEmail" placeholder="Email-ul tau">
+								</div>
+								<div class="mb-3">
+									<label for="footerInputName" class="form-label visually-hidden">Prenume</label>
+									<input type="text" class="form-control" id="footerInputName" placeholder="Prenume">
+								</div>
+
+								<p class="footer-form-innertitle">În ce sector lucrați în acest moment:</p>
+
+								<div class="footer-form-check mb-3">
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="sectorCheck1">
+										<label class="form-check-label" for="sectorCheck1">Privat</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="sectorCheck2">
+										<label class="form-check-label" for="sectorCheck2">Public</label>
+									</div>
+								</div>
+
+								<div class="form-check footer-form-check-policy mb-2">
+									<input type="checkbox" class="form-check-input" id="policyCheck">
+									<label class="form-check-label" for="policyCheck">Sunt de acord cu Politica de confidențialitate.</label>
+								</div>
+
+								<button type="submit" class="btn btn-pill">Da, ma abonez!</button>
+							</form>
+						</div>
+					</div>
+					<div class="footer-content-col-small">
+						<address class="footer-address">
+							<p class="footer-address-title">Centrul de Formare APSAP</p>
+							<p><strong>Adresă:</strong> Str. Turturelelor nr. 62, clădirea Decebal Tower, etaj 6, camera 12, sector 3, București</p>
+							<p class="mb-0"><strong>Telefon:</strong> 0788 124 567</p>
+							<p class="mb-0"><strong>Fax:</strong> (021) 569 61 26</p>
+							<p class="mb-0"><strong>E-mail:</strong>	<a href="mailto:secretariat@cursuri-functionari.ro">secretariat@cursuri-functionari.ro</a></p>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container-1000">
+				<div class="footer-bottom-content d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap">
+					<p class="footer-copy">
+						&copy; <strong>2023</strong> - Centrul de Formare APSAP
+					</p>
+	
+					<img class="footer-payment-logos" src="../images/payment-logos.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="../js/prod/main.js"></script>
+
+</body>
+</html>

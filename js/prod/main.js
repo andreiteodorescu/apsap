@@ -515,7 +515,7 @@ for (let i = 0; i < thumbsBigSlider.length; i++) {
   thumbsSmallSlider[i].classList.add('js-thumbs-small-' + i);
 
   const hotelThumbs = new Swiper('.js-thumbs-small-' + i , {
-    direction: "vertical",
+    //direction: "vertical",
     spaceBetween: 5,
     slidesPerView: 4,
     freeMode: true,
@@ -523,6 +523,14 @@ for (let i = 0; i < thumbsBigSlider.length; i++) {
       enabled: true
     },
     watchSlidesProgress: true,
+    breakpoints: {
+      320: {
+        direction: "horizontal",
+      },
+      600: {
+        direction: "vertical",
+      },
+    }
   });
 
   const hotelThumbsBig = new Swiper('.js-thumbs-big-' + i, {

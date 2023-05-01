@@ -1,0 +1,173 @@
+.search-results-wrapper {
+    text-align: center;
+}
+
+.search-results-filter {
+    display: inline-block;
+
+    &-btn {
+        background-color: transparent;
+        border: none;
+        font-size: rem(14px);
+        font-family: $font-family-medium;
+        color: $blue-violet;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: rem(50px);
+            height: rem(50px);
+            border-radius: 50%;
+            background-color: $blue-violet;
+            margin: 0 rem(10px);
+
+            svg {
+                fill: #fff;
+                width: rem(22px);
+                height: rem(22px);
+            }
+        }
+    }
+
+    &-dropdown {
+        background-color: $grey-white;
+        border-radius: rem(7px);
+        width: rem(340px);
+        border: none;
+        padding: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: rem(-15px);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0; 
+            height: 0; 
+            border-left: rem(40px) solid transparent;
+            border-right: rem(40px) solid transparent;
+            border-bottom: rem(15px) solid $grey-white;
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                font-size: rem(19px);
+                font-family: $font-family-medium;
+                padding: rem(15px) rem(20px);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $grey-extralight-3;
+                }
+
+                &:first-child {
+                    border-top-left-radius: rem(7px);
+                    border-top-right-radius: rem(7px);
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: rem(7px);
+                    border-bottom-right-radius: rem(7px);
+                }
+
+                &.selected {
+                    background-color: $grey-extralight;
+                }
+            }
+        }
+    }
+}
+
+.search-results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(15px);
+    row-gap: rem(30px);
+    text-align: left;
+
+    &-session {
+        color: $blue-light-2;
+
+        &-eyebrow {
+            font-size: rem(12px);
+            font-family: $font-family-medium;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: rem(3px);
+        }
+
+        &-dates {
+            font-size: rem(23px);
+            font-family: $font-family-extrabold;
+            margin-bottom: rem(10px);
+            
+            span {
+                display: block;
+            }
+        }
+
+        &-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(30px);
+            padding: rem(15px) 0 0 rem(15px);
+            position: relative;
+
+            .card-info {
+                position: relative;
+            }
+
+            &::before {
+                content: "";
+                background-color: $blue-light-2;
+                width: 100%;
+                height: rem(145px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-radius: rem(10px);
+            }
+        }
+
+        &-grey {
+            color: $grey-dark-5;
+
+            .search-results-grid-session-group::before {
+                background-color: $grey-dark-5;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .search-results-grid-session-group {
+        gap: rem(15px);
+    }
+}
+
+@media (max-width: rem(500px)) {
+    .search-results-grid-session-group {
+        justify-content: center;
+        padding-right: rem(15px);
+    }
+}
+
+@media (max-width: rem(365px)) {
+    .search-results-filter-dropdown {
+        width: rem(320px);
+    }
+}
+
+@media (max-width: rem(340px)) {
+    .search-results-filter-dropdown {
+        width: rem(300px);
+    }
+}

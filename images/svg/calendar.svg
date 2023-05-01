@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.05 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="LECTORI">
+    <g id="calendar_icon" data-name="calendar icon">
+      <path class="cls-1" d="M16.84,3.16V1.05c0-.58-.47-1.05-1.05-1.05s-1.05,.47-1.05,1.05V3.16H6.32V1.05c0-.58-.47-1.05-1.05-1.05s-1.05,.47-1.05,1.05V3.16H0V20H21.05V3.16h-4.21Zm2.11,14.74H2.11V5.26H18.95v12.63ZM7.37,8.42h-2.11v2.11h2.11v-2.11Zm0,4.21h-2.11v2.11h2.11v-2.11Zm8.42-4.21h-6.32v2.11h6.32v-2.11Zm0,4.21h-6.32v2.11h6.32v-2.11Z"/>
+    </g>
+  </g>
+</svg>
