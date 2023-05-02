@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        // Compile de SCSS files into one CSS file
         sass: {
             options: {
                 implementation: sass,
@@ -17,6 +18,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // Concatenate all the javascript files into a single one: main.js
         concat: {
             options: {
                 sourceMap: true,
@@ -31,6 +33,29 @@ module.exports = function(grunt) {
             ],
               dest: 'js/prod/main.js',
             },
+        },
+        // Minify main.js file for production
+        uglify: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'js/prod/main.min.js': ['js/prod/main.js']
+                }
+            }
+        },
+        // Minify css files for production
+        cssmin: {
+            options: {
+                rebaseTo: 'code/css/',
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'css/style.min.css': ['css/style.css']
+                }
+            }
         },
         connect: {
             server: {
@@ -54,7 +79,9 @@ module.exports = function(grunt) {
         },
     });
 
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -62,6 +89,8 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'sass',
         'concat',
+        'uglify',
+        'cssmin',
         'connect',
         'watch'
     ]);

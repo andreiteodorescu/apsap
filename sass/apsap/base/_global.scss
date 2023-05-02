@@ -416,6 +416,10 @@ body {
     }
 }
 
+.logo-404 {
+    max-width: rem(570px);
+}
+
 @include media-breakpoint-down(xl) {
     .component-block {
         margin-top: rem(100px);
@@ -476,5 +480,15 @@ body {
 
     .grey-header-cut {
         padding-bottom: rem(80px);
+    }
+
+    .logo-404 {
+        max-width: 70%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .logo-404 {
+        max-width: 90%;
     }
 }

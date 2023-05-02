@@ -1,0 +1,163 @@
+.reservation-success {
+    color: $blue-main;
+
+    a {
+        color: $blue-main;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-icon {
+        width: rem(100px);
+    }
+
+    &-header {
+        text-align: center;
+        margin-bottom: rem(50px);
+    }
+
+    &-main-title {
+        font-size: rem(32px);
+        margin-bottom: rem(15px);
+        margin-top: rem(30px);
+    
+        span {
+            display: block;
+            font-family: $font-family-extrabold;
+        }
+    }
+
+    &-body {
+        display: flex;
+        gap: 8%;
+        flex-wrap: wrap;
+
+        &-half {
+            width: 46%;
+        }
+
+        &-info {
+            font-size: rem(13px);
+
+            &-title {
+                font-size: rem(18px);
+                font-family: $font-family-extrabold;
+                margin-bottom: rem(20px);
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+
+                span {
+                    flex: 1;
+                }
+            }
+
+            &-content {
+                ul {
+                    padding-left: rem(15px);
+                }
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &-details-list {
+        font-size: rem(12px);
+
+        h4, p {
+            margin: 0;
+        }
+
+        h4 {
+            font-size: rem(16px);
+            font-family: $font-family-bold;
+        }
+
+        li {
+            margin-bottom: rem(10px);
+            padding-bottom: rem(10px);
+            border-bottom: rem(1px) solid $blue-main;
+        }
+    }
+
+    &-dwn {
+        display: inline-flex;
+        color: $red !important;
+        font-size: rem(24px);
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+
+        span span {
+            display: block;
+            font-size: rem(14px);
+            text-transform: none;
+            margin-top: rem(2px);
+        }
+
+        &-icon {
+            fill: $red;
+            width: rem(40px);
+            height: rem(40px);
+            margin-right: rem(5px);
+        }
+    }
+}
+
+.rsbi-icon {
+    fill: $blue-main;
+    margin-right: rem(10px);
+
+    &-1 {
+        width: rem(35px);
+        height: rem(35px);
+    }
+
+    &-2 {
+        width: rem(31px);
+        height: rem(35px);
+    }
+
+    &-3 {
+        width: rem(41px);
+        height: rem(35px);
+    }
+}
+
+@media (max-width: rem(899px)) {
+    .reservation-success-body {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+
+        &-half {
+            width: rem(450px);
+        }
+    }
+
+    .rsbh-certificate {
+        order: -1;
+        margin-bottom: rem(50px);
+        margin-top: rem(20px);
+    }
+}
+
+@media (max-width: rem(500px)) {
+    .reservation-success-body-half {
+        width: 100%;
+    }
+}

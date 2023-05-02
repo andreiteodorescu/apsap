@@ -16,4 +16,12 @@
         top: rem(-9px);
         transform: rotate(-6deg) skew(-5deg);
     }
+
+    @include media-breakpoint-down(md) {
+        max-width: rem(350px);
+
+        figcaption {
+            top: rem(-20px);
+        }
+    }
 }

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Centrul de formare APSAP</title>
+
+	  <link href="../css/style.css" rel="stylesheet">
+
+  </head>
+  <body class="grey-header-gradient"> <!-- Comentariu in romana, sterge-l dupa ce citesti: Clasa asta de pe body NU trebuie sa apara pe paginile de cursuri (cazare, locatie, perioada si tematica) si pe homepage DAR aceasta clasa trebuie sa fie pe toate paginile de INTERIOR. Deci if page id is not cazare, locatie, perioada, tematica and is not homepage add class "grey-header-gradient". Pe homepage nu trebuie sa existe aceasta clasa!!! -->
+	<a class="visually-hidden-focusable" href="#content">Mergi direct la contentul principal</a>
+
+	<header class="header">
+		<div class="container-narrow">
+			<div class="menu navbar position-static">
+				<div class="menu-left">
+					<button id="menuOffer" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-close-effect"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-oferta"></use>
+							</svg>
+							<i class="menu-btn-text">Oferta</i>
+						</span>
+					</button>
+					<div class="main-submenu dropdown-menu" aria-labelledby="menuOffer">
+						<div class="container-narrow">
+							<nav class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item has-submenu">
+										<a class="main-submenu-list-link main-submenu-list-dropdown-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" href="#">Cursuri cu cazare sector public</a>
+										<div id="collapseOne" class="main-submenu-list-dropdown accordion-collapse collapse">
+											<ul class="main-submenu-second-level list-group list-group-flush">
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 7 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de 6 zile</a>
+												</li>
+												<li class="list-group-item">
+													<a class="main-submenu-list-link" href="#">Cursuri de weekend (4 zile)</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+								<button class="search-toggler btn btn-link" type="button">
+									<svg class="search-toggler-icon">
+										<use href="../images/sprite.svg#icon-magnifier"></use>
+									</svg>
+									<span class="search-toggler-text">Cauta un curs</span>
+								</button>
+							</nav>
+						</div>
+						<div class="search-wrapper">
+							<div class="container-narrow">
+								<button type="button" class="btn search-back-btn">
+									<svg class="search-back-btn-icon">
+										<use href="../images/sprite.svg#icon-left-arrow"></use>
+									</svg>
+								</button>
+								<div class="search-console">
+									<div class="search-console-inner">
+										<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-1" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1" value="Alege locatia">
+												<span class="search-console-slice-tag">Locatia</span>
+												<span class="search-console-selection">Alege locatia</button>
+											</button>
+											<div id="searchDrop-1" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1">
+												<ul>
+													<li tabindex="0">On-line</li>
+													<li tabindex="0">Baile felix</li>
+													<li tabindex="0">Poiana Brasov</li>
+													<li tabindex="0">Sinaia</li>
+													<li tabindex="0">Mamaia</li>
+												</ul>
+											</div>
+										</div>
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-2" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2" value="Alege tematica">
+												<span class="search-console-slice-tag">Tematica</span>
+												<span class="search-console-selection">Alege tematica</button>
+											</button>
+											<div id="searchDrop-2" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2">
+												<ul>
+													<li tabindex="0">Achizitii publice</li>
+													<li tabindex="0">Administratie publica</li>
+													<li tabindex="0">Comunicare si transparenta</li>
+												</ul>
+											</div>
+										</div>
+										<div class="search-console-slice">
+											<button id="searchTriggerDrop-3" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3" value="Alege datele">
+												<span class="search-console-slice-tag">Perioada</span>
+												<span class="search-console-selection">Alege datele</button>
+											</button>
+											<div id="searchDrop-3" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3">
+												<ul>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+													<li tabindex="0">
+														<div>27 feb. - 6 mart.</div>
+														<div>&raquo; 7 zile</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<button class="btn search-console-bubbles">
+										<span>Cautã</span>
+									</button>
+								</div>
+							</div>
+
+							<div id="card-full-image-slider" class="swiper cards-full-image-small-slider mt-5"> 
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 1 curs disponibil"> <!-- Keep and fill the "title" attribute, it's important for accessibilty -->
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">1 cursuri disponibile</p>
+													<p class="card-full-image-title">Bãile-Felix</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 2 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">2 cursuri disponibile</p>
+													<p class="card-full-image-title">Jupiter</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 3 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">3 cursuri disponibile</p>
+													<p class="card-full-image-title">Mamaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 4 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">4 cursuri disponibile</p>
+													<p class="card-full-image-title">Sinaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Predeal - 5 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">5 cursuri disponibile</p>
+													<p class="card-full-image-title">Predeal</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Eforie Nord - 6 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_3.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">6 cursuri disponibile</p>
+													<p class="card-full-image-title">Eforie Nord</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Bãile-Felix - 7 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_5.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">7 cursuri disponibile</p>
+													<p class="card-full-image-title">Bãile-Felix</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Jupiter - 8 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_6.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">8 cursuri disponibile</p>
+													<p class="card-full-image-title">Jupiter</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Mamaia - 9 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_7.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">9 cursuri disponibile</p>
+													<p class="card-full-image-title">Mamaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="card-full-image card-full-image-small" href="#" title="Sinaia - 10 cursuri disponibile">
+											<figure class="card-full-image-inner">
+												<img class="card-full-image-asset" src="../images/temporary/DEST_hero_00.psd_8.jpg" alt=""/>
+												<figcaption class="card-full-image-text">
+													<p class="card-full-image-pretitle">10 cursuri disponibile</p>
+													<p class="card-full-image-title">Sinaia</p>
+												</figcaption>
+											</figure>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="social-media social-media-absolute mt-5 mb-5">
+							<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
+							<ul class="social-media-list">
+								<li class="social-media-list-item social-media-facebook">
+									<a target="_blank" href="#" title="Facebook">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social-media-list-item social-media-instagram">
+									<a target="_blank" href="#" title="Instagram">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social-media-list-item social-media-youtube">
+									<a target="_blank" href="#" title="Youtube">
+										<svg class="social-media-list-item-icon">
+											<use href="../images/sprite.svg#icon-youtube"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a class="logo" href="#" title="APSAP">
+					<svg class="logo-icon">
+						<use href="../images/sprite.svg#icon-logo"></use>
+					</svg>
+				</a>
+				<div class="menu-right">
+					<button id="menuInfo" class="btn btn-link menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="menu-btn-close"></span>
+						<span class="menu-btn-close-effect"></span>
+						<span class="menu-btn-group">
+							<svg class="menu-btn-icon">
+								<use href="../images/sprite.svg#icon-info"></use>
+							</svg>
+							<i class="menu-btn-text">Info</i>
+						</span>
+					</button>
+					<div class="main-submenu dropdown-menu" aria-labelledby="menuInfo">
+						<div class="container-narrow">
+							<nav class="main-submenu-group">
+								<ul class="main-submenu-list list-group list-group-flush">
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line acreditate</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri on-line sector public</a>
+									</li>
+									<li class="list-group-item">
+										<a class="main-submenu-list-link" href="#">Cursuri vocationale</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-medium-large text-center mt-5">
+		<div class="search-wrapper search-wrapper-general">
+			<div class="container-narrow">
+				<button type="button" class="btn search-back-btn">
+					<svg class="search-back-btn-icon">
+						<use href="../images/sprite.svg#icon-left-arrow"></use>
+					</svg>
+				</button>
+				<div class="search-console">
+					<div class="search-console-inner">
+						<!-- The IDs (on buttons and dropdowns) are just for accessibility purposes. They don't control the functionality. -->
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-1a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-1a" value="Alege locatia">
+								<span class="search-console-slice-tag">Locatia</span>
+								<span class="search-console-selection">Alege locatia</button>
+							</button>
+							<div id="searchDrop-1a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-1a">
+								<ul>
+									<li tabindex="0">On-line</li>
+									<li tabindex="0">Baile felix</li>
+									<li tabindex="0">Poiana Brasov</li>
+									<li tabindex="0">Sinaia</li>
+									<li tabindex="0">Mamaia</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-2a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-2a" value="Alege tematica">
+								<span class="search-console-slice-tag">Tematica</span>
+								<span class="search-console-selection">Alege tematica</button>
+							</button>
+							<div id="searchDrop-2a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-2a">
+								<ul>
+									<li tabindex="0">Achizitii publice</li>
+									<li tabindex="0">Administratie publica</li>
+									<li tabindex="0">Comunicare si transparenta</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-console-slice">
+							<button id="searchTriggerDrop-3a" class="btn search-console-slice-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="searchDrop-3a" value="Alege datele">
+								<span class="search-console-slice-tag">Perioada</span>
+								<span class="search-console-selection">Alege datele</button>
+							</button>
+							<div id="searchDrop-3a" class="search-console-slice-dropdown dropdown-menu js-search-select" aria-labelledby="searchTriggerDrop-3a">
+								<ul>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+									<li tabindex="0">
+										<div>27 feb. - 6 mart.</div>
+										<div>&raquo; 7 zile</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="btn search-console-bubbles">
+						<span>Cautã</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn search-console-bubbles search-trigger-mobile">
+			<span>Cautã</span>
+		</button>
+	</div>
+	<main id="content" class="main">
+
+		<section class="mt-5 pt-5">
+			<div class="container-narrow">
+				<article class="reservation-success">
+					<header class="reservation-success-header">
+						<img class="reservation-success-icon" src="../images/reservation-success.svg" alt="">
+						<h4 class="reservation-success-main-title">
+							FELICITARI!
+							<span>Bogdan Popescu</span>
+						</h4>
+						<div class="reservation-success-main-subtitle">
+							Ti-am rezervat un loc la cursul <strong>“Responsabil date cu caracter personal - Cod COR 242231”</strong> ce se va tine in format ONLINE-IN DIRECT, vezi mai jos datele si orele de desfasurare. Ti-am trimis pe email confirmarea de participare, daca ai orice alte intrebari nu ezita sa ne contactezi la <a href="">office@cursuri-functionari.ro</a>
+						</div>
+					</header>
+					<div class="reservation-success-body">
+						<div class="reservation-success-body-half">
+							<ul class="list-unstyled reservation-success-details-list mb-5 pb-2">
+								<li>
+									<h4>Denumire curs:</h4>
+									<p>
+										Curs expert accesare fonduri structurale şi de coeziune europene <br>
+										<strong>Cod COR 242213</strong>
+									</p>
+								</li>
+								<li>
+									<h4>Date/Ore de desfasurare:</h4>
+									<p>
+										30 ian. - 3 feb. 2023 (orele 17:30 - 20:30)
+									</p>
+								</li>
+								<li>
+									<h4>Data examen:</h4>
+									<p>
+										3 februarie 2023
+									</p>
+								</li>
+								<li>
+									<h4>Tarif eliberare certificat de absolvire:</h4>
+									<p>
+										<strong>1090 RON</strong>  TVA inclus
+									</p>
+								</li>
+							</ul>
+
+							<a class="reservation-success-dwn" href="#" title="">
+								<svg class="reservation-success-dwn-icon">
+									<use href="../images/sprite.svg#icon-star-arrow"></use>
+								</svg>
+								<span>
+									Descarcã <strong>oferta</strong> <span>in format PDF</span>
+								</span>
+							</a>
+
+						</div>
+						<div class="reservation-success-body-half rsbh-certificate">
+							<figure class="certification mt-0">
+								<img class="img-fluid" src="../images/certification.png" alt="Certificat de absolvire curs">
+								<figcaption class="text-uppercase">Online</figcaption>
+							</figure>
+						</div>
+						<div class="reservation-success-body-half mt-5">
+							<div class="reservation-success-body-info">
+								<h4 class="reservation-success-body-info-title">
+									<svg class="rsbi-icon rsbi-icon-1">
+										<use href="../images/sprite.svg#icon-info-extra-2"></use>
+									</svg>
+									<span>
+										Informatii suplimentare
+									</span>
+								</h4>
+								<div class="reservation-success-body-info-content">
+									<p><strong>Actele necesare pentru obținerea certificatului de absolvire A.N.C. : </strong></p>
+									<ul>
+										<li>Diplomă de licență / adeverință de absolvire (copie)</li>
+										<li>Act de identitate (copie) </li>
+										<li>Certificat de naștere (copie) </li>
+										<li>Certificat de căsătorie, în cazul schimbării numelui (copie)</li>
+										<li>Dovada plății</li>
+									</ul>
+									<p>Detalii privind tematicile cursurilor, organizarea și desfășurarea programelor de perfecționare se pot obține de la: </p>
+									<p>
+										Doamna <strong>Luiza Almajan</strong> <br>
+										Director programe de formare-APSAP <br>
+										<strong>0788 124 567</strong>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="reservation-success-body-half mt-5">
+							<div class="reservation-success-body-info">
+								<h4 class="reservation-success-body-info-title">
+									<svg class="rsbi-icon rsbi-icon-2">
+										<use href="../images/sprite.svg#icon-tech-details-2"></use>
+									</svg>
+									<span>
+										Detalii tehnice
+									</span>
+								</h4>
+								<div class="reservation-success-body-info-content">
+									<p>Cursul este în format audio-video, live, on-line și este necesar ca fiecare participant să:</p>
+									<p>1. Dețină un dispozitiv electronic de tip calculator sau telefon mobil, o conexiune bună la internet și microfon (opțional: căști și cameră web)</p>
+									<p>2. Să descarce aplicația Zoom pe dispozitivul de pe care se va accesa cursul on-line.</p>
+									<p><strong>Aplicația Zoom este disponibilă</strong> (gratuit) printr-un simplu click mai jos:</p>
+									<p>
+										<a href="#" title="">Sistem de operare <strong>Windows</strong></a> <br>
+										<a href="#" title="">Sistem de operare <strong>MacOS</strong></a> <br>
+										<a href="#" title="">Telefon mobil cu sistem de operare <strong>Android</strong></a> <br>
+										<a href="#" title="">Telefon mobil cu sistem de operare <strong>iOS (iPhone)</strong></a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="reservation-success-body-half mt-5">
+							<div class="reservation-success-body-info">
+								<h4 class="reservation-success-body-info-title">
+									<svg class="rsbi-icon rsbi-icon-3">
+										<use href="../images/sprite.svg#icon-tech-support"></use>
+									</svg>
+									<span>
+										Suport tehnic APSAP
+									</span>
+								</h4>
+								<div class="reservation-success-body-info-content">
+									<p>
+										Telefon: <br>
+										<strong>0730 124 567</strong>
+									</p>
+									<p>
+										<strong>INFO CENTER APSAP</strong> <br>
+										Telefon: <br>
+										<strong>0730 124 567</strong> <br>
+										Fax: <br>
+										<strong>021 569 61 26</strong>
+									</p>
+									<p>
+										Email: <br>
+										<a href="#"><strong>webinar@cursuri-functionari.ro</strong></a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="reservation-success-body-half mt-5">
+							<p>
+								Cu deosebită considerație,
+							</p>
+							<p>
+								<strong>Președinte</strong> <br>
+								Bogdan-Costin Fârșirotu
+							</p>
+							<img src="../images/signature.png" alt="">
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="component-block">
+			<div class="container">
+				<div class="contact-form-wrapper">
+					<div class="contact-form-header">
+						<div class="contact-form-header-left">
+							<span class="contact-form-icon-circle">
+								<svg class="contact-form-icon">
+									<use href="../images/sprite.svg#icon-envelope"></use>
+								</svg>
+							</span>
+							<h4 class="contact-form-header-title">Contacteazã-ne</h4>
+							<p class="contact-form-header-subtitle">si afla amanunte despre oferta noastra de cazare si cursuri, este foarte simplu, un operator APSAP te va suna si te va ajuta sa gasesti cazarea potrivita pentru curs</p>
+						</div>
+						<div class="contact-form-header-right">
+							<svg class="contact-form-icon">
+								<use href="../images/sprite.svg#icon-star-arrow"></use>
+							</svg>
+							<a class="contact-form-header-title" href="#" title="">Descarcã <strong>brosura hotelurilor</strong></a>
+							<p class="contact-form-header-subtitle">in format PDF si descopera toate locatiile si hotelurile unde oferim cazare!</p>
+						</div>
+					</div>
+
+					<form class="row g-3 needs-validation" novalidate>
+						<div class="col-xl-6 form-floating">
+							<input type="text" class="form-control form-control-lg" id="ctName" placeholder="Numele tau" required>
+							<label for="ctName" class="form-label">Numele tau</label>
+							<div class="invalid-feedback">
+								Va rugam introduceti numele dvs
+							</div>
+						</div>
+						<div class="col-xl-6 form-floating">
+							<input type="text" class="form-control form-control-lg" id="ctPhone" placeholder="Telefon Mobil" required>
+							<label for="ctPhone" class="form-label">Telefon Mobil</label>
+							<div class="invalid-feedback">
+								Va rugam introduceti numarul de telefon
+							</div>
+						</div>
+						<div class="col-12 form-floating">
+							<textarea class="form-control form-control-txt" placeholder="Mesajul tau" id="ctMessage" required></textarea>
+							<label for="ctMessage" class="form-label">Mesajul tau</label>
+							<div class="invalid-feedback">
+								Va rugam introduceti mesajul dvs
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<div class="form-check form-check-big form-check-big-blue form-check-big-policy d-flex align-items-center form-check-complex-blue">
+								<input class="form-check-input" type="checkbox" name="policyConfirm" id="policyConfirm" required>
+								<label class="form-check-label" for="policyConfirm">
+									Am citit politica cu privire la prelucrarea datelor cu caracter personal și sunt de acord ca datele furnizate prin acest formular să fie prelucrate în scopul obținerii de informații.
+								</label>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<button type="submit" class="btn btn-pill btn-pill-blue">Trimite</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="component-block component-stacks">
+			<div class="container-medium-2 text-center">
+				<div class="ribbon ribbon-yellow observe mb-4">
+					<svg class="ribbon-icon ribbon-icon-medal">
+						<use href="../images/sprite.svg#icon-medal"></use>
+					</svg>
+				</div>
+				<h4 class="second-title second-title-black second-title-bolder text-uppercase mb-2">Autorizare si certificare</h4>
+				<p class="subtitle-text subtitle-text-black">
+					Centrul de Formare APSAP este furnizor acreditat de formare profesională înregistrat în Registrul Național al Furnizorilor de Formare Profesionala a Adulților a Municipiului București iar certificatele de absolvire sunt emise de Comisia de Autorizare a Furnizorilor de Formare Profesională a Adulţilor sub egida Ministerului Muncii și Protecției Sociale și a Ministerului Educației și Cercetării.
+				</p>
+			</div>
+
+			<div class="horizontal-stripe">
+				<div class="container-medium-2 text-center">
+					<!-- The class "bottom-overflow-limit-wrap-xl" (change "xl" with "lg" or "md" if you need the functionality only on a lower res) is used together with "bottom-overflow-limit" at the bottom to hide stuff on mobile -->
+					<div class="swiper js-swiper-certification certifications mt-4 mt-xl-5 bottom-overflow-limit-wrap-lg">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-1" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" data-bs-toggle="modal" data-bs-target="#docModal-2" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_3.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-3" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_4.jpg" alt="" data-bs-toggle="modal" data-bs-target="#docModal-4" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_5.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_6.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" />
+							</div>
+						</div>
+						<!-- This always has to be on the first level, as a direct child of "bottom-overflow-limit-wrap-(xl, lg, md)" -->
+						<div class="bottom-overflow-limit">
+							<button type="button" class="btn btn-pill btn-pill-blue js-cancel-overflow">Mai incarcã documente</button>
+						</div>
+					</div>
+
+					<!-- Group modals START. The trigger is on the images above. In these modals you will put the large versions of the documents/certifications. I have added modals on just 4 items as an example, it will probably have to be on all of them. -->
+						<!-- Modal 1 START -->
+						<div class="modal" id="docModal-1" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_1.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 1 END -->
+
+						<!-- Modal 2 START -->
+						<div class="modal" id="docModal-2" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_2.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 2 END -->
+
+						<!-- Modal 3 START -->
+						<div class="modal" id="docModal-3" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_3.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 3 END -->
+
+						<!-- Modal 4 START -->
+						<div class="modal" id="docModal-4" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-fluid" src="../images/temporary/certificat_4.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Modal 4 END -->
+					<!-- Group modals END -->
+				</div>
+			</div>
+		</section>
+
+		<div class="social-media social-media-footer">
+			<p>Ne găsești și pe Facebook, Instagram & YouTube:</p>
+			<ul class="social-media-list">
+				<li class="social-media-list-item social-media-facebook">
+					<a target="_blank" href="#" title="Facebook">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-facebook"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="social-media-list-item social-media-instagram">
+					<a target="_blank" href="#" title="Instagram">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-instagram"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="social-media-list-item social-media-youtube">
+					<a target="_blank" href="#" title="Youtube">
+						<svg class="social-media-list-item-icon">
+							<use href="../images/sprite.svg#icon-youtube"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="footer-inner">
+			<div class="container-1000">
+				<div class="footer-content">
+					<div class="footer-content-col-small">
+						<h4 class="footer-title-dashed">Link-uri utile</h4>
+						<ul class="list-unstyled footer-list">
+							<li><a href="#" title="">Termeni și condiții</a></li>
+							<li><a href="#" title="">Politica de cookie</a></li>
+							<li><a href="#" title="">Ofertă cursuri</a></li>
+							<li><a href="#" title="">Contactează-ne</a></li>
+							<li><a href="#" title="">Notă de Informare GDPR</a></li>
+							<li><a href="#" title="">Politica de achiziție, livrare, retur a serviciilor achiziționate cu plata prin card bancar</a></li>
+							<li><a href="#" title="">Locuri de muncă</a></li>
+						</ul>
+					</div>
+					<div class="footer-content-col-large">
+						<div class="footer-form">
+							<h4 class="footer-form-title"><strong>Rămâi conectat</strong> la educație!</h4>
+							<p class="footer-form-subtitle">Fii la curent cu noile noastre cursuri online acreditate, evenimente și webinarii.</p>
+							<form>
+								<div class="mb-2">
+								  <label for="footerInputEmail" class="form-label visually-hidden">Email-ul tau</label>
+								  <input type="email" class="form-control" id="footerInputEmail" placeholder="Email-ul tau">
+								</div>
+								<div class="mb-3">
+									<label for="footerInputName" class="form-label visually-hidden">Prenume</label>
+									<input type="text" class="form-control" id="footerInputName" placeholder="Prenume">
+								</div>
+
+								<p class="footer-form-innertitle">În ce sector lucrați în acest moment:</p>
+
+								<div class="footer-form-check mb-3">
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="sectorCheck1">
+										<label class="form-check-label" for="sectorCheck1">Privat</label>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="sectorCheck2">
+										<label class="form-check-label" for="sectorCheck2">Public</label>
+									</div>
+								</div>
+
+								<div class="form-check footer-form-check-policy mb-2">
+									<input type="checkbox" class="form-check-input" id="policyCheck">
+									<label class="form-check-label" for="policyCheck">Sunt de acord cu Politica de confidențialitate.</label>
+								</div>
+
+								<button type="submit" class="btn btn-pill">Da, ma abonez!</button>
+							</form>
+						</div>
+					</div>
+					<div class="footer-content-col-small">
+						<address class="footer-address">
+							<p class="footer-address-title">Centrul de Formare APSAP</p>
+							<p><strong>Adresă:</strong> Str. Turturelelor nr. 62, clădirea Decebal Tower, etaj 6, camera 12, sector 3, București</p>
+							<p class="mb-0"><strong>Telefon:</strong> 0788 124 567</p>
+							<p class="mb-0"><strong>Fax:</strong> (021) 569 61 26</p>
+							<p class="mb-0"><strong>E-mail:</strong>	<a href="mailto:secretariat@cursuri-functionari.ro">secretariat@cursuri-functionari.ro</a></p>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container-1000">
+				<div class="footer-bottom-content d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap">
+					<p class="footer-copy">
+						&copy; <strong>2023</strong> - Centrul de Formare APSAP
+					</p>
+	
+					<img class="footer-payment-logos" src="../images/payment-logos.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="../js/prod/main.js"></script>
+
+</body>
+</html>
