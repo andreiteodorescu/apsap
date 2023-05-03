@@ -35,6 +35,8 @@
 
         &::after, &::before {
             content: "";
+            width: 40px;
+            height: 2px;
             width: rem(40px);
             height: rem(2px);
             background: $grey-light;
@@ -47,10 +49,12 @@
         }
 
         &::after {
+            transform: rotate(45deg) translate(-35px, 14px);
             transform: rotate(45deg) translate(rem(-35px), rem(14px));
         }
 
         &::before {
+            transform: rotate(-45deg) translate(28px, 6px);
             transform: rotate(-45deg) translate(rem(28px), rem(6px));
             
         }
@@ -139,6 +143,7 @@
                 }
 
                 &.main-submenu-list-dropdown-toggler:hover::after {
+                    transform: translateX(-2px);
                     transform: translateX(rem(-2px));
                 }
             }
@@ -188,6 +193,7 @@
             background: linear-gradient(to right, transparent, rgba(255,255,255, .1) 45%, rgba(255,255,255, .1) 50%, transparent);
             position: absolute;
             left: 0;
+            top: 8px;
             top: rem(8px);
         }
 
@@ -205,7 +211,9 @@
                     content: ">";
                     position: absolute;
                     left: 0;
+                    top: 4px;
                     top: rem(4px);
+                    font-size: 12px;
                     font-size: rem(12px);
                 }
             }
@@ -292,11 +300,13 @@
                 height: rem(30px);
     
                 &::after {
+                    transform: rotate(45deg) translate(6px, 14px);
                     transform: rotate(45deg) translate(rem(6px), rem(14px));
                     opacity: 1;
                 }
     
                 &::before {
+                    transform: rotate(-45deg) translate(-14px, 6px);
                     transform: rotate(-45deg) translate(rem(-14px), rem(6px));
                     opacity: 1;
                 }
@@ -324,8 +334,8 @@
         left: 0;
         top: 0;
         width: 100%;
+        height: 48px;
         height: rem(48px);
-        //background-color: $grey-dark-3;
         animation: stickyMenuBG .3s ease-out .1s forwards;
     }
 
@@ -378,6 +388,7 @@
             &::after {
                 content: "";
                 width: 100%;
+                height: 80px;
                 height: rem(80px);
                 position: absolute;
                 left: 0;
@@ -420,6 +431,8 @@
 
         &::after, &::before {
             content: "";
+            width: 40px;
+            height: 2px;
             width: rem(40px);
             height: rem(2px);
             background: $grey-light;
@@ -432,10 +445,12 @@
         }
 
         &::after {
+            transform: rotate(45deg) translate(-35px, 14px);
             transform: rotate(45deg) translate(rem(-35px), rem(14px));
         }
 
         &::before {
+            transform: rotate(-45deg) translate(28px, 6px);
             transform: rotate(-45deg) translate(rem(28px), rem(6px));
             
         }

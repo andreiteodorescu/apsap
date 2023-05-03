@@ -36,6 +36,9 @@
     }
 
     &::after {
+        width: 39px;
+        height: 39px;
+        margin-top: -20px;
         width: rem(39px);
         height: rem(39px);
         margin-top: rem(-20px);
@@ -43,6 +46,9 @@
     }
 
     &::before {
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
         width: rem(16px);
         height: rem(16px);
         margin-top: rem(-8px);
@@ -55,20 +61,24 @@
         }
 
         &::after {
+            right: -23px;
             right: rem(-23px);
         }
 
         &::before {
+            right: -44px;
             right: rem(-44px);
         }
     }
 
     &-right {
         &::after {
+            left: -23px;
             left: rem(-23px);
         }
 
         &::before {
+            left: -44px;
             left: rem(-44px);
         }
     }
@@ -96,20 +106,24 @@
     &.in-view {
         .stats-big-text-left {
             &::after {
+                right: -23px;
                 right: rem(-23px);
             }
     
             &::before {
+                right: -44px;
                 right: rem(-44px);
             }
         }
     
         .stats-big-text-right {
             &::after {
+                left: -23px;
                 left: rem(-23px);
             }
     
             &::before {
+                left: -44px;
                 left: rem(-44px);
             }
         }

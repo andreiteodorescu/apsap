@@ -239,3 +239,9 @@
         }
     }
 }
+
+@media (max-width: rem(480px)) {
+    .card-info:not(.card-info-image) {
+        min-height: 260px;
+    }
+}

@@ -268,12 +268,17 @@
                     content: "";
                     width: 0; 
                     height: 0; 
+                    border-left: 100px solid transparent;
+                    border-right: 100px solid transparent;
                     border-left: rem(100px) solid transparent;
                     border-right: rem(100px) solid transparent;
                     position: absolute;
                     left: 50%;
+                    margin-left: -100px;
                     margin-left: rem(-100px);
+                    bottom: -20px;
                     bottom: rem(-20px);
+                    border-top: 20px solid $blue-violet;
                     border-top: rem(20px) solid $blue-violet;
                     z-index: 1;
                     transition: border-top-color .3s ease;
@@ -385,6 +390,7 @@
                 content: "";
                 position: absolute;
                 width: calc(100% - 40px);
+                height: 1px;
                 height: rem(1px);
                 background-color: $grey-extralight;
                 left: 0;
@@ -1077,6 +1083,10 @@
         &-center-bottom {
             bottom: rem(15px);
         }
+
+        &-center-top {
+            top: rem(-15px);
+        }
     }
 
     .course-summary-about {
@@ -1108,6 +1118,9 @@
     }
 
     .info-drop-slice-single:not(.info-drop-slice-single-sessions) .info-drop-slice-btn::before {
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        margin-left: -80px;
         border-left: rem(80px) solid transparent;
         border-right: rem(80px) solid transparent;
         margin-left: rem(-80px);

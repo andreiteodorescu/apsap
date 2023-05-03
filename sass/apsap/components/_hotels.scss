@@ -9,7 +9,7 @@
 
         &-header {
             display: flex;
-            gap: 10px;
+            gap: rem(10px);
             justify-content: space-between;
             align-items: center;
 
@@ -20,13 +20,13 @@
 
             &-right {
                 align-self: flex-end;
-                width: 180px;
+                width: rem(180px);
             }
 
             &-rating {
-                font-size: 14px;
+                font-size: rem(14px);
                 color: $orange-2;
-                margin-bottom: 3px;
+                margin-bottom: rem(3px);
 
                 .star {
                     display: inline-block;
@@ -35,26 +35,29 @@
 
             &-title {
                 font-family: $font-family-bold;
-                font-size: 30px;
+                font-size: rem(30px);
                 line-height: 1;
-                margin-bottom: 5px;
+                margin-bottom: rem(5px);
 
                 span {
                     font-family: $font-family-base;
                     position: relative;
-                    padding-left: 15px;
-                    margin-left: 4px;
+                    padding-left: rem(15px);
+                    margin-left: rem(4px);
                     display: inline-block;
 
                     &::before {
                         content: "";
                         width: 6px;
                         height: 6px;
+                        width: rem(6px);
+                        height: rem(6px);
                         border-radius: 50%;
                         position: absolute;
                         left: 0;
                         top: 50%;
                         margin-top: -3px;
+                        margin-top: rem(-3px);
                         background-color: $green-blue;
                     }
                 }
@@ -68,7 +71,7 @@
 
             &-link {
                 color: $blue-violet;
-                font-size: 14px;
+                font-size: rem(14px);
                 font-family: $font-family-bold;
                 text-decoration: none;
 
@@ -78,13 +81,13 @@
             }
 
             &-details {
-                font-size: 14px;
+                font-size: rem(14px);
                 margin-bottom: 0;
 
                 li {
-                    border-top: 1px solid $link-color;
-                    padding-top: 7px;
-                    margin-top: 5px;
+                    border-top: rem(1px) solid $link-color;
+                    padding-top: rem(7px);
+                    margin-top: rem(5px);
 
                     &:first-child {
                         border: none;

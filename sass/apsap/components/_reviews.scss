@@ -114,6 +114,7 @@
     &::before {
         content: "";
         width: 100%;
+        height: 2px;
         height: rem(2px);
         background-image: linear-gradient(to right, $grey-medium-3, transparent);
         position: absolute;

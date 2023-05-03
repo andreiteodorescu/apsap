@@ -5,6 +5,7 @@
     &::before {
         content: "";
         width: 100%;
+        height: 1px;
         height: rem(1px);
         background-color: $blue-main;
         top: 50%;
@@ -23,8 +24,8 @@
         width: 100%;
         border-radius: 0;
         font-size: rem(16px);
-        padding-top: rem(14px);
-        padding-bottom: rem(10px);
+        padding-top: rem(13px);
+        padding-bottom: rem(11px);
     }
 
     .current-active .btn {
@@ -108,5 +109,12 @@
 
     .courses-slider-nav .swiper-button-next {
         right: rem(-5px);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .firefox .courses-slider-inner .btn {
+        padding-top: rem(12px);
+        padding-bottom: rem(12px);
     }
 }

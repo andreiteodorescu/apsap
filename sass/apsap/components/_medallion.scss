@@ -18,6 +18,8 @@
 
         &::after {
             content: "";
+            width: 10px;
+            height: 2px;
             width: rem(10px);
             height: rem(2px);
             background-color: $grey-dark-2;
@@ -35,6 +37,8 @@
 
             &::after, &::before {
                 content: "";
+                width: 10px;
+                height: 2px;
                 width: rem(10px);
                 height: rem(2px);
                 background-color: $grey-dark-2;
@@ -91,6 +95,7 @@
     
             &::after {
                 width: 40%;
+                height: 1px;
                 height: rem(1px);
             }
     
@@ -133,6 +138,10 @@
         }
 
         &::before {
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            left: -35px;
             width: rem(30px);
             height: rem(30px);
             margin-top: rem(-15px);
@@ -150,10 +159,12 @@
 
             &.in-view {
                 &::after {
+                    right: -32px;
                     right: rem(-32px);
                 }
 
                 &::before {
+                    left: -35px;
                     left: rem(-35px);
                 } 
             }

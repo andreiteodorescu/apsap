@@ -27,10 +27,13 @@
             color: #fff;
             border-radius: 50%;
             background-color: $yellow;
+            width: 30px;
+            height: 30px;
             width: rem(30px);
             height: rem(30px);
             position: absolute;
             left: 0;
+            top: 2px;
             top: rem(2px);
             display: flex;
             align-items: center;
@@ -61,12 +64,15 @@
             position: relative;
             padding-left: rem(65px);
             min-height: rem(50px);
+            break-inside: avoid-column;
 
             &::before {
                 content: counter(list-item);
                 position: absolute;
                 left: 0;
                 top: 0;
+                width: 50px;
+                height: 50px;
                 width: rem(50px);
                 height: rem(50px);
                 border-radius: 50%;
@@ -75,6 +81,7 @@
                 align-items: center;
                 justify-content: center;
                 font-family: $font-family-bebas-regular;
+                font-size: 36px;
                 font-size: rem(36px);
                 color: $blue-violet;
 
